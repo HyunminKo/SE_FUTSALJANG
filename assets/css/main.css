@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300");
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
 
 /*
 	Identity by HTML5 UP
@@ -182,6 +183,7 @@
 
 	p {
 		margin: 0 0 1.5em 0;
+		font-family: 'Hanna', serif;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -199,6 +201,7 @@
 		font-size: 1.85em;
 		letter-spacing: 0.22em;
 		margin: 0 0 0.525em 0;
+		font-family: 'Hanna', serif;
 	}
 
 	h2 {
@@ -623,7 +626,7 @@
 		padding: 0 1.5em;
 		background-color: transparent;
 		border-radius: 4px;
-		border: solid 1px #c8cccf;
+		border: solid 1px black;
 		color: #414f57 !important;
 		cursor: pointer;
 		text-align: center;
@@ -705,7 +708,7 @@
 		max-width: 100%;
 		min-width: 70em;
 		padding: 4.5em 3em 3em 3em ;
-		background: #ffffff;
+		background: rgba(255, 255, 255, 0.55);
 		border-radius: 4px;
 		cursor: default;
 		opacity: 0.95;
@@ -771,7 +774,11 @@
 			-ms-transform: rotateX(15deg);
 			transform: rotateX(15deg);
 		}
-
+	#EnterButton{
+		font-family: 'Hanna', serif;
+		width:13em;
+		height:3em;
+	}
 /* Footer */
 
 	#footer {
