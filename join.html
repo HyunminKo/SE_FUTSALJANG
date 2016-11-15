@@ -12,6 +12,7 @@
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" href="./images/favicon.ico">
+		<script type="text/javascript" src="./join.js"></script>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -25,39 +26,23 @@
 			
 					<section id="main">
 					
-					
-						<hr />
-						<h2>Extra Stuff!</h2>
+						<h2>Join!</h2>
 						<form method="post" action="#">
-							<div class="field">
-								<input type="text" name="name" id="name" placeholder="Name" />
+							<div class="field" id="join_id">
+								<input type="text" name="id" id="join_id_box" placeholder="ID" onchange="confirmSubmit(this)" required/>
 							</div>
-							<div class="field">
-								<input type="email" name="email" id="email" placeholder="Email" />
+							<div class="field" id="join_pw">
+								<input type="password" name="pw" id="join_pw_box" placeholder="pw" onchange="confirmSubmit(this)" required/>
 							</div>
-							<div class="field">
-								<div class="select-wrapper">
-									<select name="department" id="department">
-										<option value="">Department</option>
-										<option value="sales">Sales</option>
-										<option value="tech">Tech Support</option>
-										<option value="null">/dev/null</option>
-									</select>
-								</div>
+							<div class="field" id="join_name">
+								<input type="text" name="name" id="join_name_box" placeholder="Name" onchange="confirmSubmit(this)" required/>
 							</div>
-							<div class="field">
-								<textarea name="message" id="message" placeholder="Message" rows="4"></textarea>
-							</div>
-							<div class="field">
-								<input type="checkbox" id="human" name="human" /><label for="human">I'm a human</label>
-							</div>
-							<div class="field">
-								<label>But are you a robot?</label>
-								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">Yes</label>
-								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">No</label>
+							<div class="field" id="join_phone">
+								<input type="text" name="phone" id="join_phone_box" placeholder="phone" onchange="confirmSubmit(this)" required/>
 							</div>
 							<ul class="actions">
-								<li><a href="#" class="button">Get Started</a></li>
+								<li><a href="#" class="button">가입</a></li>
+								<li><a href="#" class="button">취소</a></li>
 							</ul>
 						</form>
 						
