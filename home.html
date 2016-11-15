@@ -23,7 +23,7 @@
 
 				<!-- Main -->
 				<div class="field" id="banner">
-					<div class="select-wrapper">
+					<div class="select-wrapper" id="searchGuDiv">
 						<select name="gu" id="department">
 							<option value="유성구">유성구</option>
 							<option value="동구">동구</option>
@@ -32,16 +32,13 @@
 							<option value="대덕구">대덕구</option>
 						</select>
 					</div>
-
+					<div id="iconsDiv">
+						<ul class="icons">
+							<li><a href="#" class="fa-search">검색</a></li>
+							<li><a href="#" class="fa-user">회원가입</a></li>
+						</ul>
+					</div>
 				</div>
-				<div>
-					<ul class="icons">
-						<li><a href="#" class="fa-search">검색</a></li>
-						<li><a href="#" class="fa-instagram">Instagram</a></li>
-						<li><a href="#" class="fa-user">회원가입</a></li>
-					</ul>
-				</div>
-
 					<section id="main">
 						<header>
 							<span class="avatar"><img src="images/avatar.jpg" alt="" /></span>
@@ -104,7 +101,9 @@
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 			<script>
 				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					window.addEventListener('load', function() { 
+						document.body.className = document.body.className.replace(/\bis-loading\b/, ''); 
+					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 			</script>

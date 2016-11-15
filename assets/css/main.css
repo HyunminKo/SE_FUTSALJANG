@@ -486,6 +486,7 @@
 		list-style: disc;
 		margin: 0 0 1.5em 0;
 		padding-left: 1em;
+		white-space:nowrap; 
 	}
 
 		ul li {
@@ -780,8 +781,29 @@
 		width:13em;
 		height:3em;
 	}
+	#searchGuDiv{
+		width: 15em;
+		position:relative;
+		left: 43%;
+		top:-12px;
+	}
 	#banner{
-		width: 8em;
+		width:68.7%;
+		position:relative;
+		top:50px;
+		background: rgba(255, 255, 255, 0.55);
+		border-radius: 4px;
+	}
+	#banner div{
+		display: inline-block;
+	}
+	#iconsDiv{
+		position:relative;
+		left:59.5%;
+		top:10px;
+		
+		height: 56px;
+
 	}
 /* Footer */
 
