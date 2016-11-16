@@ -12,6 +12,7 @@
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" href="./images/favicon.ico">
+		<script type="text/javascript" src="./join.js"></script>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -22,16 +23,24 @@
 			<div id="wrapper">
 
 				<!-- Main -->
-					<section id="main" style="min-width:5em">
-						<header>
-							<span><img src="images/1logo_bgDelete2.png" alt="" /></span>
-							
-							<p>풋살장 예약 시스템</p>
-							<button id="EnterButton" onclick="location.href='home.html'";>선수 입장</button>
-						</header>
-						<div>
-							
-						</div>
+			
+					<section id="login_window">
+					<img src="images/1logo_bgDelete2.png" alt="" />
+						<h2>Login!</h2>
+						<form method="post" action="#">
+							<div class="field" id="login_id">
+								<input type="text" name="id" id="join_id_box" placeholder="ID" onchange="confirmSubmit(this)" required/>
+							</div>
+							<div class="field" id="login_pw">
+								<input type="password" name="pw" id="join_pw_box" placeholder="pw" onchange="confirmSubmit(this)" required/>
+							</div>
+							<ul class="actions">
+								<li><a href="#" class="button">로그인</a></li>
+								<li><a href="#" class="button" >회원가입</a></li>
+							</ul>
+						</form>
+						
+
 					</section>
 
 				<!-- Footer -->
@@ -41,13 +50,16 @@
 							<li>윤성준 정창훈 고현민</li>
 						</ul>
 					</footer>
+
 			</div>
 
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 			<script>
 				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					window.addEventListener('load', function() { 
+						document.body.className = document.body.className.replace(/\bis-loading\b/, ''); 
+					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 			</script>
