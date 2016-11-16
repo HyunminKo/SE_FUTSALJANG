@@ -35,7 +35,7 @@ function confirmSubmit(a){
 			join_id_box.focus();
 			if(isExsitID != true){
 				span_tag.innerHTML = "아이디에 공백이 있거나 4자이상 입력해주세요";
-				join_main.insertBefore(span_div,join_main.children[i+1]);
+				join_id.insertBefore(span_div,join_id.children[i+1]);
 				isExsitID = true;
 				}
 				return;
@@ -52,7 +52,7 @@ function confirmSubmit(a){
 		if(join_pw_box.value.length <5){
 			if(isExsitPW != true){
 			span_tag.innerHTML = "비밀번호를 6자이상 입력해주세요";
-			join_main.insertBefore(span_div,join_main.children[i+1]);
+			join_pw.insertBefore(span_div,join_pw.children[i+1]);
 			isExsitPW = true;
 			}
 			return;
@@ -74,7 +74,7 @@ function confirmSubmit(a){
 			join_name_box.focus();
 			if(isExsitName != true){
 			span_tag.innerHTML = "이름에 공백이 있거나 2자이상 입력해주세요";
-			join_main.insertBefore(span_div,join_main.children[i+1]);
+			join_name.insertBefore(span_div,join_name.children[i+1]);
 			isExsitName = true;
 			}
 			return;
@@ -97,7 +97,7 @@ function confirmSubmit(a){
 		}else{
 			if(isExsitTel != true){
 				span_tag.innerHTML = "EX) 010-xxxx-xxxx";
-				join_main.insertBefore(span_div,join_main.children[i+1]);
+				join_phone.insertBefore(span_div,join_phone.children[i+1]);
 				isExsitTel = true;
 			}
 			return;
