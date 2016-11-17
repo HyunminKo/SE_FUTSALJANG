@@ -15,6 +15,7 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	</head>
 	<body class="is-loading">
 
@@ -22,8 +23,11 @@
 			<div id="wrapper">
 
 				<!-- Main -->
-				<div class="field" id="banner">
-					<div class="select-wrapper" id="searchGuDiv">
+				<div class="field w3-row" id="banner">
+					<div class="w3-third w3-container">
+						<span><img src="images/1logo_bgDelete2.png" alt="" width="120px" height="88px"/></span>
+					</div>
+					<div class="select-wrapper w3-third w3-container" id="searchGuDiv">
 						<select name="gu" id="department">
 							<option value="유성구">유성구</option>
 							<option value="동구">동구</option>
@@ -32,7 +36,7 @@
 							<option value="대덕구">대덕구</option>
 						</select>
 					</div>
-					<div id="iconsDiv">
+					<div id="iconsDiv" class="w3-third w3-container">
 						<ul class="icons">
 							<li><a href="#" class="fa-search">검색</a></li>
 							<li><a href="./login.html" class="fa-user">회원가입</a></li>
