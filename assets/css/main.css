@@ -190,6 +190,7 @@
 		color: #313f47;
 		line-height: 1.5;
 		margin: 0 0 0.75em 0;
+		font-family: 'Hanna', serif;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -707,6 +708,7 @@
 /* Main */
 
 	#main {
+		width:70%;
 		position: relative;
 		max-width: 100%;
 		min-width: 70em;
@@ -728,6 +730,29 @@
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
+	}
+	#indexmain{
+		position: relative;
+		max-width: 100%;
+		min-width: 70em;
+		padding: 4.5em 3em 3em 3em ;
+		background: rgba(255, 255, 255, 0.55);
+		border-radius: 4px;
+		cursor: default;
+		opacity: 0.95;
+		text-align: center;
+		-moz-transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-moz-transform: rotateX(0deg);
+		-webkit-transform: rotateX(0deg);
+		-ms-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+		transition: opacity 1s ease, transform 1s ease;		
 	}
 
 		#main .avatar {
@@ -1051,3 +1076,11 @@
 			transform: rotateX(15deg);
 		}		
 			
+/* 클래스 */
+
+.FUTSALJANG_CARD{
+	margin-left: 10%;
+}
+.FUTSALJANG_CARD_ROW{
+	margin-bottom: 10%;
+}
