@@ -12,6 +12,7 @@
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" href="./images/favicon.ico">
+		<script type="text/javascript" src="./assets/js/join.js"></script>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -22,16 +23,34 @@
 			<div id="wrapper">
 
 				<!-- Main -->
-					<section id="indexmain" style="min-width:5em">
-						<header>
-							<span><img src="images/1logo_bgDelete2.png" alt="" /></span>
-							
-							<p>풋살장 예약 시스템</p>
-							<button id="EnterButton" onclick="location.href='home.html'";>선수 입장</button>
-						</header>
-						<div>
-							
-						</div>
+			
+					<section id="join_window" style="background:white;">
+						<h2>수정하기</h2>
+						<form method="post" action="#">
+							<div class="field" id="modify_id">
+								<p>아이디: KHM</p>
+							</div>
+							<div class="field" id="modify_name">
+								<p>이름: 고현민</p>
+							</div>
+							<div class="field" id="modify_phone">
+								<input type="text" name="phone" id="join_phone_box" placeholder="01083844578" onchange="confirmSubmit(this)" required/>
+							</div>
+							<div class="select-wrapper-grade" id="gradeDiv">							
+								<div class="field" id="modify_grade">
+									<select name="grade" id="grade">
+										<option value="일반">일반</option>
+										<option value="VIP">VIP</option>
+									</select>
+								</div>
+							</div>
+							<ul class="actions" style="margin-top: 6%;">
+								<li><a href="#" class="button">수정</a></li>
+								<li><a href="#" class="button">취소</a></li>
+							</ul>
+						</form>
+						
+
 					</section>
 
 				<!-- Footer -->
@@ -41,17 +60,18 @@
 							<li>윤성준 정창훈 고현민</li>
 						</ul>
 					</footer>
+
 			</div>
 
 		<!-- Scripts -->
 			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 			<script>
-			
 				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
+					window.addEventListener('load', function() { 
+						document.body.className = document.body.className.replace(/\bis-loading\b/, ''); 
+					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-				
 			</script>
 
 	</body>

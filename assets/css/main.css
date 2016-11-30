@@ -11,7 +11,7 @@
 
 /* Reset */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
 		padding: 0;
 		border: 0;
@@ -136,12 +136,12 @@
 		text-transform: uppercase;
 	}
 
+
 		@media screen and (max-width: 1680px) {
 
 			body, input, select, textarea {
 				font-size: 11pt;
 			}
-
 		}
 
 		@media screen and (max-width: 480px) {
@@ -190,6 +190,7 @@
 		color: #313f47;
 		line-height: 1.5;
 		margin: 0 0 0.75em 0;
+		font-family: 'Hanna', serif;
 	}
 
 		h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -342,7 +343,38 @@
 		.select-wrapper select::-ms-expand {
 			display: none;
 		}
+	.select-wrapper-grade {
+		text-decoration: none;
+		display: block;
+		position: relative;
+	}
 
+		.select-wrapper-grade:before {
+			content: "";
+			-moz-osx-font-smoothing: grayscale;
+			-webkit-font-smoothing: antialiased;
+			font-family: FontAwesome;
+			font-style: normal;
+			font-weight: normal;
+			text-transform: none !important;
+		}
+
+		.select-wrapper-grade:before {
+			color: #c8cccf;
+			display: block;
+			height: 2.75em;
+			line-height: 2.75em;
+			pointer-events: none;
+			position: absolute;
+			right: 0;
+			text-align: center;
+			top: 0;
+			width: 2.75em;
+		}
+
+		.select-wrapper-grade select::-ms-expand {
+			display: none;
+		}
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
@@ -707,6 +739,30 @@
 /* Main */
 
 	#main {
+		width:70%;
+		position: relative;
+		max-width: 100%;
+		min-width: 70em;
+		padding: 0em 3em 3em 3em ;
+		background: rgba(255, 255, 255, 0.55);
+		border-radius: 4px;
+		cursor: default;
+		opacity: 0.95;
+		text-align: center;
+		-moz-transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-moz-transform: rotateX(0deg);
+		-webkit-transform: rotateX(0deg);
+		-ms-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+		transition: opacity 1s ease, transform 1s ease;		
+	}
+	#indexmain{
 		position: relative;
 		max-width: 100%;
 		min-width: 70em;
@@ -727,7 +783,7 @@
 		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
-		transition: opacity 1s ease, transform 1s ease;
+		transition: opacity 1s ease, transform 1s ease;		
 	}
 
 		#main .avatar {
@@ -770,13 +826,14 @@
 
 		}
 
-		body.is-loading #main {
+		body.is-loading #main, body.is-loading #indexmain, body.is-loading #banner {
 			opacity: 0;
 			-moz-transform: rotateX(15deg);
 			-webkit-transform: rotateX(15deg);
 			-ms-transform: rotateX(15deg);
 			transform: rotateX(15deg);
 		}
+
 	#EnterButton{
 		font-family: 'Hanna', serif;
 		width:13em;
@@ -1001,8 +1058,45 @@
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
 	}
+	#reservationpay_window {
 	
-	
+		padding: 4.5em 3em 3em 3em ;
+		background: rgba(255, 255, 255, 0.55);
+		border-radius: 4px;
+		cursor: default;
+		opacity: 0.95;
+		text-align: center;
+		width: 70%;
+		-moz-transform-origin: 50% 50%;
+		-webkit-transform-origin: 50% 50%;
+		-ms-transform-origin: 50% 50%;
+		transform-origin: 50% 50%;
+		-moz-transform: rotateX(0deg);
+		-webkit-transform: rotateX(0deg);
+		-ms-transform: rotateX(0deg);
+		transform: rotateX(0deg);
+		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
+		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
+		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
+		transition: opacity 1s ease, transform 1s ease;
+	}
+	#reservation_center_name{
+		color: #414f57;
+		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-size: 14pt;
+		font-weight: 300;
+		line-height: 2;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		font-size: 10pt;
+		line-height: 1.75;
+		width: 50%;
+
+	}
+	#center_name_box{
+		width : 30%;
+	}
+
 		#join_window .avatar {
 			position: relative;
 			display: block;
@@ -1051,3 +1145,11 @@
 			transform: rotateX(15deg);
 		}		
 			
+/* 클래스 */
+
+.FUTSALJANG_CARD{
+	margin-left: 10%;
+}
+.FUTSALJANG_CARD_ROW{
+	margin-bottom: 10%;
+}
