@@ -133,6 +133,12 @@
 		font-weight: 300;
 		line-height: 2;
 		letter-spacing: 0.2em;
+		
+	}
+	
+	input,b{
+		font-family: 'Hanna', serif;
+		
 	}
 
 
