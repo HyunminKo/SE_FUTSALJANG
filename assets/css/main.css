@@ -133,7 +133,6 @@
 		font-weight: 300;
 		line-height: 2;
 		letter-spacing: 0.2em;
-		text-transform: uppercase;
 	}
 
 
@@ -741,7 +740,7 @@
 		position: relative;
 		max-width: 100%;
 		min-width: 70em;
-		margin-top:-50px;
+		margin-top: -10%;
 		padding: 0em 3em 3em 3em ;
 		background: rgba(255, 255, 255, 0.55);
 		border-radius: 4px;
@@ -810,11 +809,10 @@
 		
 	}
 	#banner{
-	
+		position: fixed;
 		max-width: 100%;
 		min-width: 70em;
 		padding: 0;
-		margin-top:-400px;
 		background: rgba(0, 0, 0, 0);
 		border-radius: 4px;
 		cursor: default;
@@ -839,6 +837,10 @@
 		margin-left:200px;
 		
 	
+	}
+	#currentScreenName{
+		position: relative;
+		
 	}
 /* Footer */
 
@@ -967,43 +969,8 @@
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
 	}
-	#reservationpay_window {
-	
-		padding: 4.5em 3em 3em 3em ;
-		background: rgba(255, 255, 255, 0.55);
-		border-radius: 4px;
-		cursor: default;
-		opacity: 0.95;
-		text-align: center;
-		width: 70%;
-		-moz-transform-origin: 50% 50%;
-		-webkit-transform-origin: 50% 50%;
-		-ms-transform-origin: 50% 50%;
-		transform-origin: 50% 50%;
-		-moz-transform: rotateX(0deg);
-		-webkit-transform: rotateX(0deg);
-		-ms-transform: rotateX(0deg);
-		transform: rotateX(0deg);
-		-moz-transition: opacity 1s ease, -moz-transform 1s ease;
-		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
-		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
-		transition: opacity 1s ease, transform 1s ease;
-	}
-	#reservation_center_name{
-		color: #414f57;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 14pt;
-		font-weight: 300;
-		line-height: 2;
-		letter-spacing: 0.2em;
-		text-transform: uppercase;
-		font-size: 10pt;
-		line-height: 1.75;
-		width: 50%;
-
-	}
-	#center_name_box{
-		width : 30%;
-	}
 /* 클래스 */
+	.reservation_info{
+		text-align: left;
+	}
 

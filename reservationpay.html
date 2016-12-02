@@ -11,53 +11,100 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="shortcut icon" href="./images/favicon.ico">
-		<!--<script type="text/javascript" src="./assets/js/join.js"></script>-->
+		<link rel="shortcut icon" href="./images/favicon.ico"/>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
 	</head>
 	<body class="is-loading">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
-			
-					<section id="reservationpay_window" style="background:white;">
-						<h2>예약 및 결제</h2>
-						<form method="post" action="#">
-							<div class="field" id="reservation_center_name">
-								풋살장 이름 : <input type="text" name="center_name" id="center_name_box" placeholder="풋살장 이름" onchange="confirmSubmit(this)" required/>
+			<!-- Main -->
+			<div id="banner">
+				<div>
+					<ul class="actions">
+						<li>
+							<span>
+								<a href="./home.html">
+									<img src="images/1logo_bgDelete2.png" alt="" width="180px" height="120px" style="position:relative; margin-bottom:15px; margin-left:-30px;"/>
+								</a>
+							</span>
+						</li>
+						<li>
+							<div class="select-wrapper" id="selectGu">
+								<ul  class="actions">
+									<li>
+										<select name="guList" id="guList">
+											<option value="전체">전체</option>
+											<option value="유성구">유성구</option>
+											<option value="동구">동구</option>
+											<option value="중구">중구</option>
+											<option value="서구">서구</option>
+											<option value="대덕구">대덕구</option>
+										</select>
+									</li>
+									<li>
+										<a href="#" class="button" style="background: rgba(255, 255, 255, 0.55);">검색</a>
+									</li>
+								</ul>
 							</div>
-								<ul class="actions">
-								<li><a href="#" class="button">가입</a></li>
-								<li><a href="./login.html" class="button">취소</a></li>
-							</ul>
-						</form>
-
-					</section>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>풋살장 예약 시스템</li>
-							<li>윤성준 정창훈 고현민</li>
-						</ul>
-					</footer>
-
+						</li>
+						<li>
+							<div id="operationIcons">
+								<ul class="icons">
+									<li>
+										<a href="./login.html" class="fa-user">회원가입</a>
+									</li>
+									<li>
+										<a href="#" class="fa-trophy">VIP</a>
+									</li>
+									<li>
+										<a href="#" class="fa-users">TEAM</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">동적으로 이름 설정</h1>
 			</div>
 
+			<div id="main">
+					
+					<hr/>
+
+
+					<hr/>
+			</div>
+
+
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>풋살장 예약 시스템</li>
+					<li>윤성준 정창훈 고현민</li>
+				</ul>
+			</footer>
+
+		</div>
+
 		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
+		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+		<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { 
 						document.body.className = document.body.className.replace(/\bis-loading\b/, ''); 
 					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-			</script>
+		</script>
 
 	</body>
 </html>
