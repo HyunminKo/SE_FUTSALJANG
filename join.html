@@ -32,53 +32,55 @@
 				<h2>Join!</h2>
 				<form method="post" action="#">
 					<div class="field">
-								<label>이용자와 업체를 선택해주세요.</label>
-								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">이용자</label>
-								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">업체</label>
-					</div>
-					<div class="field" id="join_id">
-						<input type="text" name="id" id="join_id_box" placeholder="ID" onchange="confirmSubmit(this)" required/>
-					</div>
-					<div class="field" id="join_pw">
-						<input type="password" name="pw" id="join_pw_box" placeholder="pw" onchange="confirmSubmit(this)" required/>
-					</div>
-					<div class="field" id="join_name">
-						<input type="text" name="name" id="join_name_box" placeholder="Name" onchange="confirmSubmit(this)" required/>
-					</div>
-					<div class="field" id="join_phone">
-						<input type="text" name="phone" id="join_phone_box" placeholder="phone" onchange="confirmSubmit(this)" required/>
-					</div>
-					<ul class="actions">
-						<li>
-							<a href="#" class="button">가입</a>
-						</li>
-						<li>
-							<a href="./login.html" class="button">취소</a>
-						</li>
+						<label>이용자와 업체 중<br>하나를 선택해주세요.</label>
+							<input type="radio" id="robot_yes" name="robot" />
+							<label for="robot_yes">이용자</label>
+							<input type="radio" id="robot_no" name="robot" />
+							<label for="robot_no">업체</label>
+						</div>
+						<div class="field" id="join_id">
+							<input type="text" name="id" id="join_id_box" placeholder="ID" onchange="confirmSubmit(this)" required/>
+						</div>
+						<div class="field" id="join_pw">
+							<input type="password" name="pw" id="join_pw_box" placeholder="pw" onchange="confirmSubmit(this)" required/>
+						</div>
+						<div class="field" id="join_name">
+							<input type="text" name="name" id="join_name_box" placeholder="Name" onchange="confirmSubmit(this)" required/>
+						</div>
+						<div class="field" id="join_phone">
+							<input type="text" name="phone" id="join_phone_box" placeholder="phone" onchange="confirmSubmit(this)" required/>
+						</div>
+						<ul class="actions">
+							<li>
+								<a href="#" class="button">가입</a>
+							</li>
+							<li>
+								<a href="./login.html" class="button">취소</a>
+							</li>
+						</ul>
+					</form>
+				</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<ul class="copyright">
+						<li>풋살장 예약 시스템</li>
+						<li>윤성준 정창훈 고현민</li>
 					</ul>
-				</form>
-			</section>
+				</footer>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="copyright">
-					<li>풋살장 예약 시스템</li>
-					<li>윤성준 정창훈 고현민</li>
-				</ul>
-			</footer>
+			</div>
 
-		</div>
-
-		<!-- Scripts -->
-		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-		<script>
+			<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { 
 						document.body.className = document.body.className.replace(/\bis-loading\b/, ''); 
 					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-		</script>
+			</script>
 
-	</body>
-</html>
+		</body>
+	</html>

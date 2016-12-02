@@ -925,7 +925,7 @@
 /* 로그인 페이지 */
 	#loginPage {
 	
-		padding: 4.5em 3em 3em 3em ;
+		padding: 0 3em 3em 3em ;
 		background: rgba(255, 255, 255, 0.55);
 		border-radius: 4px;
 		cursor: default;
@@ -948,7 +948,7 @@
 /* 가입 페이지 */
 	#joinPage {
 	
-		padding: 4.5em 3em 3em 3em ;
+		padding: 0 3em 3em 3em ;
 		background: rgba(255, 255, 255, 0.55);
 		border-radius: 4px;
 		cursor: default;
