@@ -11,48 +11,50 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="shortcut icon" href="./images/favicon.ico">
+		<link rel="shortcut icon" href="./images/favicon.ico"/>
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
 	</head>
 	<body class="is-loading">
 
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
-					<section id="indexmain" style="min-width:5em">
-						<header>
-							<span><img src="images/1logo_bgDelete2.png" alt="" /></span>
-							
-							<p>풋살장 예약 시스템</p>
-							<button id="EnterButton" onclick="location.href='home.html'";>선수 입장</button>
-						</header>
-						<div>
-							
-						</div>
-					</section>
+			<!-- Main -->
+			<section id="openingPage">
+				<header>
+					<img src="images/1logo_bgDelete2.png" alt="" />
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="copyright">
-							<li>풋살장 예약 시스템</li>
-							<li>윤성준 정창훈 고현민</li>
-						</ul>
-					</footer>
-			</div>
+					<p>풋살장 예약 시스템</p>
+					<button id="EnterButton" onclick="location.href='home.html'";>선수 입장</button>
+				</header>
+				<div>
+
+				</div>
+			</section>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>공동 제작자</li>
+					<li>윤성준 정창훈 고현민</li>
+				</ul>
+			</footer>
+		</div>
 
 		<!-- Scripts -->
-			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-			<script>
-			
+		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+		<script>
+
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); });
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-				
-			</script>
+
+		</script>
 
 	</body>
 </html>
