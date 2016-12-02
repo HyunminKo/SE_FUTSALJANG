@@ -28,6 +28,11 @@
 					<img src="images/1logo_bgDelete2.png" alt="" />
 						<h2>Join!</h2>
 						<form method="post" action="#">
+							<div class="field">
+								<label>이용자와 업체를 선택해주세요.</label>
+								<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes">이용자</label>
+								<input type="radio" id="robot_no" name="robot" /><label for="robot_no">업체</label>
+							</div>
 							<div class="field" id="join_id">
 								<input type="text" name="id" id="join_id_box" placeholder="ID" onchange="confirmSubmit(this)" required/>
 							</div>
@@ -47,7 +52,7 @@
 						</form>
 						
 
-					</section>
+					</section> 
 
 				<!-- Footer -->
 					<footer id="footer">
