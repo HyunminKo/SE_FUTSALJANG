@@ -17,8 +17,10 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: baseline;
+		vertical-align: middle;
+		
 	}
+	
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -42,8 +44,8 @@
 	}
 
 	table {
-		border-collapse: collapse;
-		border-spacing: 0;
+		
+		border-spacing: 20px;
 	}
 
 	body {
@@ -128,7 +130,7 @@
 
 	body, input, select, textarea {
 		color: #414f57;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: 'Hanna',"Source Sans Pro", Helvetica, sans-serif;
 		font-size: 14pt;
 		font-weight: 300;
 		line-height: 2;
@@ -136,7 +138,7 @@
 		
 	}
 	
-	input,b{
+	input,b,td{
 		font-family: 'Hanna', serif;
 		
 	}
@@ -294,7 +296,7 @@
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 100%;
+		
 	}
 
 		input[type="text"]:invalid,
@@ -319,13 +321,14 @@
 		text-decoration: none;
 		display: block;
 		position: relative;
+		
 	}
 
 		.select-wrapper:before {
 			content: "";
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Hanna',FontAwesome;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -358,7 +361,7 @@
 			content: "";
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Hanna',FontAwesome;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -422,7 +425,7 @@
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: 'Hanna',FontAwesome;
 				font-style: normal;
 				font-weight: normal;
 				text-transform: none !important;
@@ -431,7 +434,7 @@
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
 				border-radius: 4px;
-				border: solid 1px #c8cccf;
+				border: solid 1px black;
 				content: '';
 				display: inline-block;
 				height: 1.65em;
@@ -498,7 +501,7 @@
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
+			font-family: 'Hanna',FontAwesome;
 			font-style: normal;
 			font-weight: normal;
 			text-transform: none !important;
@@ -575,7 +578,7 @@
 					ul.icons li a:before {
 						-moz-osx-font-smoothing: grayscale;
 						-webkit-font-smoothing: antialiased;
-						font-family: FontAwesome;
+						font-family: 'Hanna',FontAwesome;
 						font-style: normal;
 						font-weight: normal;
 						text-transform: none !important;
@@ -670,6 +673,7 @@
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		font-family:'hanna';
 	}
 
 		input[type="submit"]:hover,
@@ -808,6 +812,10 @@
 	#selectGu{
 		width: 15em;
 		margin-left:200px;
+	}
+	#centerEnroll_selectGu{
+		width: 7em;
+		
 	}
 	#selectGu select{
 		width: 15em;
@@ -975,14 +983,15 @@
 		transition: opacity 1s ease, transform 1s ease;
 	}
 /* reservatonpay */
-	.reservation_info{
-		text-align: left;
+	.tdTitle{
+		text-align:right;
 	}
-	#p_card_company, #cardnum, #p_pw_2, #p_account_holder{
-		float:left;
+	.tdInfo{
+		text-align:left;
 	}
+	
 	#card_company{
-		width: 8%;
+		width: 10%;
 		height: 30px;
 	}
 	#cardnum_1, #cardnum_2, #cardnum_3{
@@ -999,12 +1008,13 @@
 		float: left;
 	}
 	#pw_2{
-		width : 6%;
+		width : 5.4%;
 		height: 20px;
 	}
 	#account_holder{
-		width: 10%;
+		width: 90px;;
 		height: 30px;
+		text-align:right;
 	}
 /*centerDetail*/
 	#center_picture{
@@ -1039,3 +1049,21 @@
 	#time_table, .time_table_tr, .time_table_th, .time_table_td{
 		border : solid black 1pt;
 	}
+
+#centerDetailAddress{
+	width:400px;
+}
+#centerSectionNum{
+	width:60px;
+}
+#currentScreenName{
+	color:white;
+	 text-shadow: -1px 0 #ff99ff, 0 1px #ff99ff, 1px 0 #ff99ff, 0 -1px #ff99ff;
+	-moz-text-shadow: -1px 0 #ff99ff, 0 1px #ff99ff, 1px 0 #ff99ff, 0 -1px #ff99ff;
+	-webkit-text-shadow: -1px 0 #ff99ff, 0 1px #ff99ff, 1px 0 #ff99ff, 0 -1px #ff99ff;
+}
+
+.futInfo {
+	margin-left:-20px;
+}
+
