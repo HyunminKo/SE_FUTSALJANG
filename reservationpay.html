@@ -18,6 +18,7 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+		<script type = "text/javascript" src = "reservationpay.js"></script>
 	</head>
 	<body class="is-loading">
 
@@ -71,15 +72,71 @@
 						</li>
 					</ul>
 				</div>
-				
-				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">동적으로 이름 설정</h1>
 			</div>
+			<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">동적으로 이름 설정</h1>
 
 			<div id="main">
 					
 					<hr/>
+						<p class = "reservation_info">풋살장 이름 : <span id = "span_fut_name"></span></p>
+						<p class = "reservation_info">대관 날짜 : <span id = "span_date"></span></p>
+						<p class = "reservation_info">이용 시간 : <span id = "span_time"></span></p>
+						<p class = "reservation_info">금액 : <span id = "span_rate"></span></p>
+						<p class = "reservation_info">결제 방식 : <span id = "span_paymentplan">
+								<input type="radio" id="craditcard" name="paymentplan" value = "cardit" onclick = "div_show(this.value)"/><label for="craditcard">신용카드</label>
+								<input type="radio" id="online_payment" name="paymentplan" value = "online" onclick = "div_show(this.value)"/><label for="online_payment">온라인 입금</label>
+						</span></p>
+						
+						<div id = "choice_card" style = "display:none">
+							<p id = "p_card_company" class = "reservation_info">카드사 : </p>
+							<select name="card_company" id="card_company">
+								<option value="국민">국민</option>
+								<option value="하나">하나</option>
+								<option value="BC">BC</option>
+								<option value="신한">신한</option>
+								<option value="롯데">롯데</option>
+								<option value="농협">농협</option>
+							</select>
+							<br>
+							<p id = "cardnum" class = "reservation_info">카드번호 : </p>
+							<input type = "text" name = "cardnums" id = "cardnum_1" maxlength = "4" /><span class = "span_cardnum"> - </span>
+							<input type = "password" name = "cardnums" id = "cardnum_2" maxlength = "4"/><span class = "span_cardnum"> - </span>
+							<input type = "password" name = "cardnums" id = "cardnum_3" maxlength = "4"/><span class = "span_cardnum"> - </span>
+							<input type = "text" name = "cardnums" id = "cardnum_4" maxlength = "4"/>
+							<br>
 
+							<p id = "p_pw_2"class = "reservation_info">비밀번호 앞자리 2개 : </p>
+							<input type = "password" name = "pw_2" id = "pw_2" maxlength = "2"/>
+							<br>
+						</div>
+						<br>
 
+						<div id = "choice_online" style = "display:none">
+							<p id = "p_account_holder" class = "reservation_info">입금자 이름 : </p>
+							<input type ="text" id = "account_holder"/>
+							<br>
+							<p id = "p_card_company" class = "reservation_info">입금은행 : </p>
+							<select name="card_company" id="card_company">
+								<option value="국민">국민</option>
+								<option value="하나">하나</option>
+								<option value="BC">BC</option>
+								<option value="신한">신한</option>
+								<option value="롯데">롯데</option>
+								<option value="농협">농협</option>
+							</select>
+							<br>
+						</div>
+
+						<div>
+						<ul class="actions">
+							<li>
+								<a href="#" class="button">결제하기</a>
+							</li>
+							<li>
+								<a href="" class="button">취소</a>
+							</li>
+						</ul>
+						</div>
 					<hr/>
 			</div>
 
