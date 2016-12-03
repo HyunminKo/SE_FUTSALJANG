@@ -746,6 +746,7 @@
 		position: relative;
 		max-width: 100%;
 		min-width: 70em;
+		margin-top: 15%;
 		padding: 0em 3em 3em 3em ;
 		background: rgba(255, 255, 255, 0.55);
 		border-radius: 4px;
