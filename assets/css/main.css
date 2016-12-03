@@ -740,7 +740,6 @@
 		position: relative;
 		max-width: 100%;
 		min-width: 70em;
-		margin-top: -10%;
 		padding: 0em 3em 3em 3em ;
 		background: rgba(255, 255, 255, 0.55);
 		border-radius: 4px;
@@ -840,7 +839,7 @@
 	}
 	#currentScreenName{
 		position: relative;
-		
+		margin-bottom: -2em;
 	}
 /* Footer */
 
@@ -969,8 +968,38 @@
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
 	}
-/* 클래스 */
+/* reservatonpay */
 	.reservation_info{
 		text-align: left;
 	}
+	#p_card_company, #cardnum, #p_pw_2, #p_account_holder{
+		float:left;
+	}
+	#card_company{
+		width: 8%;
+		height: 30px;
+	}
+	#cardnum_1, #cardnum_2, #cardnum_3{
+		float: left;
+		width : 10%;
+		height: 30px;
+	}
+	#cardnum_4{
+		width : 10%;
+		height: 30px;
+	}
+	.span_cardnum{
+		
+		float: left;
+	}
+	#pw_2{
+		width : 6%;
+		height: 20px;
+	}
+	#account_holder{
+		width: 10%;
+		height: 30px;
+	}
+
+
 
