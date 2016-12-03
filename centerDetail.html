@@ -19,6 +19,7 @@
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
 		<script type = "text/javascript" src = "./assets/js/centerDetail.js"></script>
+
 	</head>
 	<body class="is-loading">
 
@@ -72,94 +73,138 @@
 						</li>
 					</ul>
 				</div>
-				
-				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">동적으로 이름 설정</h1>
+
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 상세정보</h1>
 			</div>
 
 			<div id="main">
-					
-					<hr/>
-						
-							<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image" id = "center_picture_1">
-						
-						<div id = "center_info">
-							<p class = "p_center_info">풋살장 이름 : <span id = "span_center_name"></span></p>
-							<p class = "p_center_info">요금 : <span id = "span_rate"></span></p>
-							<p class = "p_center_info">구장 개수 : <span id = ""></span></p>
-							<p class = "p_center_info">전화번호 : <span id = ""></span></p>
-							<p class = "p_center_info">구 : <span id = ""></span></p>
-							<p class = "p_center_info">상세 주소 : <span id = ""></span></p>
-							<p class = "p_center_info" id = "p_data_choice"> 날짜 선택 : </p>
-							<table id = "date_table">
+
+				<hr/>
+				<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image" id = "center_picture_1">
+
+					<div id = "center_info">
+
+
+						<form  method="post" action="#">
+							<table>
 								<tr>
+									<td class="tdTitle">풋살장 이름 : </td>
 									<td>
-										<select id = "year" name = "year" class = "select_date"></select>
+										<span id="span_center_name" class="futInfo"></span>
 									</td>
-									
+								</tr>
+								<tr>
+									<td class="tdTitle">요금 : </td>
 									<td>
-										<select id = "month" name = "month" class = "select_date"></select>
+										<span id="span_center_rate" class="futInfo"></span>
 									</td>
-									
+								</tr>
+								<tr>
+									<td class="tdTitle">구장 개수 : </td>
 									<td>
-										<select id = "day" name = "day" class = "select_date"></select>
+										<span id="span_center_sectionNum" class="futInfo"></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="tdTitle">전화 번호 : </td>
+									<td class="tdInfo">
+										<span id="span_center_phoneNum" class="futInfo"></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="tdTitle">구 : </td>
+									<td class="tdInfo">
+										<span id="span_center_gu" class="futInfo"></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="tdTitle">상세 주소 : </td>
+									<td class="tdInfo">
+										<span id="span_center_detail" class="futInfo">
+
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="tdTitle">날짜 선택 : </td>
+									<td class="tdInfo">
+										<span id="p_data_choice" class="futInfo">
+											<table id = "date_table" style="border-spacing:0px;">
+												<tr>
+													<td>
+														<select id = "year" name = "year" class = "select_date"/>
+													</td>
+													<td>년</td>
+													<td>
+														<select id = "month" name = "month" class = "select_date"/>
+													</td>
+													<td>월</td>
+													<td>
+														<select id = "day" name = "day" class = "select_date"/>
+													</td>
+													<td>일</td>
+												</tr>
+											</table>
+										</span>
 									</td>
 								</tr>
 							</table>
-							<br>
-						</div>
+						</form>						
 
-						<table id = "time_table">
-								<tr class = "time_table_tr">
-									<th colspan = "2" class = "time_table_th">구장A</th>
-									<th colspan = "2" class = "time_table_th">구장B</th>
-									<th colspan = "2" class = "time_table_th">구장C</th>
-								</tr>
+					</div>
 
-								<tr class = "time_table_tr">
-									<td colspan = "3" class = "time_table_td">08:00 ~ 10:00</td>
-									<td colspan = "3" class = "time_table_td">10:00 ~ 12:00</td>
-								</tr>
+					<table id = "time_table">
+						<tr class = "time_table_tr">
+							<th colspan = "2" class = "time_table_th">구장A</th>
+							<th colspan = "2" class = "time_table_th">구장B</th>
+							<th colspan = "2" class = "time_table_th">구장C</th>
+						</tr>
 
-								<tr class = "time_table_tr">
-									<td colspan = "3" class = "time_table_td">12:00 ~ 14:00</td>
-									<td colspan = "3" class = "time_table_td">14:00 ~ 16:00</td>
-								</tr>
+						<tr class = "time_table_tr">
+							<td colspan = "3" class = "time_table_td">08:00 ~ 10:00</td>
+							<td colspan = "3" class = "time_table_td">10:00 ~ 12:00</td>
+						</tr>
 
-								<tr class = "time_table_tr">
-									<td colspan = "3" class = "time_table_td">16:00 ~ 18:00</td>
-									<td colspan = "3" class = "time_table_td">18:00 ~ 20:00</td>
-								</tr>
+						<tr class = "time_table_tr">
+							<td colspan = "3" class = "time_table_td">12:00 ~ 14:00</td>
+							<td colspan = "3" class = "time_table_td">14:00 ~ 16:00</td>
+						</tr>
 
-								<tr class = "time_table_tr">
-									<td colspan = "3" class = "time_table_td">20:00 ~ 22:00</td>
-									<td colspan = "3" class = "time_table_td">22:00 ~ 24:00</td>
-								</tr>
-							</table>
+						<tr class = "time_table_tr">
+							<td colspan = "3" class = "time_table_td">16:00 ~ 18:00</td>
+							<td colspan = "3" class = "time_table_td">18:00 ~ 20:00</td>
+						</tr>
 
-							<a href="./reservationpay.html" class="button">예약 및 결제</a>
+						<tr class = "time_table_tr">
+							<td colspan = "3" class = "time_table_td">20:00 ~ 22:00</td>
+							<td colspan = "3" class = "time_table_td">22:00 ~ 24:00</td>
+						</tr>
+					</table>
+
+					<a href="./reservationpay.html" class="button">예약 및 결제</a>
 					<hr/>
+				</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<ul class="copyright">
+						<li>풋살장 예약 시스템</li>
+						<li>윤성준 정창훈 고현민</li>
+					</ul>
+				</footer>
+
 			</div>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="copyright">
-					<li>풋살장 예약 시스템</li>
-					<li>윤성준 정창훈 고현민</li>
-				</ul>
-			</footer>
-
-		</div>
-
-		<!-- Scripts -->
-		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
-		<script>
+			<!-- Scripts -->
+			<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+			<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { 
 						document.body.className = document.body.className.replace(/\bis-loading\b/, ''); 
 					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-		</script>
+			</script>
 
-	</body>
-</html>
+		</body>
+	</html>
