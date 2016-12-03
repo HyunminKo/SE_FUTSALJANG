@@ -1006,6 +1006,36 @@
 		width: 10%;
 		height: 30px;
 	}
+/*centerDetail*/
+	#center_picture{
+		width:30%;
+		height:30%;
+		
+	}
+	#center_picture_1{
+		border-radius: 20px;	
+		float: left;
+		width : 30%;
+		height: 17em;
+	}
+	.p_center_info{
+		margin-top : 1em;
+		margin-bottom: 1em;
+		margin-left : 20em;
+		text-align: left;
+	}
+	#p_data_choice{
+		text-align: left;
+		float: left;
+		margin-left : 1em;
+	}
+	.select_date{
+		height: 30px;
+	}
+	#date_table{
 
-
-
+		margin-top: 1.7em;
+	}
+	#time_table, .time_table_tr, .time_table_th, .time_table_td{
+		border : solid black 1pt;
+	}
