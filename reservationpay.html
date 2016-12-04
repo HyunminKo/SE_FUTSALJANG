@@ -73,7 +73,7 @@
 					</ul>
 				</div>
 
-				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 등록</h1>
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">예약 및 결제</h1>
 			</div>
 
 			<div id="main">
@@ -119,8 +119,8 @@
 						<tr id = "choice_card1" style="display:none;">
 							<td class="tdTitle">카드사 : </td>
 							<td>
-								<div class="select-wrapper" style="width:100px;">
-									<select name="card_company" id="card_company" style="width:90px; ">
+								<div class="select-wrapper" style="width:90px;">
+									<select name="card_company" id="card_company" style="width:80px; ">
 										<option value="카드사선택" selected>선택</option>
 										<option value="국민">국민</option>
 										<option value="하나">하나</option>
@@ -134,26 +134,18 @@
 						</tr>
 						<tr id = "choice_card2" style="display:none;">
 							<td class="tdTitle">카드 번호 : </td>
-							<td class="tdInfo">
+							<td>
 								<input type = "text" name = "cardnums" id = "cardnum_1" maxlength = "4" /><span class = "span_cardnum"> - </span>
 								<input type = "password" name = "cardnums" id = "cardnum_2" maxlength = "4"/><span class = "span_cardnum"> - </span>
 								<input type = "password" name = "cardnums" id = "cardnum_3" maxlength = "4"/><span class = "span_cardnum"> - </span>
 								<input type = "text" name = "cardnums" id = "cardnum_4" maxlength = "4"/>
 							</td>
-						</tr>
-						<tr id = "choice_card3" style="display:none;">
 							<td class="tdTitle">비밀번호 앞자리 2개 : </td>
 							<td>
 								<input type = "password" name = "pw_2" id = "pw_2" maxlength = "2"/>
 							</td>
 						</tr>
 						<tr id = "choice_online1" style="display:none;">
-							<td class="tdTitle">입금자 이름 : </td>
-							<td>
-								<input type ="text" id = "account_holder"/>
-							</td>
-						</tr>
-						<tr id = "choice_online2" style="display:none;">
 							<td class="tdTitle">입금 은행 : </td>
 							<td>
 								<div class="select-wrapper" style="width:100px;">
@@ -167,6 +159,12 @@
 										<option value="농협">농협</option>
 									</select>
 								</div>	
+							</td>
+						</tr>
+						<tr id = "choice_online2" style="display:none;">
+							<td class="tdTitle">입금자 이름 : </td>
+							<td>
+								<input type ="text" id = "account_holder"/>
 							</td>
 						</tr>
 					</table>

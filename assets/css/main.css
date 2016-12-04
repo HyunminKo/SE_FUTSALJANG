@@ -747,10 +747,10 @@
 
 	#main {
 		
-		position: relative;
+		position: fixed;
 		max-width: 100%;
 		min-width: 70em;
-		margin-top: 17%;
+		margin-top:250px;
 		padding: 0em 3em 3em 3em ;
 		background: rgba(255, 255, 255, 0.55);
 		border-radius: 4px;
@@ -843,17 +843,16 @@
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;
+		
 	}
 	
 	#operationIcons{
 		position:relative;
 		margin-left:200px;
-		
-	
 	}
 	#currentScreenName{
 		position: relative;
-		margin-bottom: -2em;
+	
 	}
 /* Footer */
 
@@ -913,7 +912,7 @@
 		perspective: 1000px;
 		position: relative;
 		min-height: 100%;
-		
+
 		z-index: 2;
 	}
 
@@ -996,11 +995,11 @@
 	}
 	#cardnum_1, #cardnum_2, #cardnum_3{
 		float: left;
-		width : 10%;
+		width : 80px;
 		height: 30px;
 	}
 	#cardnum_4{
-		width : 10%;
+		width : 80px;
 		height: 30px;
 	}
 	.span_cardnum{
@@ -1008,7 +1007,7 @@
 		float: left;
 	}
 	#pw_2{
-		width : 5.4%;
+		width : 50px;
 		height: 20px;
 	}
 	#account_holder{

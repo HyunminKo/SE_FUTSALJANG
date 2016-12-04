@@ -1,6 +1,7 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
+<%@page import="DAO.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <% 
 	request.setCharacterEncoding("UTF-8");
@@ -11,7 +12,6 @@
 	String sql=null;
 	
 	try{
-		
 		String join_id = request.getParameter("join_id");
 		String join_pw = request.getParameter("join_pw");
 		String join_name = request.getParameter("join_name");
@@ -24,11 +24,11 @@
 	
 		
 		// 사용하려는 데이터베이스명을 포함한 URL
-		String URL = "jdbc:oracle:thin:@localhost:1521:DBSERVER";
+		String URL = "jdbc:oracle:thin:@168.188.128.130:1521:DBSERVER";
 		
 		// DB의 사용자이름과 비밀번호
-		String USER = "KIM";                                                    
-		String PASS = "bluesky";                                                
+		String USER = "DBHM";                                                    
+		String PASS = "DBSERVER";                                                
 
 		
 		// 데이터베이스와 연동하기 위해 DriverManager에 등록한다.
@@ -41,7 +41,7 @@
 		rs = stmt.executeQuery("select * from FUTSALUSER where USERID='"+join_id+"'");
 
 		if(rs.next()!=true){
-			stmt.executeUpdate("INSERT INTO FUTSALUSER (USERNO, USERNAME, USERPHONE, USERID, USERPW, USERGRADE, USERPOINT) VALUES (3,'"+join_name+"','"+join_phone+"','"+join_id+"','"+join_pw+"',general,0);");
+			stmt.executeUpdate("INSERT INTO FUTSALUSER (userSeq.nextval, USERNAME, USERPHONE, USERID, USERPW, USERGRADE, USERPOINT) VALUES (3,'"+join_name+"','"+join_phone+"','"+join_id+"','"+join_pw+"',general,0);");
 		}
 		else{
 			%> <script>
