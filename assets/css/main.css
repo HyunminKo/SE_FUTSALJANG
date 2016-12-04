@@ -1075,21 +1075,20 @@ table.centerInfoTable {
 
     border-collapse: collapse;
 	text-align: center;
-    line-height: 3;
+   
 	margin:auto;
 	
 }
 
 table.centerInfoTable th {
-    border-bottom:2px solid #cccccc;
-    border-right:2px solid #cccccc;
-    border-bottom:2px solid #cccccc;
+    border:2px solid white;
     background-color: rgba(255, 0, 0, 0.3);
 }
 table.centerInfoTable td {
+	line-height: 3;
     width:auto;
-	border-bottom:2px solid #cccccc;
-    border-right:2px solid #cccccc;
+	border:2px solid white;
+	
 }
 
 	#team_detail_table{
