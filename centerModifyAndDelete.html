@@ -19,7 +19,7 @@
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
 	</head>
-	<body class="is-loading" >
+	<body class="is-loading">
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -71,28 +71,42 @@
 						</li>
 					</ul>
 				</div>
-				
-				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">대전광역시 풋살장</h1>
+
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 수정 및 삭제</h1>
 			</div>
 
 			<div id="main" >
-					
-					<hr/>
-						<div style="overflow:auto; max-height:700px;">
-							<div>
-								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
-							</div>
-							<div>
-								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
-							</div>
-							<div>
-								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
-							</div>
-							<div>
-								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
-							</div>
-						</div>
-					<hr/>
+
+				<hr/>
+				<p>수정하거나 삭제할 풋살장 정보를 선택해주세요.</p>
+				<form method="post" action="#">
+
+					<table class="centerInfoTable">
+						<tr>
+							<th>선택</th>
+							<th>풋살장 이름</th>
+							<th>요금</th>
+							<th>구장 개수</th>
+							<th>전화 번호</th>
+							<th>상세 주소</th>
+						</tr>
+						<tr>
+							<td>선택</td>
+							<td>풋살장 이름</td>
+							<td>요금</td>
+							<td>구장 개수</td>
+							<td>전화 번호</td>
+							<td>상세 주소</td>
+						</tr>
+					</table>
+
+
+					<input type="submit" value="수정" formnovalidate formaction="#"/>
+					<input type="submit" value="삭제" formnovalidate formaction="#"/>
+					<input type="submit" value="취소" formnovalidate formaction="#"/>
+				</form>
+
+				<hr/>
 			</div>
 
 			<!-- Footer -->

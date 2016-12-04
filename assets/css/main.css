@@ -21,6 +21,11 @@
 		
 	}
 	
+	th{
+		font-family:'hanna';
+		color: black;
+	}
+	
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
@@ -256,6 +261,7 @@
 		border: 0;
 		border-bottom: solid 1px #c8cccf;
 		margin: 3em 0;
+		
 	}
 
 /* Form */
@@ -747,7 +753,7 @@
 
 	#main {
 		
-		position: fixed;
+		position: relative;
 		max-width: 100%;
 		min-width: 70em;
 		margin-top:250px;
@@ -1066,3 +1072,24 @@
 	margin-left:-20px;
 }
 
+table.centerInfoTable {
+	border-collapse: separate;
+    border-spacing: 1px;
+	text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid pink;
+	border-bottom: 1px solid pink;
+	margin-bottom:50px;
+}
+
+table.centerInfoTable th {
+    
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+table.centerInfoTable td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
