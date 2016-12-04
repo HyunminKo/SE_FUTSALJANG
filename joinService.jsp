@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+ï»¿<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page import="java.sql.*" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -23,17 +23,17 @@
 			</script><%
 	
 		
-		// »ç¿ëÇÏ·Á´Â µ¥ÀÌÅÍº£ÀÌ½º¸íÀ» Æ÷ÇÔÇÑ URL
+		// ì‚¬ìš©í•˜ë ¤ëŠ” ë°ì´í„°ë² ì´ìŠ¤ëª…ì„ í¬í•¨í•œ URL
 		String URL = "jdbc:oracle:thin:@localhost:1521:DBSERVER";
 		
-		// DBÀÇ »ç¿ëÀÚÀÌ¸§°ú ºñ¹Ð¹øÈ£
+		// DBì˜ ì‚¬ìš©ìžì´ë¦„ê³¼ ë¹„ë°€ë²ˆí˜¸
 		String USER = "KIM";                                                    
 		String PASS = "bluesky";                                                
 
 		
-		// µ¥ÀÌÅÍº£ÀÌ½º¿Í ¿¬µ¿ÇÏ±â À§ÇØ DriverManager¿¡ µî·ÏÇÑ´Ù.
+		// ë°ì´í„°ë² ì´ìŠ¤ì™€ ì—°ë™í•˜ê¸° ìœ„í•´ DriverManagerì— ë“±ë¡í•œë‹¤.
 		Class.forName("oracle.jdbc.driver.OracleDriver"); 
-		// DriverManager °´Ã¼·ÎºÎÅÍ Connection °´Ã¼¸¦ ¾ò¾î¿Â´Ù.		
+		// DriverManager ê°ì²´ë¡œë¶€í„° Connection ê°ì²´ë¥¼ ì–»ì–´ì˜¨ë‹¤.		
 		conn=DriverManager.getConnection(URL,USER,PASS);      
 		
 			  
@@ -45,7 +45,7 @@
 		}
 		else{
 			%> <script>
-			alert("¾ÆÀÌµð°¡ ÀÌ¹Ì Á¸ÀçÇÕ´Ï´Ù.");
+			alert("ì•„ì´ë””ê°€ ì´ë¯¸ ì¡´ìž¬í•©ë‹ˆë‹¤.");
 			history.go(-1); 
 			</script><%
 		}
