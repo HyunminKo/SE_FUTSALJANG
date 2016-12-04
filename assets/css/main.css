@@ -138,7 +138,7 @@
 		
 	}
 	
-	input,b,td{
+	input,b,td,th{
 		font-family: 'Hanna', serif;
 		
 	}
@@ -1065,4 +1065,34 @@
 .futInfo {
 	margin-left:-20px;
 }
+/*teamDetail*/
 
+	#team_detail_table{
+		margin-right : auto;
+		margin-left : auto;
+		border : solid black 1px;
+		width : 60%;
+	}
+	#team_detail_table tr{
+		border : solid black 1px;
+	}
+
+/*teamCheck*/
+	#teamCheck_table{
+		margin-right : auto;
+		margin-left : auto;
+	}
+	#teamCheck_table th{
+		font-size :2em;
+	}
+	#teamCheck_table th:nth-child(1){
+		width : 20%;
+	}
+	
+	#teamCheck_table th:nth-child(2){
+		width : 80%;
+	}
+	#teamCheck_table td{
+		font-size : 20px;
+	}
+	
