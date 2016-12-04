@@ -18,6 +18,16 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+		<style type="text/css">
+			.inputRadioLabel{
+				margin-left:23px;
+				margin-bottom:30px;
+			}
+			input[type="submit"]{
+			    border:1px solid rgba(255, 255, 255, 0.55);
+			}
+
+		</style>
 	</head>
 	<body class="is-loading">
 
@@ -71,34 +81,36 @@
 						</li>
 					</ul>
 				</div>
-				
-				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 이용 및 예약 내</h1>
+
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 이용 및 예약 내역(이용자)</h1>
 			</div>
 
 			<div id="main">
-					
-					<hr/>
-						<div>
-							<table id= "userHistory_table" align = "center">
-								<tr>
-									<th>풋살장 이름</th>
-									<th>대관 날짜</th>
-									<th>이용 시간</th>
-									<th>금액</th>
-									<th>예약 취소</th>
-								</tr>
 
-								<tr>
-									<td>유성풋살장</td>
-									<td>16/12/17</td>
-									<td>20:00 ~ 22:00</td>
-									<td>100,000원</td>
-									<td><input type="button" value="취소하기" formnovalidate formaction="#"/></td>
-								</tr>
-								
-							</table>
-						</div>
-					<hr/>
+				<hr/>
+				<form method="post" action="#">
+
+					<table class="centerInfoTable">
+						<tr>
+							<th style="display:none;">풋살장번호</th>
+							<th>풋살장이름</th>
+							<th>대관날짜</th>
+							<th>이용시간</th>
+							<th>금액</th>
+							<th style="border-right:2px solid rgba(0,0,0,0)">예약취소</th>
+						</tr>
+						<tr>
+							<td style="display:none;">1</td>
+							<td>유성 풋살장</td>
+							<td>16/12/17</td>
+							<td>20:00 ~ 22:00</td>
+							<td>100000</td>
+							<td><input type="submit" value="취소" formnovalidate formaction="#"/></td>
+						</tr>
+					</table>
+
+				</form>
+				<hr/>
 			</div>
 
 			<!-- Footer -->

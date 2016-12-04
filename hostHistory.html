@@ -18,6 +18,13 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+		<style type="text/css">
+			.inputRadioLabel{
+				margin-left:23px;
+				margin-bottom:30px;
+			}
+
+		</style>
 	</head>
 	<body class="is-loading">
 
@@ -71,34 +78,39 @@
 						</li>
 					</ul>
 				</div>
-				
-				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 이용 및 예약 내역</h1>
+
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 이용 및 예약 내역(업체)</h1>
 			</div>
 
 			<div id="main">
-					
-					<hr/>
-						<div>
-							<table id= "userHistory_table" align = "center">
-								<tr>
-									<th>예약자 이름</th>
-									<th>대관 날짜</th>
-									<th>이용 시간</th>
-									<th>전화번호</th>
-									<th>금액</th>
-								</tr>
 
-								<tr>
-									<td>정창훈</td>
-									<td>16/12/10</td>
-									<td>20:00 ~ 22:00</td>
-									<td>010-9423-3167</td>
-									<td>100,000원</td>
-								</tr>
-								
-							</table>
-						</div>
-					<hr/>
+				<hr/>
+				<form method="post" action="#">
+
+					<table class="centerInfoTable">
+						<tr>
+							<th style="display:none;">예약자 번호</th>
+							<th>예약자이름</th>
+							<th>대관날짜</th>
+							<th>이용시간</th>
+							<th>전화번호</th>
+							<th style="border-right:2px solid rgba(0,0,0,0)">금액</th>
+						</tr>
+						<tr>
+							<td style="display:none;">1</td>
+							<td>정창훈</td>
+							<td>16/12/10</td>
+							<td>19:00 ~ 21:00</td>
+							<td>010-9423-3167</td>
+							<td>금액</td>
+						</tr>
+					</table>
+
+					<input style="margin-top:50px;" type="submit" value="수정" formnovalidate formaction="#"/>
+					<input type="submit" value="삭제" formnovalidate formaction="#"/>
+					<input type="submit" value="취소" formnovalidate formaction="#"/>
+				</form>
+				<hr/>
 			</div>
 
 			<!-- Footer -->
