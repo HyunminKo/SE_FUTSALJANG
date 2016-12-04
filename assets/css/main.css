@@ -1121,3 +1121,30 @@ table.centerInfoTable td {
 		font-size : 20px;
 	}
 
+/*userHistory*/
+	#userHistory_table{
+		margin-right : auto;
+		margin-left : auto;
+	}
+	#userHistory_table th{
+		font-size: 2em;
+	}
+
+/*teamModify*/
+	#team_info_table th{
+		font-size: 2em;
+	}
+	#team_info_table th:nth-child(2){
+		width : 20%;
+	}
+	#team_info_table th:nth-child(3){
+		width : 70%;
+	}
+	#team_info_table td{
+		font-size : 15px;
+		height: 20%;
+	}
+	#team_info_table{
+		margin-right : auto;
+		margin-left : auto;
+	}
