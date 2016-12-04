@@ -775,8 +775,6 @@
 		-webkit-transition: opacity 1s ease, -webkit-transform 1s ease;
 		-ms-transition: opacity 1s ease, -ms-transform 1s ease;
 		transition: opacity 1s ease, transform 1s ease;	
-
-		
 	}
 	#openingPage{
 		position: relative;
@@ -1063,9 +1061,9 @@
 }
 #currentScreenName{
 	color:white;
-	 text-shadow: -1px 0 #ff99ff, 0 1px #ff99ff, 1px 0 #ff99ff, 0 -1px #ff99ff;
-	-moz-text-shadow: -1px 0 #ff99ff, 0 1px #ff99ff, 1px 0 #ff99ff, 0 -1px #ff99ff;
-	-webkit-text-shadow: -1px 0 #ff99ff, 0 1px #ff99ff, 1px 0 #ff99ff, 0 -1px #ff99ff;
+	 text-shadow: -2px 0 #ec407a, 0 2px #ec407a, 2px 0 #ec407a, 0 -2px #ec407a;
+	-moz-text-shadow: -2px 0 #ec407a, 0 2px #ec407a, 2px 0 #ec407a, 0 -2px #ec407a;
+	-webkit-text-shadow: -2px 0 #ec407a, 0 2px #ec407a, 2px 0 #ec407a, 0 -2px #ec407a;
 }
 
 .futInfo {
@@ -1074,35 +1072,34 @@
 /*teamDetail*/
 
 table.centerInfoTable {
-	border-collapse: separate;
-    border-spacing: 1px;
+
+    border-collapse: collapse;
 	text-align: center;
-    line-height: 1.5;
-    border-top: 1px solid pink;
-	border-bottom: 1px solid pink;
-	margin-bottom:50px;
+    line-height: 3;
+	margin:auto;
+	
 }
 
 table.centerInfoTable th {
-    
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
+    border-bottom:2px solid #cccccc;
+    border-right:2px solid #cccccc;
+    border-bottom:2px solid #cccccc;
+    background-color: rgba(255, 0, 0, 0.3);
 }
 table.centerInfoTable td {
-    width: 350px;
-    padding: 10px;
-    vertical-align: top;
-    border-bottom: 1px solid #ccc;
+    width:auto;
+	border-bottom:2px solid #cccccc;
+    border-right:2px solid #cccccc;
 }
 
 	#team_detail_table{
 		margin-right : auto;
 		margin-left : auto;
-		border : solid black 1px;
+		border : solid #cccccc 1px;
 		width : 60%;
 	}
 	#team_detail_table tr{
-		border : solid black 1px;
+		border : solid #cccccc 1px;
 	}
 
 /*teamCheck*/
@@ -1123,3 +1120,4 @@ table.centerInfoTable td {
 	#teamCheck_table td{
 		font-size : 20px;
 	}
+
