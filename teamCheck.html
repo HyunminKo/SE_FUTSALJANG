@@ -18,6 +18,16 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+		<style type="text/css">
+			.inputRadioLabel{
+				margin-left:23px;
+				margin-bottom:30px;
+			}
+			input[type="submit"]{
+			    border:1px solid rgba(0,0,0,0);;
+			}
+
+		</style>
 	</head>
 	<body class="is-loading">
 
@@ -71,30 +81,35 @@
 						</li>
 					</ul>
 				</div>
-				
+
 				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">팀 조회</h1>
 			</div>
 
 			<div id="main">
-					
-					<hr/>
-						<div>
-							<table id= "teamCheck_table" align = "center">
-								<tr>
-									<th>팀 이름</th>
-									<th>팀 설명</th>
-									<th>상세</th>
-								</tr>
 
-								<tr>
-									<td>FC컴공</td>
-									<td>24살 윤성준, 24살 정창훈, 24살 고현민</td>
-									<td><input type="button" value="상세보기" formnovalidate formaction="#"/></td>
-								</tr>
-								
-							</table>
-						</div>
-					<hr/>
+				<hr/>
+				<form method="post" action="#">
+
+					<table class="centerInfoTable">
+						<tr>
+							<th style="display:none;">팀번호</th>
+							<th>팀이름</th>
+							<th>팀설명</th>
+						
+							<th>상세</th>
+						</tr>
+						<tr>
+							<td style="display:none;">1</td>
+							<td>컴공 프로브 풋살</td>
+							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리의 12학번 끼리 친목을 다지기 위해 만든 팀입니다.</td>
+							<td>
+								<input type="submit" value="상세보기" formnovalidate formaction="#"/>
+							</td>
+						</tr>
+					</table>
+
+				</form>
+				<hr/>
 			</div>
 
 			<!-- Footer -->

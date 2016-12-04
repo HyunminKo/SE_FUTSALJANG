@@ -18,6 +18,13 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+		<style type="text/css">
+			.inputRadioLabel{
+				margin-left:23px;
+				margin-bottom:30px;
+			}
+
+		</style>
 	</head>
 	<body class="is-loading">
 
@@ -71,41 +78,48 @@
 						</li>
 					</ul>
 				</div>
-				
+
 				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">팀 정보 수정 및 삭제</h1>
 			</div>
 
 			<div id="main">
-					
-					<hr/>
-						<div>
-							<table id= "team_info_table" align = "center">
-								<tr>
-									<th>선택</th>
-									<th>팀명</th>
-									<th>팀 설명</th>
-								</tr>
 
-								<tr>
-									<td id = "td_radio"><input type="radio" id="robot_yes" name="robot" /><label for="robot_yes" style="font-family: 'Hanna', serif; margin:0px;"></label></td>
-									<td>FC컴공</td>
-									<td>24살 윤성준 24살 정창훈 24살 고현민</td>
-								</tr>
-							</table>
+				<hr/>
+				<p>수정하거나 삭제할 팀의 정보를 선택해주세요.</p>
+				<form method="post" action="#">
 
-							<ul class="actions">
-							<li>
-								<input type="button" value="수정"/>
-							</li>
-							<li>
-								<input type="button" value="삭제"/>
-							</li>
-							<li>
-								<a href="" class="button">취소</a>
-							</li>
-						</ul>
-						</div>
-					<hr/>
+					<table class="centerInfoTable">
+						<tr>
+							<th style="display:none;">팀번호</th>
+							<th>선택</th>
+							<th>팀이름</th>
+							<th style="border-right:2px solid rgba(0,0,0,0)">팀설명</th>
+						</tr>
+						<tr>
+							<td style="display:none;">1</td>
+							<td>
+								<input class="inputRadio" type="radio" id="centerInfo1" name="robot"/>
+								<label class="inputRadioLabel" for="centerInfo1"/>
+							</td>
+							<td>프로브 풋살팀</td>
+							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리 친구들의 모임</td>
+						</tr>
+						<tr>
+							<td style="display:none;">1</td>
+							<td>
+								<input class="inputRadio" type="radio" id="centerInfo1" name="robot"/>
+								<label class="inputRadioLabel" for="centerInfo1"/>
+							</td>
+							<td>프로브 풋살팀</td>
+							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리 친구들의 모임</td>
+						</tr>
+					</table>
+
+					<input style="margin-top:50px;" type="submit" value="수정" formnovalidate formaction="#"/>
+					<input type="submit" value="삭제" formnovalidate formaction="#"/>
+					<input type="submit" value="취소" formnovalidate formaction="#"/>
+				</form>
+				<hr/>
 			</div>
 
 			<!-- Footer -->
