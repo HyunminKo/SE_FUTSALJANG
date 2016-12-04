@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Identity by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>뛰놀자</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="./images/favicon.ico"/>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
+		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+	</head>
+	<body class="is-loading">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<div id="banner">
+				<div>
+					<ul class="actions">
+						<li>
+							<span>
+								<a href="./home.html">
+									<img src="images/1logo_bgDelete2.png" alt="" width="180px" height="120px" style="position:relative; margin-bottom:15px; margin-left:-30px;"/>
+								</a>
+							</span>
+						</li>
+						<li>
+							<div class="select-wrapper" id="selectGu">
+								<ul  class="actions">
+									<li>
+										<select name="guList" id="guList">
+											<option value="전체">전체</option>
+											<option value="유성구">유성구</option>
+											<option value="동구">동구</option>
+											<option value="중구">중구</option>
+											<option value="서구">서구</option>
+											<option value="대덕구">대덕구</option>
+										</select>
+									</li>
+									<li>
+										<a href="#" class="button" style="background: rgba(255, 255, 255, 0.55);">검색</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<div id="operationIcons">
+								<ul class="icons">
+									<li>
+										<a href="./login.html" class="fa-user">회원가입</a>
+									</li>
+									<li>
+										<a href="#" class="fa-trophy">VIP</a>
+									</li>
+									<li>
+										<a href="#" class="fa-users">TEAM</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 이용 및 예약 내</h1>
+			</div>
+
+			<div id="main">
+					
+					<hr/>
+						<div>
+							<table id= "userHistory_table" align = "center">
+								<tr>
+									<th>풋살장 이름</th>
+									<th>대관 날짜</th>
+									<th>이용 시간</th>
+									<th>금액</th>
+									<th>예약 취소</th>
+								</tr>
+
+								<tr>
+									<td>유성풋살장</td>
+									<td>16/12/17</td>
+									<td>20:00 ~ 22:00</td>
+									<td>100,000원</td>
+									<td><input type="button" value="취소하기" formnovalidate formaction="#"/></td>
+								</tr>
+								
+							</table>
+						</div>
+					<hr/>
+			</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>풋살장 예약 시스템</li>
+					<li>윤성준 정창훈 고현민</li>
+				</ul>
+			</footer>
+
+		</div>
+
+		<!-- Scripts -->
+		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+		<script>
+				if ('addEventListener' in window) {
+					window.addEventListener('load', function() { 
+						document.body.className = document.body.className.replace(/\bis-loading\b/, ''); 
+					});
+					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+				}
+		</script>
+
+	</body>
+</html>
