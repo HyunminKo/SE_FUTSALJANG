@@ -80,7 +80,32 @@
 										<a href="./login.html" title="회원가입" class="fa-user">JOIN</a>
 									</li>
 									<li>
-										<a href="#" title="VIP조회" class="fa-trophy">VIP</a>
+										<a href="#" title="VIP조회" class="fa-trophy" onclick= "dropbar()">VIP</a>
+										<div id="myDropdown" class="dropdown-content">
+											<table>
+												<tr>
+													<td>아이디</td>
+													<td>예약횟수</td>
+												</tr>
+												
+												<tr>
+													<td>YSJGOOD</td>
+													<td>10</td>													
+												</tr>
+												
+												<tr>
+													<td>KHMKIN</td>
+													<td>8</td>
+												</tr>
+
+												<tr>
+													<td>JCHBS</td>
+													<td>5</td>
+												</tr>
+
+											</table>
+									 	</div>
+
 									</li>
 									<li>
 										<a href="#" title="팀조회" class="fa-users">TEAM</a>
@@ -102,22 +127,19 @@
 								<tr>
 									<th>회원번호</th>
 									<th>아이디</th>
-									<th>비밀번호</th>
 									<th>이름</th>
 									<th>등급</th>
 									<th>전화번호</th>
 									<th>수정</th>
 									<th>삭제</th>
 								</tr>
-
 								<tr>
-									<td>1001</td>
-									<td>yoonseongjun</td>
-									<td>123123</td>
-									<td>윤성준</td>
-									<td>VIP</td>
-									<td>010-1231-1232</td>
-									<td><input type="button" id = "modify" value="수정"/></td>
+									<td id="No">1001</td>
+									<td id="Id">yoonseongjun</td>
+									<td id="Name">윤성준</td>
+									<td id="Grade">VIP</td>
+									<td id="Phone">01012311232</td>
+									<td><input type="button" id = "modify" value="수정" onclick="memberModify()"/></td>
 									<td><input type="button" value="삭제"/></td>
 								</tr>
 								
@@ -126,19 +148,21 @@
 
 						<div id="layer_pop">
 							<br>
-							<h3 id ="pop_p">수정하기</h3>
-							<p>아이디 : </span>yoonseongjun</span></p>
-							<p>이름 : </span>윤성준</span></p>
-							<input type = "text" id = "modifyPhone" placeholder = "01022223333"/>
-							<br>
-							<select name="memberGrade" id="memberGrade">
-									<option value="일반">일반</option>
-									<option value="VIP">VIP</option>
-							</select>
-							<br>
-							<input type = "button" class = "btn_modify" value = "수정"/> 
-							<input type = "button" class = "btn_close" value = "취소"/>
-							
+							<form method="post" action="./memberModifyService.jsp">
+								<h3 id ="pop_p">수정하기</h3>
+								<p>아이디 : <span id="layer_Id"></span></p>
+								<p>이름 : <span id="layer_Name"></span></p>
+								<select name="memberGrade" id="memberGrade" required>
+										<option value="일반">일반</option>
+										<option value="VIP">VIP</option>
+								</select>
+								<br>
+								<input type = "text" id = "modifyPhone" name="modifyPhone" placeholder = "" required/>
+								<br>
+								<input type = "hidden" name = "memberNo" id="memberNo" value = ""/> 
+								<input type = "submit" class = "btn_modify" value = "수정"/> 
+								<input type = "button" class = "btn_close" value = "취소"/>
+							</form>
 						</div>
 					<hr/>
 					
@@ -162,6 +186,7 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 		</script>
-
+		<script src = "./assets/js/dropbar.js"></script>
+		<script src = "./assets/js/memberCheck.js"></script>
 	</body>
 </html>

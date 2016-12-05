@@ -6,16 +6,19 @@
 	UserDAO userDAO;
 	HostDAO hostDAO;
 	request.setCharacterEncoding("UTF-8");
-		
+	
 	try{
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		userDAO = new UserDAO(id,pw);	
 		hostDAO = new HostDAO(id,pw);
 		String result = userDAO.login();
-		if(result.equals("success")){
+		if(result.contains("success")){
+			String resultData[] = result.split(":");
 			session.setAttribute("Id",id);
 			session.setAttribute("type","user");
+			session.setAttribute("no",resultData[1]);
+			System.out.println("Id: "+id+" "+"Type: user No: "+resultData[1]);
 			response.sendRedirect("./home.html");
 		}else if(result.equals("incorrect")){
 			%>
@@ -26,9 +29,12 @@
 			<%
 		}else{
 			result = hostDAO.login();
-			if(result.equals("success")){
+			if(result.contains("success")){
+				String resultData[] = result.split(":");
 				session.setAttribute("Id",id);
 				session.setAttribute("type","host");
+				session.setAttribute("no",resultData[1]);
+				System.out.println("Id: "+id+" "+"Type: host No: "+resultData[1]);
 				response.sendRedirect("./home.html");
 			}else if(result.equals("incorrect")){
 				%>

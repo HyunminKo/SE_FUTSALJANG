@@ -1,3 +1,7 @@
+<%
+	
+%>
+
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -19,15 +23,24 @@
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
 		<style type="text/css">
-			.inputRadioLabel{
-				margin-left:23px;
-				margin-bottom:30px;
-			}
-			input[type="submit"]{
-			    border:1px solid rgba(0,0,0,0);;
-			}
-
 		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 	 	<script>
+			$(document).ready(function() {
+			 popConfig();
+			});
+			function popConfig(){
+			 $("#modify").click(layerOpen);
+			 $(".btn_close").click(layerClose);
+			}
+			function layerOpen(){
+			 $("#layer_pop").css("display","block");
+			 
+			}
+			function layerClose(){
+			 $("#layer_pop").css("display","none");
+			}
+		</script>
 	</head>
 	<body class="is-loading">
 
@@ -36,12 +49,12 @@
 
 			<!-- Main -->
 			<div id="banner">
-				<div id="bannerMinusTitleDiv">
+				<div>
 					<ul class="actions">
 						<li>
 							<span>
 								<a href="./home.html">
-									<img id="homeBtn" src="images/1logo_bgDelete2.png" alt=""/>
+									<img src="images/1logo_bgDelete2.png" alt="" width="180px" height="120px" style="position:relative; margin-bottom:15px; margin-left:-30px;"/>
 								</a>
 							</span>
 						</li>
@@ -59,7 +72,7 @@
 										</select>
 									</li>
 									<li>
-										<a href="#" class="button" id="searchBtn">검색</a>
+										<a href="#" class="button" style="background: rgba(255, 255, 255, 0.55);">검색</a>
 									</li>
 								</ul>
 							</div>
@@ -68,10 +81,10 @@
 							<div id="operationIcons">
 								<ul class="icons">
 									<li>
-										<a href="./login.html" title="회원가입" class="fa-user">JOIN</a>
+										<a href="./login.html" class="fa-user">회원가입</a>
 									</li>
 									<li>
-										<a href="#" title="VIP조회" class="fa-trophy" onclick= "dropbar()">VIP</a>
+										<a href="#" class="fa-trophy" onclick= "dropbar()">VIP</a>
 										<div id="myDropdown" class="dropdown-content">
 											<table>
 												<tr>
@@ -98,56 +111,75 @@
 									 	</div>
 									</li>
 									<li>
-										<a href="#" title="팀조회" class="fa-users">TEAM</a>
+										<a href="#" class="fa-users">TEAM</a>
 									</li>
 								</ul>
 							</div>
 						</li>
 					</ul>
 				</div>
-
-				<h1 id="currentScreenName">풋살장 이용 및 예약 내역(이용자)</h1>
+				
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">회원 조회</h1>
 			</div>
 
 			<div id="main">
+					
+					<hr/>
+						<div>
+							<table id= "memberCheck_table" align = "center">
+								<tr>
+									<th>회원번호</th>
+									<th>아이디</th>
+									<th>이름</th>
+									<th>등급</th>
+									<th>전화번호</th>
+									<th>수정</th>
+									<th>삭제</th>
+								</tr>
+								<tr>
+									<td id="No">1001</td>
+									<td id="Id">yoonseongjun</td>
+									<td id="Name">윤성준</td>
+									<td id="Grade">VIP</td>
+									<td id="Phone">01012311232</td>
+									<td><input type="button" id = "modify" value="수정" onclick="memberModify()"/></td>
+									<td><input type="button" value="삭제"/></td>
+								</tr>
+								
+							</table>
+						</div>
 
-				<hr/>
-				<form method="post" action="#">
+						<div id="layer_pop">
+							<br>
+							<form method="post" action="./memberModifyService.jsp">
+								<h3 id ="pop_p">수정하기</h3>
+								<p>아이디 : <span id="layer_Id"></span></p>
+								<p>이름 : <span id="layer_Name"></span></p>
+								<select name="memberGrade" id="memberGrade" required>
+										<option value="일반">일반</option>
+										<option value="VIP">VIP</option>
+								</select>
+								<br>
+								<input type = "text" id = "modifyPhone" name="modifyPhone" placeholder = "" required/>
+								<br>
+								<input type = "hidden" name = "memberNo" id="memberNo" value = ""/> 
+								<input type = "submit" class = "btn_modify" value = "수정"/> 
+								<input type = "button" class = "btn_close" value = "취소"/>
+							</form>
+						</div>
+					<hr/>
+			</div>
 
-					<table class="centerInfoTable">
-						<tr>
-							<th style="display:none;">풋살장번호</th>
-							<th>풋살장이름</th>
-							<th>대관날짜</th>
-							<th>이용시간</th>
-							<th>금액</th>
-							<th>예약취소</th>
-						</tr>
-						<tr>
-							<td style="display:none;">1</td>
-							<td>유성 풋살장</td>
-							<td>16/12/17</td>
-							<td>20:00 ~ 22:00</td>
-							<td>100000</td>
-							<td><input type="submit" value="취소" formnovalidate formaction="#"/></td>
-						</tr>
-					</table>
-
-				</form>
-				<hr/>
-			
-
-			
-
-		</div>
-		<!-- Footer -->
-				
-			<footer id="footer" >
-				<ul class="copyright" >
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
 					<li>풋살장 예약 시스템</li>
 					<li>윤성준 정창훈 고현민</li>
 				</ul>
 			</footer>
+
+		</div>
+
 		<!-- Scripts -->
 		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 		<script>
@@ -159,5 +191,6 @@
 				}
 		</script>
 		<script src = "./assets/js/dropbar.js"></script>
+		<script src = "./assets/js/memberCheck.js"></script>
 	</body>
 </html>

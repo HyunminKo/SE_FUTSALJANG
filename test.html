@@ -18,30 +18,21 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
-		<style type="text/css">
-			.inputRadioLabel{
-				margin-left:23px;
-				margin-bottom:30px;
-			}
-			input[type="submit"]{
-			    border:1px solid rgba(0,0,0,0);;
-			}
-
-		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
-	<body class="is-loading">
+	<body class="is-loading" >
 
 		<!-- Wrapper -->
 		<div id="wrapper">
 
 			<!-- Main -->
 			<div id="banner">
-				<div id="bannerMinusTitleDiv">
+				<div>
 					<ul class="actions">
 						<li>
 							<span>
 								<a href="./home.html">
-									<img id="homeBtn" src="images/1logo_bgDelete2.png" alt=""/>
+									<img src="images/1logo_bgDelete2.png" alt="" width="180px" height="120px" style="position:relative; margin-bottom:15px; margin-left:-30px;"/>
 								</a>
 							</span>
 						</li>
@@ -59,7 +50,7 @@
 										</select>
 									</li>
 									<li>
-										<a href="#" class="button" id="searchBtn">검색</a>
+										<a href="#" class="button" style="background: rgba(255, 255, 255, 0.55);">검색</a>
 									</li>
 								</ul>
 							</div>
@@ -68,11 +59,19 @@
 							<div id="operationIcons">
 								<ul class="icons">
 									<li>
-										<a href="./login.html" title="회원가입" class="fa-user">JOIN</a>
+										<a href="./login.html" title="회원가입" class="fa-user"  onclick = "dropbar(this)">회원가입</a>
 									</li>
 									<li>
-										<a href="#" title="VIP조회" class="fa-trophy" onclick= "dropbar()">VIP</a>
-										<div id="myDropdown" class="dropdown-content">
+										<a href="#" class="fa-user" onclick = "" id ="btn_mypage">마이페이지</a>
+										<div id="mypage" class="dropdown-content">
+											<a href="#" class = "test" id = "history"/>이용 내역</a>
+											<a href="#" class = "test" id = "centerEnroll"/>풋살장 등록</a>
+											<a href="#" class = "test" id = "centermodify"/>풋살장 수정 및 삭제</a>
+										</div>
+									</li>
+									<li>
+										<a href="#" title="VIP조회" class="fa-trophy" id = "btn_vip" onclick= "">VIP</a>
+										<div id="vip" class="dropdown-content">
 											<table>
 												<tr>
 													<td>아이디</td>
@@ -105,49 +104,40 @@
 						</li>
 					</ul>
 				</div>
-
-				<h1 id="currentScreenName">풋살장 이용 및 예약 내역(이용자)</h1>
+				
+				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">대전광역시 풋살장</h1>
 			</div>
 
-			<div id="main">
+			<div id="main" >
+					
+					<hr/>
+						<div max-height:"700px;">
+							<div>
+								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
+							</div>
+							<div>
+								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
+							</div>
+							<div>
+								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
+							</div>
+							<div>
+								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
+							</div>
+						</div>
+					<hr/>
+			</div>
 
-				<hr/>
-				<form method="post" action="#">
-
-					<table class="centerInfoTable">
-						<tr>
-							<th style="display:none;">풋살장번호</th>
-							<th>풋살장이름</th>
-							<th>대관날짜</th>
-							<th>이용시간</th>
-							<th>금액</th>
-							<th>예약취소</th>
-						</tr>
-						<tr>
-							<td style="display:none;">1</td>
-							<td>유성 풋살장</td>
-							<td>16/12/17</td>
-							<td>20:00 ~ 22:00</td>
-							<td>100000</td>
-							<td><input type="submit" value="취소" formnovalidate formaction="#"/></td>
-						</tr>
-					</table>
-
-				</form>
-				<hr/>
-			
-
-			
-
-		</div>
-		<!-- Footer -->
-				
-			<footer id="footer" >
-				<ul class="copyright" >
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
 					<li>풋살장 예약 시스템</li>
 					<li>윤성준 정창훈 고현민</li>
 				</ul>
 			</footer>
+
+		</div>
+
 		<!-- Scripts -->
 		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 		<script>
