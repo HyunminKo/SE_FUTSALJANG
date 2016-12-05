@@ -117,8 +117,6 @@
 		font-size: 14pt;
 		font-weight: 300;
 		line-height: 2;
-		
-		
 	}
 	
 	input,b,td,th{
@@ -734,14 +732,13 @@
 
 	#main {
 		
-		position: absolute;
+		position: relative;
 		max-width: 70em;
 		min-width: 70em;
 		margin-top:290px;
 		margin-bottom:50px;
 		padding: 0em 3em 0em 3em ;
 		background: rgba(255, 255, 255, 0.5);
-		
 		border-radius: 10px;
 		cursor: default;
 		opacity: 0.95;
