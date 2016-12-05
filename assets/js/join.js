@@ -13,10 +13,12 @@ function confirmSubmit(a){
 	var temp_phone;
 	var temp_tel;
 	var pattern =  /\s/g;
-	var tel_pattern ="[0-9]{3}-[0-9]{4}-[0-9]{4}";
-	var join_main = document.getElementById("main");
+	var tel_pattern ="[0-9]{3}[0-9]{4}[0-9]{4}";
+	var join_main = document.getElementById("joinMain");
 	var join_id_box = document.getElementById("join_id_box");
 	var join_pw_box = document.getElementById("join_pw_box");
+	var join_name_box = document.getElementById("join_name_box");
+	var join_phone_box = document.getElementById("join_phone_box");
 
 	var span_div = document.createElement("div");
 	var span_tag = document.createElement("span");
@@ -26,7 +28,7 @@ function confirmSubmit(a){
 	if(a.id == "join_id_box" ){
 		var i = 0;
 		for(i = 0 ; i<join_main.children.length; i++){
-			if((join_main.children[i].id)=="div_id"){
+			if((join_main.children[i].id)=="join_id"){
 				temp_id=i;
 				break;
 			}
@@ -39,12 +41,16 @@ function confirmSubmit(a){
 				isExsitID = true;
 				}
 				return;
-			}
 		}
+		if(isExsitID==true){
+			join_id.removeChild(join_id.children[1]);
+			isExsitID = false;			
+		}
+	}
 	if(a.id == "join_pw_box"){
 		var i = 0;
 		for(i = 0 ; i<join_main.children.length; i++){
-			if((join_main.children[i].id)=="div_pw"){
+			if((join_main.children[i].id)=="join_pw"){
 				temp_pw=i;
 				break;
 			}
@@ -58,14 +64,14 @@ function confirmSubmit(a){
 			return;
 		}
 		if(isExsitPW==true){
-			join_main.removeChild(join_main.children[temp_pw+1]);
+			join_pw.removeChild(join_pw.children[1]);
 			isExsitPW = false;			
 		}
 	}
 	if(a.id == "join_name_box" ){
 		var i = 0;
 		for(i = 0 ; i<join_main.children.length; i++){
-			if((join_main.children[i].id)=="div_name"){
+			if((join_main.children[i].id)=="join_name"){
 				temp_name=i;
 				break;
 			}
@@ -80,30 +86,30 @@ function confirmSubmit(a){
 			return;
 		}
 		if(isExsitName == true){
-			join_main.removeChild(join_main.children[temp_name+1]);
+			join_name.removeChild(join_name.children[1]);
 			isExsitName = false;	
 		}
 	}
-	if(a.id == "phone"){
+	if(a.id == "join_phone_box"){
 		var i = 0;
 		for(i = 0 ; i<join_main.children.length; i++){
-			if((join_main.children[i].id)=="join_phone_box"){
+			if((join_main.children[i].id)=="join_phone"){
 				temp_tel=i;
 				break;
 			}
 		}
-		if(phone.value.match(tel_pattern)){
+		if(join_phone_box.value.match(tel_pattern)){
 
 		}else{
 			if(isExsitTel != true){
-				span_tag.innerHTML = "EX) 010-xxxx-xxxx";
+				span_tag.innerHTML = "EX) 010xxxxxxxx";
 				join_phone.insertBefore(span_div,join_phone.children[i+1]);
 				isExsitTel = true;
 			}
 			return;
 		}
 		if(isExsitTel == true){
-			join_main.removeChild(join_main.children[temp_tel+1]);
+			join_phone.removeChild(join_phone.children[1]);
 			isExsitTel = false;	
 		}
 	}

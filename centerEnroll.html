@@ -78,7 +78,7 @@
 			<div id="main">
 
 				<hr/>
-				<form method="post" action="#">
+				<form method="post" action="./enrollService.jsp" enctype="multipart/form-data">
 
 					<table>
 						<tr>
@@ -90,7 +90,6 @@
 						<tr>
 							<td>위치(구)</td>
 							<td>
-
 								<div class="select-wrapper" id="centerEnroll_selectGu">
 
 									<select name="cEnrollGuSelect" id="cEnrollGuSelect" style="width:100px">
@@ -101,8 +100,13 @@
 										<option value="서구">서구</option>
 										<option value="대덕구">대덕구</option>
 									</select>
-
 								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>사진</td>
+							<td>
+								<input type="file" name="centerImg" id="centerImg"  required/>
 							</td>
 						</tr>
 						<tr>
@@ -139,10 +143,14 @@
 							</td>
 						</tr>
 					</table>
-
-
-					<input type="submit" value="등록하기" formnovalidate formaction="#"/>
-
+					<ul class="actions">
+						<li>
+							<input type="submit" value="등록하기"/>
+						</li>
+						<li>
+							<a href="./login.html" class="button">취소</a>
+						</li>
+					</ul>
 				</form>
 				<hr/>
 			</div>

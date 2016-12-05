@@ -30,11 +30,11 @@
 					<img src="images/1logo_bgDelete2.png" alt="" />
 				</a>
 				<h2>Join!</h2>
-				<form method="post" action="joinService.jsp">
+				<form method="post" action="./joinService.jsp" id="joinMain">
 					<div class="field">
 						<label style="font-family: 'Hanna', serif;">이용자와 업체를 선택해주세요.</label>
-						<input type="radio" id="robot_yes" name="robot" /><label for="robot_yes" style="font-family: 'Hanna', serif; margin:0px;">이용자</label>
-						<input type="radio" id="robot_no" name="robot" /><label for="robot_no" style="font-family: 'Hanna', serif;">업체</label>
+						<input type="radio" id="robot_yes" name="robot" value="user" required/><label for="robot_yes" style="font-family: 'Hanna', serif; margin:0px;">이용자</label>
+						<input type="radio" id="robot_no" name="robot" value="host" required/><label for="robot_no" style="font-family: 'Hanna', serif;">업체</label>
 					</div>
 					<div class="field" id="join_id">
 						<input type="text" name="id" id="join_id_box" placeholder="ID" onchange="confirmSubmit(this)" required/>
@@ -79,6 +79,6 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 			</script>
-
+			<script src="./assets/js/join.js"></script>
 		</body>
 	</html>
