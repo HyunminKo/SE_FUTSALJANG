@@ -5,9 +5,9 @@
 <%@page import="java.util.*" %>
 <%
 	UserDAO userDAO = new UserDAO();
-	HostDAO hostDAO = new hostDAO();
-	List<UserDAO> userinformationList = new ArrayList<>();
-	List<HostDAO> hostinformationList = new ArrayList<>();
+	HostDAO hostDAO = new HostDAO();
+	List<UserDAO> userinformationList = new ArrayList<UserDAO>();
+	List<HostDAO> hostinformationList = new ArrayList<HostDAO>();
 	userDAO.select(userinformationList);
 	hostDAO.select(hostinformationList);
 %>
@@ -37,20 +37,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		
  	 	<script>
-			$(document).ready(function() {
-			 popConfig();
-			});
-			function popConfig(){
-			 $("#modify").click(layerOpen);
-			 $(".btn_close").click(layerClose);
-			}
-			function layerOpen(){
-			 $("#layer_pop").css("display","block");
-			 
-			}
-			function layerClose(){
-			 $("#layer_pop").css("display","none");
-			}
+
 		</script>
 	</head>
 	<body class="is-loading">
@@ -155,16 +142,44 @@
 									<th>수정</th>
 									<th>삭제</th>
 								</tr>
-								<tr>
-									<td id="No">1001</td>
-									<td id="Id">yoonseongjun</td>
-									<td id="Name">윤성준</td>
-									<td id="Grade">VIP</td>
-									<td id="Phone">01012311232</td>
-									<td><input type="button" id = "modify" value="수정" onclick="memberModify()"/></td>
-									<td><input type="button" value="삭제"/></td>
-								</tr>
-								
+<% 
+			Iterator<UserDAO> it = userinformationList.iterator();
+			int i = 0;
+			while(it.hasNext()){
+				UserDAO temp = it.next();
+%>
+				<tr>
+					<td id="No<%=i%>"><%=temp.getUserNo()%></td>
+					<td id="Id<%=i%>"><%=temp.getUserId() %></td>
+					<td id="Name<%=i%>"><%= temp.getUserName() %></td>
+					<td id="Grade<%=i%>"><%=temp.getUserGrade() %></td>
+					<td id="Phone<%=i%>"><%=temp.getUserPhone() %></td>
+					<td><input type="button" id = "modify<%=i %>" value="수정" onclick="memberModify(this)"/></td>
+					<td><input type="button" value="삭제"/></td>
+				</tr>
+<%
+				i++;
+			}
+%>
+<% 
+			Iterator<HostDAO> it_Host = hostinformationList.iterator();
+			i = 0;
+			while(it_Host.hasNext()){
+				HostDAO temp = it_Host.next();
+%>
+				<tr>
+					<td id="No<%=i%>"><%=temp.getHostNo()%></td>
+					<td id="Id<%=i%>"><%=temp.getHostId() %></td>
+					<td id="Name<%=i%>"><%= temp.getHostName()%></td>
+					<td id="Grade<%=i%>"></td>
+					<td id="Phone<%=i%>"><%=temp.getHostPhone()%></td>
+					<td><input type="button" id = "modify<%=i %>" value="수정" onclick="memberModify(this)"/></td>
+					<td><input type="button" value="삭제"/></td>
+				</tr>
+<%
+				i++;
+			}
+%>								
 							</table>
 						</div>
 
@@ -183,7 +198,7 @@
 								<br>
 								<input type = "hidden" name = "memberNo" id="memberNo" value = ""/> 
 								<input type = "submit" class = "btn_modify" value = "수정"/> 
-								<input type = "button" class = "btn_close" value = "취소"/>
+								<input type = "button" class = "btn_close" value = "취소" onclick="layerClose(this)"/>
 							</form>
 						</div>
 					<hr/>

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#layer_pop").hide();	
     $("#btn_vip").click(function(){
         $("#vip").show();
         $("#mypage").hide();
@@ -10,7 +11,7 @@ $(document).ready(function(){
 });
 
 window.onclick = function(e) {
-  if (!(e.target.nodeName=='A')) {
+  if (!(e.target.nodeName=='A')&&!(e.target.nodeName=='INPUT')) {
       $("#mypage").hide();
       $("#vip").hide();
   }
