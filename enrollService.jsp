@@ -52,7 +52,7 @@
 		fscDao = new FutsalcenterDAO(hostNo,centerName, "대전광역시", guName, centerDetailAddress,
 				baseCharge, centerSectionNum, centerPhoneNum, imgFileName);
 		
-		if(fscDao.enroll()){
+		if(fscDao.enroll()){ 
 			%>
 			<script>
 				alert("풋살장 등록에 성공하였습니다.");
