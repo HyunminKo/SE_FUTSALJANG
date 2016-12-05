@@ -84,7 +84,7 @@
 						<tr>
 							<td>이름</td>
 							<td>
-								<input type="text" name="centerName" id="centerName"  required/>
+								<input type="text" name="centerName" id="centerName" onchange="formcheck(this)" required/>
 							</td>
 						</tr>
 						<tr>
@@ -92,7 +92,7 @@
 							<td>
 								<div class="select-wrapper" id="centerEnroll_selectGu">
 
-									<select name="cEnrollGuSelect" id="cEnrollGuSelect" style="width:100px">
+									<select name="cEnrollGuSelect" id="cEnrollGuSelect" style="width:100px" onchange = "formcheck(this)">
 										<option value="구 선택" selected>구 선택</option>
 										<option value="유성구">유성구</option>
 										<option value="동구">동구</option>
@@ -118,7 +118,7 @@
 						<tr>
 							<td>기본 요금</td>
 							<td>
-								<input type="text" name="baseCharge" id="baseCharge" style="width:100px; text-align:right;"  required/>
+								<input type="text" name="baseCharge" id="baseCharge" style="width:100px; text-align:right;" onchange="formcheck(this)" onkeyup = "formcheck(this)" maxlength = "7"required/>
 							</td>
 							<td>
 								<p style="position:absolute; margin-left:-310px; margin-top:-12px;">원</p>
@@ -127,7 +127,7 @@
 						<tr>
 							<td>구장 개수</td>
 							<td>
-								<input type="text" name="centerSectionNum" id="centerSectionNum" style="text-align:right;"  required/>
+								<input type="text" name="centerSectionNum" id="centerSectionNum" style="text-align:right;" onchange="formcheck(this)" onkeyup = "formcheck(this)" maxlength ="2"required/>
 							</td>
 							<td>
 								<p style="position:absolute; margin-left:-350px; margin-top:-12px;">개</p>
@@ -136,7 +136,7 @@
 						<tr>
 							<td>전화번호</td>
 							<td>
-								<input type="text" name="centerPhoneNum" id="centerPhoneNum" style="width:160px"required/>
+								<input type="text" name="centerPhoneNum" id="centerPhoneNum" onchange="formcheck(this)" onkeyup = "formcheck(this)" style="width:160px" maxlength = "11"required/>
 							</td>
 							<td>
 								<p style="position:absolute; margin-left:-250px; margin-top:-12px;">'-'생략</p>
@@ -175,6 +175,6 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 		</script>
-
+		<script src="./assets/js/centerEnroll.js"></script>
 	</body>
 </html>
