@@ -19,7 +19,7 @@
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
 		<script type = "text/javascript" src = "./assets/js/centerDetail.js"></script>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
 	<body class="is-loading">
 
@@ -60,11 +60,19 @@
 							<div id="operationIcons">
 								<ul class="icons">
 									<li>
-										<a href="./login.html" title="회원가입" class="fa-user">JOIN</a>
+										<a href="./login.html" title="회원가입" class="fa-user">회원가입</a>
 									</li>
 									<li>
-										<a href="#" title="VIP조회" class="fa-trophy" onclick= "dropbar()">VIP</a>
-										<div id="myDropdown" class="dropdown-content">
+										<a href="#" class="fa-user" onclick = "" id ="btn_mypage">마이페이지</a>
+										<div id="mypage" class="dropdown-content">
+											<a href="#" class = "test" id = "history"/>이용 내역</a>
+											<a href="#" class = "test" id = "centerEnroll"/>풋살장 등록</a>
+											<a href="#" class = "test" id = "centermodify"/>풋살장 수정 및 삭제</a>
+										</div>
+									</li>
+									<li>
+										<a href="#" title="VIP조회" class="fa-trophy" id = "btn_vip" onclick= "">VIP</a>
+										<div id="vip" class="dropdown-content">
 											<table>
 												<tr>
 													<td>아이디</td>
