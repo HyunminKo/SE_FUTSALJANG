@@ -61,7 +61,31 @@
 										<a href="./login.html" class="fa-user">회원가입</a>
 									</li>
 									<li>
-										<a href="#" class="fa-trophy">VIP</a>
+										<a href="#" class="fa-trophy" onclick= "dropbar()">VIP</a>
+										<div id="myDropdown" class="dropdown-content">
+											<table>
+												<tr>
+													<td>아이디</td>
+													<td>예약횟수</td>
+												</tr>
+												
+												<tr>
+													<td>YSJGOOD</td>
+													<td>10</td>													
+												</tr>
+												
+												<tr>
+													<td>KHMKIN</td>
+													<td>8</td>
+												</tr>
+
+												<tr>
+													<td>JCHBS</td>
+													<td>5</td>
+												</tr>
+
+											</table>
+									 	</div>
 									</li>
 									<li>
 										<a href="#" class="fa-users">TEAM</a>
@@ -90,7 +114,6 @@
 							<td>위치(구)</td>
 							<td>
 								<div class="select-wrapper" id="centerEnroll_selectGu">
-
 									<select name="cenrollguselect" id="cEnrollGuSelect" style="width:100px">
 										<option value="구 선택" selected>구 선택</option>
 										<option value="유성구">유성구</option>
@@ -127,6 +150,7 @@
 							<td>구장 개수</td>
 							<td>
 								<input type="text" name="centersectionnum" id="centerSectionNum" style="text-align:right;"  required/>
+
 							</td>
 							<td>
 								<p style="position:absolute; margin-left:-350px; margin-top:-12px;">개</p>
@@ -136,6 +160,7 @@
 							<td>전화번호</td>
 							<td>
 								<input type="text" name="centerphonenum" id="centerPhoneNum" style="width:160px"required/>
+
 							</td>
 							<td>
 								<p style="position:absolute; margin-left:-250px; margin-top:-12px;">'-'생략</p>
@@ -174,6 +199,7 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 		</script>
-
+		<script src="./assets/js/centerEnroll.js"></script>
+		<script src = "./assets/js/dropbar.js"></script>
 	</body>
 </html>
