@@ -34,12 +34,12 @@
 
 			<!-- Main -->
 			<div id="banner">
-				<div>
+				<div  id="bannerMinusTitleDiv">
 					<ul class="actions">
 						<li>
 							<span>
 								<a href="./home.html">
-									<img src="images/1logo_bgDelete2.png" alt="" width="180px" height="120px" style="position:relative; margin-bottom:15px; margin-left:-30px;"/>
+									<img id="homeBtn" src="images/1logo_bgDelete2.png" alt=""/>
 								</a>
 							</span>
 						</li>
@@ -57,7 +57,7 @@
 										</select>
 									</li>
 									<li>
-										<a href="#" class="button" style="background: rgba(255, 255, 255, 0.55);">검색</a>
+										<a href="#" class="button" id="searchBtn">검색</a>
 									</li>
 								</ul>
 							</div>
@@ -66,13 +66,13 @@
 							<div id="operationIcons">
 								<ul class="icons">
 									<li>
-										<a href="./login.html" class="fa-user">회원가입</a>
+										<a href="./login.html" title="회원가입" class="fa-user">JOIN</a>
 									</li>
 									<li>
-										<a href="#" class="fa-trophy">VIP</a>
+										<a href="#" title="VIP조회" class="fa-trophy">VIP</a>
 									</li>
 									<li>
-										<a href="#" class="fa-users">TEAM</a>
+										<a href="#" title="팀조회" class="fa-users">TEAM</a>
 									</li>
 								</ul>
 							</div>
@@ -80,7 +80,7 @@
 					</ul>
 				</div>
 
-				<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">풋살장 수정 및 삭제</h1>
+				<h1 id="currentScreenName">풋살장 수정 및 삭제</h1>
 			</div>
 
 			<div id="main">
@@ -123,6 +123,7 @@
 							<td>01064231597</td>
 							<td>대전 유성구 배울1로 297</td>
 						</tr>
+						
 					</table>
 
 					<input style="margin-top:50px;" type="submit" value="수정" formnovalidate formaction="#"/>
@@ -131,18 +132,18 @@
 				</form>
 
 				<hr/>
+					
 			</div>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="copyright">
+		</div>
+		<!-- Footer -->
+				
+			<footer id="footer" >
+				<ul class="copyright" >
 					<li>풋살장 예약 시스템</li>
 					<li>윤성준 정창훈 고현민</li>
 				</ul>
 			</footer>
-
-		</div>
-
 		<!-- Scripts -->
 		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 		<script>
