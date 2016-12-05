@@ -2,13 +2,14 @@
    pageEncoding="UTF-8" import ="java.sql.*" %>
 <%@page import="DAO.HostDAO" %>
 <%@page import="DAO.UserDAO" %>
+<%@page import="java.util.*" %>
 <%
 	UserDAO userDAO = new UserDAO();
 	HostDAO hostDAO = new hostDAO();
 	List<UserDAO> userinformationList = new ArrayList<>();
 	List<HostDAO> hostinformationList = new ArrayList<>();
 	userDAO.select(userinformationList);
-	HostDAO.select(hostinformationList)
+	hostDAO.select(hostinformationList);
 %>
 
 <!DOCTYPE HTML>
@@ -93,7 +94,7 @@
 										<a href="./login.html" class="fa-user">회원가입</a>
 									</li>
 									<li>
-										<a href="#" class="fa-trophy" onclick= "dropbar()">VIP</a>
+										<a href="#" class="fa-trophy">VIP</a>
 										<div id="myDropdown" class="dropdown-content">
 											<table>
 												<tr>

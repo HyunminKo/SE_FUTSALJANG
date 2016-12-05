@@ -815,7 +815,7 @@
 	#currentScreenName{
 		position: relative;
 		font-family: 'Hanna', serif; 
-		background: rgba(0, 0, 0, 0);
+	
 	}
 	#centerEnroll_selectGu{
 		width: 7em;
@@ -1064,11 +1064,11 @@
 }
 #currentScreenName{
 	color:white;
-	 text-shadow: -2px 0 #ec407a, 0 2px #ec407a, 2px 0 #ec407a, 0 -2px #ec407a;
-	-moz-text-shadow: -2px 0 #ec407a, 0 2px #ec407a, 2px 0 #ec407a, 0 -2px #ec407a;
-	-webkit-text-shadow: -2px 0 #ec407a, 0 2px #ec407a, 2px 0 #ec407a, 0 -2px #ec407a;
+	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-
+#currentScreenName:hover{
+	color: #ff7496;
+}
 .futInfo {
 	margin-left:-20px;
 }
