@@ -126,22 +126,19 @@
 								<tr>
 									<th>회원번호</th>
 									<th>아이디</th>
-									<th>비밀번호</th>
 									<th>이름</th>
 									<th>등급</th>
 									<th>전화번호</th>
 									<th>수정</th>
 									<th>삭제</th>
 								</tr>
-
 								<tr>
-									<td>1001</td>
-									<td>yoonseongjun</td>
-									<td>123123</td>
-									<td>윤성준</td>
-									<td>VIP</td>
-									<td>010-1231-1232</td>
-									<td><input type="button" id = "modify" value="수정"/></td>
+									<td id="No">1001</td>
+									<td id="Id">yoonseongjun</td>
+									<td id="Name">윤성준</td>
+									<td id="Grade">VIP</td>
+									<td id="Phone">01012311232</td>
+									<td><input type="button" id = "modify" value="수정" onclick="memberModify()"/></td>
 									<td><input type="button" value="삭제"/></td>
 								</tr>
 								
@@ -150,19 +147,21 @@
 
 						<div id="layer_pop">
 							<br>
-							<h3 id ="pop_p">수정하기</h3>
-							<p>아이디 : </span>yoonseongjun</span></p>
-							<p>이름 : </span>윤성준</span></p>
-							<input type = "text" id = "modifyPhone" placeholder = "01022223333"/>
-							<br>
-							<select name="memberGrade" id="memberGrade">
-									<option value="일반">일반</option>
-									<option value="VIP">VIP</option>
-							</select>
-							<br>
-							<input type = "button" class = "btn_modify" value = "수정"/> 
-							<input type = "button" class = "btn_close" value = "취소"/>
-							
+							<form method="post" action="./memberModifyService.jsp">
+								<h3 id ="pop_p">수정하기</h3>
+								<p>아이디 : <span id="layer_Id"></span></p>
+								<p>이름 : <span id="layer_Name"></span></p>
+								<select name="memberGrade" id="memberGrade" required>
+										<option value="일반">일반</option>
+										<option value="VIP">VIP</option>
+								</select>
+								<br>
+								<input type = "text" id = "modifyPhone" name="modifyPhone" placeholder = "" required/>
+								<br>
+								<input type = "hidden" name = "memberNo" id="memberNo" value = ""/> 
+								<input type = "submit" class = "btn_modify" value = "수정"/> 
+								<input type = "button" class = "btn_close" value = "취소"/>
+							</form>
 						</div>
 					<hr/>
 			</div>
@@ -188,5 +187,6 @@
 				}
 		</script>
 		<script src = "./assets/js/dropbar.js"></script>
+		<script src = "./assets/js/memberCheck.js"></script>
 	</body>
 </html>
