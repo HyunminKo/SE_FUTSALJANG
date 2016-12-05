@@ -2,6 +2,7 @@
    pageEncoding="UTF-8" import ="java.sql.*" %>
 <%@page import="DAO.HostDAO" %>
 <%@page import="DAO.UserDAO" %>
+<%@page import="java.util.*" %>   
 <%
 	UserDAO userDAO = new UserDAO();
 	HostDAO hostDAO = new HostDAO();
