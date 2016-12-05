@@ -91,7 +91,7 @@
 	}
 
 	body {
-		height: 100%;
+		
 		background-color: #ffffff;
 		background-image: url("images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
 		background-image: url("images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("../../images/bg.jpg");
@@ -735,7 +735,6 @@
 		position: relative;
 		max-width: 70em;
 		min-width: 70em;
-		margin-top:290px;
 		margin-bottom:50px;
 		padding: 0em 3em 0em 3em ;
 		background: rgba(255, 255, 255, 0.5);
@@ -824,7 +823,7 @@
 		
 	}
 	#banner{
-		position: fixed;
+		position: relative;
 		max-width: 100%;
 		min-width: 70em;
 		margin-top:50px;
@@ -851,6 +850,7 @@
 /* Footer */
 
 	#footer {
+		
 		-moz-align-self: -moz-flex-end;
 		-webkit-align-self: -webkit-flex-end;
 		-ms-align-self: -ms-flex-end;
@@ -860,8 +860,7 @@
 		color: rgba(0, 0, 0, 1);
 		cursor: default;
 		text-align: center;
-	
-		
+		height:20px;
 		
 	}
 
@@ -879,7 +878,7 @@
 				padding: 0 0 0 0.85em;
 				border-left: solid 1px rgba(255, 255, 255, 0.5);
 				line-height: 1;
-				
+				color: rgba(255, 255, 255, 0.8);
 			}
 
 				#footer .copyright li:first-child {
@@ -911,8 +910,8 @@
 		-ms-perspective: 1000px;
 		perspective: 1000px;
 		position: relative;
+		height: auto;
 		min-height: 100%;
-		
 		z-index: 2;
 	}
 
