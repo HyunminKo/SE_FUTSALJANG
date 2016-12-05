@@ -881,7 +881,7 @@
 				padding: 0 0 0 0.85em;
 				border-left: solid 1px rgba(255, 255, 255, 0.5);
 				line-height: 1;
-				
+				color: rgba(255, 255, 255, 0.8);
 			}
 
 				#footer .copyright li:first-child {
