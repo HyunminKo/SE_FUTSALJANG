@@ -1151,3 +1151,37 @@ table.centerInfoTable td {
 		margin-right : auto;
 		margin-left : auto;
 	}
+/*memberCheck*/
+
+	#memberCheck_table{
+		margin-right : auto;
+		margin-left : auto;
+	}
+	#memberCheck_table th{
+		font-size: 2em;
+	}
+	#pop_p{
+		margin: 0 0 1.5em 0;
+		font-family: 'Hanna', serif;
+	}
+	#memberGrade{
+		margin-right : auto;
+		margin-left : auto;
+	}
+	#modifyPhone{
+		margin-right : auto;
+		margin-left : auto;
+		width : 50%;
+	}
+	#layer_pop{
+		position:fixed;
+		margin-top : -10%;
+		margin-left : 22em;
+		width:35%;
+		height:130%;
+		top:0px;
+		left:0px;
+		display:none;
+		background-image:url('images/white.png');
+		border-radius: 30px;
+	}
