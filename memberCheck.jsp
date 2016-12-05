@@ -1,5 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8" import ="java.sql.*" %>
+<%@page import="DAO.HostDAO" %>
+<%@page import="DAO.UserDAO" %>
 <%
-	
+	UserDAO userDAO = new UserDAO();
+	HostDAO hostDAO = new hostDAO();
+	List<UserDAO> userinformationList = new ArrayList<>();
+	List<HostDAO> hostinformationList = new ArrayList<>();
+	userDAO.select(userinformationList);
+	HostDAO.select(hostinformationList)
 %>
 
 <!DOCTYPE HTML>
