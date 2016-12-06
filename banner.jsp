@@ -25,7 +25,7 @@
 								</select>
 							</li>
 							<li>
-								<a href="#" class="button" style="background: rgba(255, 255, 255, 0.55);">검색</a>
+								<input type="button"class="button" id="searchBtn" value="검색"/>
 							</li>
 						</ul>
 					</div>
