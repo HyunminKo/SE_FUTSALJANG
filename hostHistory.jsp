@@ -78,7 +78,6 @@
 							<td id = "hoursOfUse<%=i%>"><%=temp.getHoursOfUse()%>:00 ~ <%=2+Integer.parseInt(temp.getHoursOfUse())%>:00</td>
 							<td id = "userPhone<%=i%>"><%=temp.getPaymentOption()%></td>
 							<td id = "charge<%=i%>"><%=temp.getCharge()%></td>
-							<td><input type="submit" value="취소"/></td>
 						</tr>
 <%
 						i++;
