@@ -44,7 +44,8 @@ $(document).ready(function(){
 	);
 	
 	$(".cardForm").click(function(e){
-		alert($("e:nth-last-child(1)").val());
+		var target = e.target;
+		var parent = target.parentsUntil(".cardForm");
 		$(".cardForm").submit();
 	});
 });
