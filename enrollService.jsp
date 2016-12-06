@@ -47,8 +47,6 @@
 		String fullpath = realFolder + "\\" + imgFileName;
 		/******************/
 		
-		hostNo="200";
-		
 		fscDao = new FutsalcenterDAO(hostNo,centerName, "대전광역시", guName, centerDetailAddress,
 				baseCharge, centerSectionNum, centerPhoneNum, imgFileName);
 		
@@ -56,7 +54,7 @@
 			%>
 			<script>
 				alert("풋살장 등록에 성공하였습니다.");
-				location.replace("./home.html");
+				location.replace("./home.jsp");
 			</script>
 			<%
 		}

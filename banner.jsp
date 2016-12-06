@@ -6,7 +6,7 @@
 			<ul class="actions">
 				<li>
 					<span>
-						<a href="./home.html">
+						<a href="./home.jsp">
 							<img src="images/1logo_bgDelete2.png" alt="" width="180px" height="120px" style="position:relative; margin-bottom:15px; margin-left:-30px;"/>
 						</a>
 					</span>
@@ -38,7 +38,7 @@
 							</li>
 							<li>
 								<a href="#" class="fa-user" onclick = "" id ="btn_mypage">마이페이지</a>
-								<div id="mypage" class="dropdown-content">
+								<div id="mypage" class="dropdown-content1">
 									<a href="#" class = "test" id = "history">이용 내역</a>
 									<a href="#" class = "test" id = "centerEnroll">풋살장 등록</a>
 									<a href="#" class = "test" id = "centermodify">풋살장 수정 및 삭제</a>
@@ -46,7 +46,7 @@
 							</li>
 							<li>
 								<a href="#" title="VIP조회" class="fa-trophy" id = "btn_vip" onclick= "">VIP</a>
-								<div id="vip" class="dropdown-content">
+								<div id="vip" class="dropdown-content2">
 									<table>
 										<tr>
 											<td>아이디</td>
