@@ -62,7 +62,19 @@ function bodyOnload(){
 
   document.getElementById("currentScreenName").innerHTML = title;
 }
-
+function pageSetting(a){
+	var val = a;
+	var currentScreenName = document.getElementById("currentScreenName");
+	$("#guList").val(val);
+	if(val=="전체"){
+		currentScreenName.innerHTML="대전 전체 풋살장 검색";
+		$(".card").show();
+	}else{
+		currentScreenName.innerHTML="대전 "+ val +" 풋살장 검색";
+		$(".card").hide();
+		$("."+val).show();
+	}
+}
 
 
 function urlCheck(){

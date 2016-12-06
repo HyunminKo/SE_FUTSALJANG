@@ -2,11 +2,13 @@
 <%@page import="DAO.FutsalcenterDAO" %>
 <%@page import="java.util.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
 	FutsalcenterDAO futsalcenterDAO = new FutsalcenterDAO();
 	List<FutsalcenterDAO> centerList = new ArrayList<>();
 	
 	futsalcenterDAO.select(centerList);
 
+	String gu = request.getParameter("hiddenInput");
 %>
 <!DOCTYPE HTML>
 <!--
@@ -32,7 +34,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 		</script>
 	</head>
-	<body class="is-loading" onload="bodyOnload()" >
+	<body class="is-loading">
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -83,6 +85,7 @@
 
 		<!-- Scripts -->
 		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+		<script src = "./assets/js/dropbar.js"></script>
 		<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { 
@@ -90,8 +93,10 @@
 					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-			
+				var temp = '<%=gu%>';
+				if(temp!='null'){
+					pageSetting(temp);
+				}
 		</script>
-		<script src = "./assets/js/dropbar.js"></script>
 	</body>
 </html>
