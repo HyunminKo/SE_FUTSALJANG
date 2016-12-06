@@ -1,4 +1,18 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8" import ="java.sql.*" %>
+<%@page import="DAO.HostDAO" %>
+<%@page import="DAO.UserDAO" %>
+<%@page import="DAO.ReservationDAO" %>
+<%@page import="java.util.*" %>
+<%
+	String userNo = (String)session.getAttribute("No");
+	ReservationDAO userHistory = new ReservationDAO();
+	
+	List<ReservationDAO> userResrvationList = new ArrayList<>();
+	
+	userHistory.select(userResrvationList, userNo);
+%>
+
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -46,27 +60,34 @@
 						<tr>
 							<th style="display:none;">풋살장번호</th>
 							<th>풋살장이름</th>
+							<th>구장번호</th>
 							<th>대관날짜</th>
 							<th>이용시간</th>
 							<th>금액</th>
 							<th>예약취소</th>
 						</tr>
+<%
+						Iterator<ReservationDAO> it = userResrvationList.iterator();
+						int i = 0;
+						while(it.hasNext()){
+							ReservationDAO temp = it.next();
+%>
 						<tr>
-							<td style="display:none;">1</td>
-							<td>유성 풋살장</td>
-							<td>16/12/17</td>
-							<td>20:00 ~ 22:00</td>
-							<td>100000</td>
-							<td><input type="submit" value="취소" formnovalidate formaction="#"/></td>
+							<td id = "centerName<%=i%>"><%=temp.getCenterNo()%></td>
+							<td id = "sectionNo<%=i%>"><%=temp.getSectionNo()%></td>
+							<td id = "bookingDate<%=i%>"><%=temp.getBookingDate()%></td>
+							<td id = "hoursOfUse<%=i%>"><%=temp.getHoursOfUse()%>:00 ~ <%=2+Integer.parseInt(temp.getHoursOfUse())%>:00</td>
+							<td id = "charge<%=i%>"><%=temp.getCharge()%></td>
+							<td><input type="submit" value="취소"/></td>
 						</tr>
+						<%
+						i++;
+						}
+						%>
 					</table>
 
 				</form>
 				<hr/>
-			
-
-			
-
 		</div>
 		<!-- Footer -->
 				

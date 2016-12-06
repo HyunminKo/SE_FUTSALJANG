@@ -1,4 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="DAO.HostDAO" %>
+<%@page import="DAO.UserDAO" %>
+<%@page import="DAO.ReservationDAO" %>
+<%@page import="java.util.*" %>
+
+<%
+	String hostNo = (String)session.getAttribute("No");
+	ReservationDAO hostHistory = new ReservationDAO();
+	
+	List<ReservationDAO> hostResrvationList = new ArrayList<>();
+	
+	hostHistory.select(hostResrvationList, hostNo);
+	
+%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -42,46 +56,34 @@
 
 					<table class="centerInfoTable">
 						<tr>
-							<th style="display:none;">예약자 번호</th>
 							<th>예약자이름</th>
+							<th>풋살장</th>
+							<th>구장 번호</th>
 							<th>대관날짜</th>
 							<th>이용시간</th>
 							<th>전화번호</th>
 							<th>금액</th>
 						</tr>
+<%
+						Iterator<ReservationDAO> it = hostResrvationList.iterator();
+						int i = 0;
+						while(it.hasNext()){
+							ReservationDAO temp = it.next();
+%>
 						<tr>
-							<td style="display:none;">1</td>
-							<td>정창훈</td>
-							<td>16/12/10</td>
-							<td>19:00 ~ 21:00</td>
-							<td>010-9423-3167</td>
-							<td>금액</td>
+							<td id = "userName<%=i%>"><%=temp.getUserNo()%></td>
+							<td id = "centerName<%=i%>"><%=temp.getCenterNo()%></td>
+							<td id = "sectionNo<%=i%>"><%=temp.getSectionNo()%></td>
+							<td id = "bookingDate<%=i%>"><%=temp.getBookingDate()%></td>
+							<td id = "hoursOfUse<%=i%>"><%=temp.getHoursOfUse()%>:00 ~ <%=2+Integer.parseInt(temp.getHoursOfUse())%>:00</td>
+							<td id = "userPhone<%=i%>"><%=temp.getPaymentOption()%></td>
+							<td id = "charge<%=i%>"><%=temp.getCharge()%></td>
+							<td><input type="submit" value="취소"/></td>
 						</tr>
-						<tr>
-							<td style="display:none;">1</td>
-							<td>정창훈</td>
-							<td>16/12/10</td>
-							<td>19:00 ~ 21:00</td>
-							<td>010-9423-3167</td>
-							<td>금액</td>
-						</tr>
-						<tr>
-							<td style="display:none;">1</td>
-							<td>정창훈</td>
-							<td>16/12/10</td>
-							<td>19:00 ~ 21:00</td>
-							<td>010-9423-3167</td>
-							<td>금액</td>
-						</tr>
-						<tr>
-							<td style="display:none;">1</td>
-							<td>정창훈</td>
-							<td>16/12/10</td>
-							<td>19:00 ~ 21:00</td>
-							<td>010-9423-3167</td>
-							<td>금액</td>
-						</tr>
-
+<%
+						i++;
+						}
+%>
 					</table>
 
 					<input style="margin-top:50px;" type="submit" value="수정" formnovalidate formaction="#"/>
