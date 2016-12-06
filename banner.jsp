@@ -49,8 +49,8 @@
 								<div id="vip" class="dropdown-content2">
 									<table>
 										<tr>
-											<td>아이디</td>
-											<td>예약횟수</td>
+											<th>아이디</th>
+											<th>예약횟수</th>
 										</tr>
 										
 										<tr>
