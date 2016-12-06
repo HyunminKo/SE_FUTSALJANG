@@ -1,18 +1,24 @@
-function memberModify(){
-	var No = document.getElementById("No");
-	var Id = document.getElementById("Id");
-	var Name = document.getElementById("Name");
-	var Phone = document.getElementById("Phone");
+function memberModify(a){
+	var list = a.parentElement.parentElement.children;
 	
+	if(list[0].innerHTML.startsWith("2"))
+		$("#memberGrade").hide();
+	else
+		$("#memberGrade").show();
+		
+		
 	var layer_Id = document.getElementById("layer_Id");
 	var layer_Name = document.getElementById("layer_Name");
 	var modifyPhone = document.getElementById("modifyPhone");
 	var memberNo = document.getElementById("memberNo");
 	
-	layer_Id.innerHTML = Id.innerHTML;
-	layer_Name.innerHTML = Name.innerHTML;
-	modifyPhone.placeholder = Phone.innerHTML;
-	memberNo.value = No.innerHTML;
+	memberNo.value = list[0].innerHTML;
+	layer_Id.innerHTML = list[1].innerHTML;
+	layer_Name.innerHTML = list[2].innerHTML;
+	modifyPhone.placeholder = list[4].innerHTML;
 	
-	
+    $("#layer_pop").show();
+}
+function layerClose(a){
+	$("#layer_pop").hide();
 }

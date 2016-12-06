@@ -1062,9 +1062,6 @@
 	color:white;
 	transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
-#currentScreenName:hover{
-	color: #ff7496;
-}
 .futInfo {
 	margin-left:-20px;
 }
@@ -1176,7 +1173,6 @@ table.centerInfoTable td {
 		height:130%;
 		top:0px;
 		left:0px;
-		display:none;
 		background-image:url('images/white.png');
 		border-radius: 15px;
 	}
