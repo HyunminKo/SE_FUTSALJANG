@@ -6,13 +6,8 @@
 <%
 	UserDAO userDAO = new UserDAO();
 	HostDAO hostDAO = new HostDAO();
-<<<<<<< HEAD
 	List<UserDAO> userinformationList = new ArrayList<>();
 	List<HostDAO> hostinformationList = new ArrayList<>();
-=======
-	List<UserDAO> userinformationList = new ArrayList<UserDAO>();
-	List<HostDAO> hostinformationList = new ArrayList<HostDAO>();
->>>>>>> 18f87088559b3ae973044c34d2b846df4b1424fd
 	userDAO.select(userinformationList);
 	hostDAO.select(hostinformationList);
 %>
