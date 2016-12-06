@@ -80,5 +80,5 @@
 			</ul>
 		</div>
 		
-		<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">회원 조회</h1>
+		<h1 style="font-family: 'Hanna', serif;" id="currentScreenName"></h1>
 	</div>

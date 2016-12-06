@@ -9,7 +9,6 @@
 	FutsalcenterDAO fscDao=null;
 	request.setCharacterEncoding("utf-8");
 	String imgFileName = "";
-	BufferedReader br=null;
 
 	try{
 		String centerName = null;
@@ -48,6 +47,7 @@
 		String fullpath = realFolder + "\\" + imgFileName;
 		/******************/
 		
+		hostNo="200";
 		
 		fscDao = new FutsalcenterDAO(hostNo,centerName, "대전광역시", guName, centerDetailAddress,
 				baseCharge, centerSectionNum, centerPhoneNum, imgFileName);
@@ -56,7 +56,7 @@
 			%>
 			<script>
 				alert("풋살장 등록에 성공하였습니다.");
-				response.sendRedirect("./home.html");
+				location.replace("./home.html");
 			</script>
 			<%
 		}
@@ -73,12 +73,5 @@
 		e.printStackTrace();
 	}
 	
-	br.close();
 	
 %>
-<title>Insert title here</title>
-</head>
-<body>
-	<img src="./images/FUTSALJANG/<%= imgFileName %>" width=512 height=384></img>
-</body>
-</html>

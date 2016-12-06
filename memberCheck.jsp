@@ -49,7 +49,6 @@
 
 			<jsp:include page="./banner.jsp"></jsp:include>
 
-			<h1 id="currentScreenName"></h1>
 			<div id="main">
 					
 					<hr/>

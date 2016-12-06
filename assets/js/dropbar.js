@@ -16,8 +16,17 @@ window.onclick = function(e) {
       $("#vip").hide();
   }
 }
-window.onload = function(){
+function bodyOnload(){
   var title = document.getElementById("title").innerHTML;
 
   document.getElementById("currentScreenName").innerHTML = title;
 }
+
+$("#main").hover(
+		  function () {
+		   $('#currentScreenName').css('color','#ff7496');
+		  }, 
+		  function () {
+		    $('#currentScreenName').css('color','white');
+		  }
+);
