@@ -42,7 +42,7 @@
 
 		</script>
 	</head>
-	<body class="is-loading">
+	<body class="is-loading" onload = "bodyOnload()">
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -123,6 +123,7 @@
 							</form>
 						</div>
 					<hr/>
+				</div>
 			</div>
 
 			<!-- Footer -->
