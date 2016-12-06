@@ -2,17 +2,29 @@ $(document).ready(function(){
     $("#layer_pop").hide();	
     $("#btn_vip").click(function(){
         $("#vip").show();
-        $("#mypage").hide();
+        $("#userMypage").hide();
+        $("#hostMypage").hide();
+        $("#adminMypage").hide();
     });
-    $("#btn_mypage").click(function(){
-        $("#mypage").show();
+    $("#btn_userMypage").click(function(){
+        $("#userMypage").show();
+        $("#vip").hide();
+    });
+    $("#btn_hostMypage").click(function(){
+        $("#hostMypage").show();
+        $("#vip").hide();
+    });
+    $("#btn_adminMypage").click(function(){
+        $("#adminMypage").show();
         $("#vip").hide();
     });
 });
 
 window.onclick = function(e) {
   if (!(e.target.nodeName=='A')&&!(e.target.nodeName=='INPUT')) {
-      $("#mypage").hide();
+      $("#userMypage").hide();
+      $("#hostMypage").hide();
+      $("#adminMypage").hide();
       $("#vip").hide();
   }
 }
