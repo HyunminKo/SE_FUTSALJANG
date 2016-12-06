@@ -1219,10 +1219,10 @@ table.centerInfoTable td {
 	    display: none;
 	    position : absolute;
 	    background-color: #f6f6f6;
-	   
 	    overflow: auto;
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	    border-radius: 4px;
+		z-index : 3;
 		
 	}
 	.dropdown-content1 {
