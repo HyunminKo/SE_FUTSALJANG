@@ -5,7 +5,7 @@
 <%@page import="java.util.*" %>
 <%
 	UserDAO userDAO = new UserDAO();
-	HostDAO hostDAO = new hostDAO();
+	HostDAO hostDAO = new HostDAO();
 	List<UserDAO> userinformationList = new ArrayList<>();
 	List<HostDAO> hostinformationList = new ArrayList<>();
 	userDAO.select(userinformationList);
