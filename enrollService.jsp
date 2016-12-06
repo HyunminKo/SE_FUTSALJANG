@@ -17,7 +17,7 @@
 		String centerSectionNum = null;
 		String centerPhoneNum = null;
 		
-		String hostNo = (String)session.getAttribute("hostNo");
+		String hostNo = (String)session.getAttribute("No");
 
 		/***사진 서버에 저장 부분***/
 		String realFolder = "";

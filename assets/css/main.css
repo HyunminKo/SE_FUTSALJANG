@@ -1214,6 +1214,9 @@ table.centerInfoTable td {
 .cardHidden{
 	display: none;
 }
+.cardForm{
+	display: inline-block;
+}
 
 /*test*/
 

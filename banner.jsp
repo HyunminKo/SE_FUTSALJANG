@@ -118,5 +118,5 @@
 			</ul>
 		</div>
 		
-		<h1 style="font-family: 'Hanna', serif;" id="currentScreenName"></h1>
+		<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">대전 전체 풋살장 검색</h1>
 	</div>

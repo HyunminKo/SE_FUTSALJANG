@@ -18,47 +18,7 @@ $(document).ready(function(){
         $("#adminMypage").show();
         $("#vip").hide();
     });
-});
-
-window.onclick = function(e) {
-  if (!(e.target.nodeName=='A')&&!(e.target.nodeName=='INPUT')) {
-      $("#userMypage").hide();
-      $("#hostMypage").hide();
-      $("#adminMypage").hide();
-      $("#vip").hide();
-  }
-}
-function bodyOnload(){
-  var title = document.getElementById("title").innerHTML;
-
-  document.getElementById("currentScreenName").innerHTML = title;
-}
-
-$("#main").hover(
-		  function () {
-		   $('#currentScreenName').css('color','#ff7496');
-		  }, 
-		  function () {
-		    $('#currentScreenName').css('color','white');
-		  }
-);
-
-function urlCheck(){
-	var para = document.location.href.split("/");
-	
-	if(para[4] == "home.jsp"){
-		return false;
-	}
-	else{
-			var sel = document.getElementById("guList");
-			var hidden = document.getElementById("hiddenInput");
-			hidden.value = sel.options[sel.selectedIndex].innerHTML;
-			return true;
-	}
-}
-
-$(document).ready(function(){
-
+    
 	$("#searchBtn").click(function(){
 		var sel = document.getElementById("guList");
 		var currentScreenName = document.getElementById("currentScreenName");
@@ -74,4 +34,59 @@ $(document).ready(function(){
 		}
 	});
 	
+	$("#main").hover(
+			  function () {
+			   $('#currentScreenName').css('color','#ff7496');
+			  }, 
+			  function () {
+			    $('#currentScreenName').css('color','white');
+			  }
+	);
+	
+	$(".cardForm").click(function(e){
+		alert($("e:nth-last-child(1)").val());
+		$(".cardForm").submit();
+	});
 });
+
+window.onclick = function(e) {
+  if (!(e.target.nodeName=='A')&&!(e.target.nodeName=='INPUT')) {
+      $("#userMypage").hide();
+      $("#hostMypage").hide();
+      $("#adminMypage").hide();
+      $("#vip").hide();
+  }
+}
+function bodyOnload(){
+  var title = document.getElementById("title").innerHTML;
+
+  document.getElementById("currentScreenName").innerHTML = title;
+}
+function pageSetting(a){
+	var val = a;
+	var currentScreenName = document.getElementById("currentScreenName");
+	$("#guList").val(val);
+	if(val=="전체"){
+		currentScreenName.innerHTML="대전 전체 풋살장 검색";
+		$(".card").show();
+	}else{
+		currentScreenName.innerHTML="대전 "+ val +" 풋살장 검색";
+		$(".card").hide();
+		$("."+val).show();
+	}
+}
+
+
+function urlCheck(){
+	var para = document.location.href.split("/");
+	
+	if(para[4] == "home.jsp"){
+		return false;
+	}
+	else{
+			var sel = document.getElementById("guList");
+			var hidden = document.getElementById("hiddenInput");
+			hidden.value = sel.options[sel.selectedIndex].innerHTML;
+			return true;
+	}
+}
