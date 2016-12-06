@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -6,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title id = "title">팀 조회</title>
+		<title id = "title">풋살장 이용 및 예약 내역(이용자)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
@@ -26,7 +27,6 @@
 			input[type="submit"]{
 			    border:1px solid rgba(0,0,0,0);;
 			}
-
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
@@ -44,27 +44,29 @@
 
 					<table class="centerInfoTable">
 						<tr>
-							<th style="display:none;">팀번호</th>
-							<th>팀이름</th>
-							<th>팀설명</th>
-						
-							<th>상세</th>
+							<th style="display:none;">풋살장번호</th>
+							<th>풋살장이름</th>
+							<th>대관날짜</th>
+							<th>이용시간</th>
+							<th>금액</th>
+							<th>예약취소</th>
 						</tr>
 						<tr>
 							<td style="display:none;">1</td>
-							<td>컴공 프로브 풋살</td>
-							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리의 12학번 끼리 친목을 다지기 위해 만든 팀입니다.</td>
-							<td>
-								<input type="submit" value="상세보기" formnovalidate formaction="#"/>
-							</td>
+							<td>유성 풋살장</td>
+							<td>16/12/17</td>
+							<td>20:00 ~ 22:00</td>
+							<td>100000</td>
+							<td><input type="submit" value="취소" formnovalidate formaction="#"/></td>
 						</tr>
 					</table>
 
 				</form>
 				<hr/>
-					
-			</div>
 			
+
+			
+
 		</div>
 		<!-- Footer -->
 				

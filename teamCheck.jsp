@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -6,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title id = "title">테스트한다!!!!</title>
+		<title id = "title">팀 조회</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
@@ -18,45 +19,62 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
+		<style type="text/css">
+			.inputRadioLabel{
+				margin-left:23px;
+				margin-bottom:30px;
+			}
+			input[type="submit"]{
+			    border:1px solid rgba(0,0,0,0);;
+			}
+
+		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
-	<body class="is-loading"  onload="bodyOnload()">
+	<body class="is-loading" onload="bodyOnload()">
 
 		<!-- Wrapper -->
 		<div id="wrapper">
 
 			<jsp:include page="./banner.jsp"></jsp:include>
 
-			<div id="main" >
-					
-					<hr/>
-						<div max-height:"700px;">
-							<div>
-								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
-							</div>
-							<div>
-								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
-							</div>
-							<div>
-								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
-							</div>
-							<div>
-								<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image">
-							</div>
-						</div>
-					<hr/>
-			</div>
+			<div id="main">
 
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="copyright">
+				<hr/>
+				<form method="post" action="#">
+
+					<table class="centerInfoTable">
+						<tr>
+							<th style="display:none;">팀번호</th>
+							<th>팀이름</th>
+							<th>팀설명</th>
+						
+							<th>상세</th>
+						</tr>
+						<tr>
+							<td style="display:none;">1</td>
+							<td>컴공 프로브 풋살</td>
+							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리의 12학번 끼리 친목을 다지기 위해 만든 팀입니다.</td>
+							<td>
+								<input type="submit" value="상세보기" formnovalidate formaction="#"/>
+							</td>
+						</tr>
+					</table>
+
+				</form>
+				<hr/>
+					
+			</div>
+			
+		</div>
+		<!-- Footer -->
+				
+			<footer id="footer" >
+				<ul class="copyright" >
 					<li>풋살장 예약 시스템</li>
 					<li>윤성준 정창훈 고현민</li>
 				</ul>
 			</footer>
-
-		</div>
-
 		<!-- Scripts -->
 		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
 		<script>
@@ -68,6 +86,5 @@
 				}
 		</script>
 		<script src = "./assets/js/dropbar.js"></script>
-		<script src = "./assets/js/test.js"></script>
 	</body>
 </html>

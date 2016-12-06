@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -6,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title id = "title">팀 정보 수정 및 삭제</title>
+		<title id = "title">풋살장 이용 및 예약 내역(업체)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
@@ -37,34 +38,50 @@
 			<div id="main">
 
 				<hr/>
-				<p>수정하거나 삭제할 팀의 정보를 선택해주세요.</p>
 				<form method="post" action="#">
 
 					<table class="centerInfoTable">
 						<tr>
-							<th style="display:none;">팀번호</th>
-							<th>선택</th>
-							<th>팀이름</th>
-							<th style="border-right:2px solid rgba(0,0,0,0)">팀설명</th>
+							<th style="display:none;">예약자 번호</th>
+							<th>예약자이름</th>
+							<th>대관날짜</th>
+							<th>이용시간</th>
+							<th>전화번호</th>
+							<th>금액</th>
 						</tr>
 						<tr>
 							<td style="display:none;">1</td>
-							<td>
-								<input class="inputRadio" type="radio" id="centerInfo1" name="robot"/>
-								<label class="inputRadioLabel" for="centerInfo1"/>
-							</td>
-							<td>프로브 풋살팀</td>
-							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리 친구들의 모임</td>
+							<td>정창훈</td>
+							<td>16/12/10</td>
+							<td>19:00 ~ 21:00</td>
+							<td>010-9423-3167</td>
+							<td>금액</td>
 						</tr>
 						<tr>
 							<td style="display:none;">1</td>
-							<td>
-								<input class="inputRadio" type="radio" id="centerInfo2" name="robot"/>
-								<label class="inputRadioLabel" for="centerInfo2"/>
-							</td>
-							<td>프로브 풋살팀</td>
-							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리 친구들의 모임</td>
+							<td>정창훈</td>
+							<td>16/12/10</td>
+							<td>19:00 ~ 21:00</td>
+							<td>010-9423-3167</td>
+							<td>금액</td>
 						</tr>
+						<tr>
+							<td style="display:none;">1</td>
+							<td>정창훈</td>
+							<td>16/12/10</td>
+							<td>19:00 ~ 21:00</td>
+							<td>010-9423-3167</td>
+							<td>금액</td>
+						</tr>
+						<tr>
+							<td style="display:none;">1</td>
+							<td>정창훈</td>
+							<td>16/12/10</td>
+							<td>19:00 ~ 21:00</td>
+							<td>010-9423-3167</td>
+							<td>금액</td>
+						</tr>
+
 					</table>
 
 					<input style="margin-top:50px;" type="submit" value="수정" formnovalidate formaction="#"/>
@@ -72,8 +89,7 @@
 					<input type="submit" value="취소" formnovalidate formaction="#"/>
 				</form>
 				<hr/>
-			
-			</div>
+					
 		</div>
 		<!-- Footer -->
 				

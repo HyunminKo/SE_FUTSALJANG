@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -6,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title id = "title">풋살장 이용 및 예약 내역(이용자)</title>
+		<title id = "title">팀 상세보기</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
@@ -18,15 +19,6 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
-		<style type="text/css">
-			.inputRadioLabel{
-				margin-left:23px;
-				margin-bottom:30px;
-			}
-			input[type="submit"]{
-			    border:1px solid rgba(0,0,0,0);;
-			}
-		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
 	<body class="is-loading" onload="bodyOnload()">
@@ -37,35 +29,33 @@
 			<jsp:include page="./banner.jsp"></jsp:include>
 
 			<div id="main">
-
-				<hr/>
-				<form method="post" action="#">
-
-					<table class="centerInfoTable">
-						<tr>
-							<th style="display:none;">풋살장번호</th>
-							<th>풋살장이름</th>
-							<th>대관날짜</th>
-							<th>이용시간</th>
-							<th>금액</th>
-							<th>예약취소</th>
-						</tr>
-						<tr>
-							<td style="display:none;">1</td>
-							<td>유성 풋살장</td>
-							<td>16/12/17</td>
-							<td>20:00 ~ 22:00</td>
-							<td>100000</td>
-							<td><input type="submit" value="취소" formnovalidate formaction="#"/></td>
-						</tr>
-					</table>
-
-				</form>
-				<hr/>
+					
+					<hr/>
+						<div>
+							<table id= "team_detail_table" align = "center">
+								<tr>
+									<td>팀명 : </td>
+									<td colspan = "4">fc컴공</td>
+								</tr>
+								<tr>
+									<td>팀 설명 : </td>
+									<td colspan = "4">팀에 대한 설명</td>
+								</tr>
+								<tr>
+									<td>대결 목록 : </td>
+									<td>FC컴공</td>
+									<td>VS</td>
+									<td>FC짱짱</td>
+									<td>날짜</td>
+								</tr>
+								<tr>
+									<td colspan = "5"><input type="submit" value="대결 신청" formnovalidate formaction="#"/></td>
+									
+								</tr>
+							</table>
+						</div>
+					<hr/>
 			
-
-			
-
 		</div>
 		<!-- Footer -->
 				
