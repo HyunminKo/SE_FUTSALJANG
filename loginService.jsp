@@ -16,10 +16,10 @@
 		if(result.contains("success")){
 			String resultData[] = result.split(":");
 			session.setAttribute("Id",id);
-			session.setAttribute("type","user");
-			session.setAttribute("no",resultData[1]);
+			session.setAttribute("Type","user");
+			session.setAttribute("No",resultData[1]);
 			System.out.println("Id: "+id+" "+"Type: user No: "+resultData[1]);
-			response.sendRedirect("./home.html");
+			response.sendRedirect("./home.jsp");
 		}else if(result.equals("incorrect")){
 			%>
 				<script>
@@ -32,10 +32,10 @@
 			if(result.contains("success")){
 				String resultData[] = result.split(":");
 				session.setAttribute("Id",id);
-				session.setAttribute("type","host");
-				session.setAttribute("no",resultData[1]);
+				session.setAttribute("Type","host");
+				session.setAttribute("No",resultData[1]);
 				System.out.println("Id: "+id+" "+"Type: host No: "+resultData[1]);
-				response.sendRedirect("./home.html");
+				response.sendRedirect("./home.jsp");
 			}else if(result.equals("incorrect")){
 				%>
 					<script>
