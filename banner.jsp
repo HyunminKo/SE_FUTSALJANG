@@ -2,7 +2,7 @@
    pageEncoding="UTF-8" import ="java.sql.*" %>	
 	<!-- Main -->
 	<div id="banner">
-		<div>
+		<div id="bannerMinusTitleDiv">
 			<ul class="actions">
 				<li>
 					<span>
