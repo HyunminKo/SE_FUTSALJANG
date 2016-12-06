@@ -1,6 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@page import="DAO.HostDAO" %>
-<%@page import="DAO.UserDAO" %>
 <%@page import="DAO.ReservationDAO" %>
 <%@page import="java.util.*" %>
 

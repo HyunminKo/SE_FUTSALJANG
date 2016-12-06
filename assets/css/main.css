@@ -1211,7 +1211,9 @@ table.centerInfoTable td {
 	width:250px; 
 	height:150px; 
 }
-
+.cardHidden{
+	display: none;
+}
 
 /*test*/
 
