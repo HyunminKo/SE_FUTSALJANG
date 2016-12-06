@@ -76,7 +76,7 @@
 								<li>
 									<a href="#" class="fa-user" onclick = "" title="마이페이지" id ="btn_adminMypage">마이페이지</a>
 									<div id="adminMypage" class="dropdown-content1">
-										<a href="#" class = "dropdown_A" id = "memberCheck">회원 조회</a>
+										<a href="./memberCheck.jsp" class = "dropdown_A" id = "memberCheck">회원 조회</a>
 										<a href="./logoutService.jsp" class = "dropdown_A" id = "adminLogout">로그아웃</a>
 									</div>
 								</li>

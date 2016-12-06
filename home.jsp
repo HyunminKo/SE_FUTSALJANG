@@ -45,10 +45,11 @@
 				<hr/>
 <% 
 			Iterator<FutsalcenterDAO> it = centerList.iterator();
+			int i = 0;
 			while(it.hasNext()){
 				FutsalcenterDAO temp = it.next();
 %>
-				<form action="./centerDetail.jsp" method="post" class="cardForm">
+				<form action="./centerDetail.jsp" method="post" class="cardForm" id="<%=i%>">
 					<div class="card <%=temp.getKu()%>">
 						<img src="images/FUTSALJANG/<%=temp.getImgUrl()%>" alt="Avatar"/>
 						<div class="container">
@@ -66,6 +67,7 @@
 					<input type="hidden" name="centerDetailAddress" value="<%=temp.getDetailAddress()%>"/>
 				</form>
 <%
+				i++;
 			}
 %>				
 				<hr/>

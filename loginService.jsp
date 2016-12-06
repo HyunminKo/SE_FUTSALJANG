@@ -17,7 +17,7 @@
 			String resultData[] = result.split(":");
 			session.setAttribute("Id",id);
 			
-			if(resultData[1].equals("1"))
+			if(resultData[1].equals("0"))
 				session.setAttribute("Type", "admin");
 			else
 				session.setAttribute("Type","user");

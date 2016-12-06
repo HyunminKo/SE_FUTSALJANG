@@ -43,8 +43,11 @@ $(document).ready(function(){
 			  }
 	);
 	
-	$(".cardForm").click(function(){
-		$(".cardForm").submit();
+	$(".cardForm").click(function(e){
+		var target = e.target;
+		while(target.className != 'cardForm')
+			target = target.parentNode;
+		$("#"+target.id).submit();
 	});
 });
 

@@ -10,7 +10,6 @@
 	String centerKu = request.getParameter("centerKu");
 	String centerDetailAddress = request.getParameter("centerDetailAddress");
 	
-	
 %>
 <!DOCTYPE HTML>
 <!--
