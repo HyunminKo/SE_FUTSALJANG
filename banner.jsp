@@ -17,6 +17,7 @@
 					</span>
 				</li>
 				<li>
+					<form action = "./home.jsp" method = "post" onsubmit = "return urlCheck();">
 					<div class="select-wrapper" id="selectGu">
 						<ul  class="actions">
 							<li>
@@ -30,10 +31,12 @@
 								</select>
 							</li>
 							<li>
-								<input type="button"class="button" id="searchBtn" value="검색"/>
+								<input type="submit" id="searchBtn" value="검색" />
+								<input type = "hidden" id = "hiddenInput" name = "hiddenInput" value = ""/>
 							</li>
 						</ul>
 					</div>
+					</form>
 				</li>
 				<li>
 					<div id="operationIcons">
