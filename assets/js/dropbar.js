@@ -42,3 +42,36 @@ $("#main").hover(
 		    $('#currentScreenName').css('color','white');
 		  }
 );
+
+function urlCheck(){
+	var para = document.location.href.split("/");
+	
+	if(para[4] == "home.jsp"){
+		return false;
+	}
+	else{
+			var sel = document.getElementById("guList");
+			var hidden = document.getElementById("hiddenInput");
+			hidden.value = sel.options[sel.selectedIndex].innerHTML;
+			return true;
+	}
+}
+
+$(document).ready(function(){
+
+	$("#searchBtn").click(function(){
+		var sel = document.getElementById("guList");
+		var currentScreenName = document.getElementById("currentScreenName");
+		var val;
+		val = sel.options[sel.selectedIndex].innerHTML;
+		if(val=="전체"){
+			currentScreenName.innerHTML="대전 전체 풋살장 검색";
+			$(".card").show();
+		}else{
+			currentScreenName.innerHTML="대전 "+ val +" 풋살장 검색";
+			$(".card").hide();
+			$("."+val).show();
+		}
+	});
+	
+});

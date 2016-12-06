@@ -157,25 +157,7 @@
 					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-
-			$(document).ready(function(){
-
-				$("#searchBtn").click(function(){
-					var sel = document.getElementById("guList");
-					var currentScreenName = document.getElementById("currentScreenName");
-					var val;
-					val = sel.options[sel.selectedIndex].innerHTML;
-					if(val=="전체"){
-						currentScreenName.innerHTML="대전 전체 풋살장 검색";
-						$(".card").show();
-					}else{
-						currentScreenName.innerHTML="대전 "+ val +" 풋살장 검색";
-						$(".card").hide();
-						$("."+val).show();
-					}
-				});
-				
-			});
+			
 		</script>
 		<script src = "./assets/js/dropbar.js"></script>
 	</body>
