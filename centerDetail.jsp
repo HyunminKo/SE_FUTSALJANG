@@ -50,7 +50,7 @@
 					<div id = "center_info">
 
 
-						<form  method="post" action="#">
+						<form  method="post" action="./reservationpay.jsp">
 							<table>
 								<tr>
 									<td class="tdTitle">풋살장 이름 : </td>
@@ -61,7 +61,7 @@
 								<tr>
 									<td class="tdTitle">요금 : </td>
 									<td>
-										<span id="span_center_rate" class="futInfo"><%=centerCharge%></span>
+										<span id="span_center_rate" name ="centerName" class="futInfo"><%=centerCharge%></span>
 									</td>
 								</tr>
 								<tr>
@@ -141,13 +141,13 @@
 									<td colspan = "3" class = "time_table_td">22:00 ~ 24:00</td>
 								</tr>
 							</table>
+							<input type ="submit" name = "btn_reservation" value ="예약 및 결제"/>
 						</form>						
 
 					</div>
 
 
 
-					<a href="./reservationpay.jsp" class="button">예약 및 결제</a>
 					<hr/>
 
 			</div>
