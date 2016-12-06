@@ -743,6 +743,7 @@
 		cursor: default;
 		opacity: 0.95;
 		text-align: center;
+		z-index: 1;
 		-moz-transform-origin: 50% 50%;
 		-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
@@ -779,13 +780,13 @@
 		transition: opacity 1s ease, transform 1s ease;		
 	}
 
-
 		body.is-loading #main, body.is-loading #openingPage, body.is-loading #banner, body.is-loading #joinPage, body.is-loading #loginPage {
 			opacity: 0;
 			-moz-transform: rotateX(15deg);
 			-webkit-transform: rotateX(15deg);
 			-ms-transform: rotateX(15deg);
 			transform: rotateX(15deg);
+
 		}
 
 	#EnterButton{
@@ -833,6 +834,7 @@
 		cursor: default;
 		opacity: 0.95;
 		text-align: center;
+		z-index : 2;
 		-moz-transform-origin: 50% 50%;
 		-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
@@ -915,10 +917,6 @@
 		min-height: 100%;
 		z-index: 2;
 	}
-
-		#wrapper > * {
-			z-index: 1;
-		}
 
 		#wrapper:before {
 			content: '';
@@ -1219,13 +1217,12 @@ table.centerInfoTable td {
 
 	.dropdown-content1,.dropdown-content2 {
 	    display: none;
-	    position: absolute;
+	    position : absolute;
 	    background-color: #f6f6f6;
 	   
 	    overflow: auto;
 	    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	    border-radius: 4px;
-		z-index: 10;
 		
 	}
 	.dropdown-content1 {
@@ -1234,7 +1231,6 @@ table.centerInfoTable td {
 	
 	.dropdown-content2 {
 		max-width:auto;
-		
 	}
 
 	.show{
