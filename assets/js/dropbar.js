@@ -45,8 +45,9 @@ $(document).ready(function(){
 	
 	$(".cardForm").click(function(e){
 		var target = e.target;
-		var parent = target.parentsUntil(".cardForm");
-		$(".cardForm").submit();
+		while(target.className != 'cardForm')
+			target = target.parentNode;
+		$("#"+target.id).submit();
 	});
 });
 
