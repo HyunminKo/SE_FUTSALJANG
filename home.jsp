@@ -52,8 +52,8 @@
 					<div class="card <%=temp.getKu()%>">
 						<img src="images/FUTSALJANG/<%=temp.getImgUrl()%>" alt="Avatar"/>
 						<div class="container">
-							<h4><b><%=temp.getKu()%></b></h4>
-							<p><%=temp.getCenterName()%></p>
+							<h4><b><%=temp.getCenterName()%></b></h4>
+							<p><%=temp.getKu()%></p>
 						</div>
 					</div>
 					<input type="hidden" name="centerNo" value="<%=temp.getCenterNo()%>"/>
