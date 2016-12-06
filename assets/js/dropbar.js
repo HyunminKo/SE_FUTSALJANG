@@ -43,7 +43,8 @@ $(document).ready(function(){
 			  }
 	);
 	
-	$(".cardForm").click(function(){
+	$(".cardForm").click(function(e){
+		alert($("e:nth-last-child(1)").val());
 		$(".cardForm").submit();
 	});
 });

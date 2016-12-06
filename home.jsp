@@ -43,6 +43,7 @@
 				<hr/>
 <% 
 			Iterator<FutsalcenterDAO> it = centerList.iterator();
+			int i = 0;
 			while(it.hasNext()){
 				FutsalcenterDAO temp = it.next();
 %>
@@ -54,16 +55,18 @@
 							<p><%=temp.getKu()%></p>
 						</div>
 					</div>
-					<input type="hidden" name="centerNo" value="<%=temp.getCenterNo()%>"/>
-					<input type="hidden" name="centerImg" value="<%=temp.getImgUrl()%>"/>
-					<input type="hidden" name="centerName" value="<%=temp.getCenterName()%>"/>
-					<input type="hidden" name="centerCharge" value="<%=temp.getCharge() %>"/>
-					<input type="hidden" name="centerSectionNum" value="<%=temp.getSectionNum() %>"/>
-					<input type="hidden" name="centerPhone" value="<%=temp.getCenterPhone()%>"/>
-					<input type="hidden" name="centerKu" value="<%=temp.getKu()%>"/>
-					<input type="hidden" name="centerDetailAddress" value="<%=temp.getDetailAddress()%>"/>
+					<input type="hidden" name="centerNo<%=i%>" value="<%=temp.getCenterNo()%>"/>
+					<input type="hidden" name="centerImg<%=i%>" value="<%=temp.getImgUrl()%>"/>
+					<input type="hidden" name="centerName<%=i%>" value="<%=temp.getCenterName()%>"/>
+					<input type="hidden" name="centerCharge<%=i%>" value="<%=temp.getCharge() %>"/>
+					<input type="hidden" name="centerSectionNum<%=i%>" value="<%=temp.getSectionNum() %>"/>
+					<input type="hidden" name="centerPhone<%=i%>" value="<%=temp.getCenterPhone()%>"/>
+					<input type="hidden" name="centerKu<%=i%>" value="<%=temp.getKu()%>"/>
+					<input type="hidden" name="centerDetailAddress<%=i%>" value="<%=temp.getDetailAddress()%>"/>
+					<input type="hidden" id="cardIndex" value="<%=i%>"/>
 				</form>
 <%
+				i++;
 			}
 %>				
 				<hr/>

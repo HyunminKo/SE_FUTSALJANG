@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
 	request.setCharacterEncoding("UTF-8");
-	String centerNo = request.getParameter("centerNo");
-	String centerImg = request.getParameter("centerImg");
-	String centerName = request.getParameter("centerName");
-	String centerCharge = request.getParameter("centerCharge");
-	String centerSectionNum = request.getParameter("centerSectionNum");
-	String centerPhone = request.getParameter("centerPhone");
-	String centerKu = request.getParameter("centerKu");
-	String centerDetailAddress = request.getParameter("centerDetailAddress");
-	
+	String cardIndex = request.getParameter("cardIndex");
+	String centerNo = request.getParameter("centerNo"+cardIndex);
+	String centerImg = request.getParameter("centerImg"+cardIndex);
+	String centerName = request.getParameter("centerName"+cardIndex);
+	String centerCharge = request.getParameter("centerCharge"+cardIndex);
+	String centerSectionNum = request.getParameter("centerSectionNum"+cardIndex);
+	String centerPhone = request.getParameter("centerPhone"+cardIndex);
+	String centerKu = request.getParameter("centerKu"+cardIndex);
+	String centerDetailAddress = request.getParameter("centerDetailAddress"+cardIndex);
 	
 %>
 <!DOCTYPE HTML>
