@@ -16,7 +16,12 @@
 		if(result.contains("success")){
 			String resultData[] = result.split(":");
 			session.setAttribute("Id",id);
-			session.setAttribute("Type","user");
+			
+			if(resultData[1].equals("1"))
+				session.setAttribute("Type", "admin");
+			else
+				session.setAttribute("Type","user");
+			
 			session.setAttribute("No",resultData[1]);
 			System.out.println("Id: "+id+" "+"Type: user No: "+resultData[1]);
 			response.sendRedirect("./home.jsp");

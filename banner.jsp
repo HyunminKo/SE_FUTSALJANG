@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-   pageEncoding="UTF-8" import ="java.sql.*" %>	
+   pageEncoding="UTF-8" import ="java.sql.*" %>
+ <%
+	String id = (String) session.getAttribute("Id");
+ 	String type = (String) session.getAttribute("Type");
+ 	String memberNo = (String) session.getAttribute("No");
+ %>	
 	<!-- Main -->
 	<div id="banner">
 		<div id="bannerMinusTitleDiv">
@@ -33,17 +38,48 @@
 				<li>
 					<div id="operationIcons">
 						<ul class="icons">
-							<li>
-								<a href="./login.html" title="회원가입" class="fa-user">회원가입</a>
-							</li>
-							<li>
-								<a href="#" class="fa-user" onclick = "" id ="btn_mypage">마이페이지</a>
-								<div id="mypage" class="dropdown-content1">
-									<a href="#" class = "test" id = "history">이용 내역</a>
-									<a href="#" class = "test" id = "centerEnroll">풋살장 등록</a>
-									<a href="#" class = "test" id = "centermodify">풋살장 수정 및 삭제</a>
-								</div>
-							</li>
+							<% 
+								if(type == null){
+							%>
+								<li>
+									<a href="./login.html" title="로그인" class="fa-user">회원가입</a>
+								</li>
+							<% 
+								}else if(type.equals("user")){
+							%>
+								<li>
+									<a href="#" class="fa-user" onclick = "" title="마이페이지" id ="btn_userMypage">마이페이지</a>
+									<div id="userMypage" class="dropdown-content1">
+										<a href="./userHistory.jsp" class = "dropdown_A" id = "userHistory">이용 내역</a>
+										<a href="./teamModify.jsp" class = "dropdown_A" id = "teamModify">팀 수정 및 삭제</a>
+										<a href="./logoutService.jsp" class = "dropdown_A" id = "userLogout">로그아웃</a>
+									</div>
+								</li>
+							<% 
+								}else if(type.equals("host")){
+							%>							
+								<li>
+									<a href="#" class="fa-user" onclick = "" title="마이페이지" id ="btn_hostMypage">마이페이지</a>
+									<div id="hostMypage" class="dropdown-content1">
+										<a href="./hostHistory.jsp" class = "dropdown_A" id = "hostHistory">이용 내역</a>
+										<a href="./centerEnroll.jsp" class = "dropdown_A" id = "centerEnroll">풋살장 등록</a>
+										<a href="./centerModifyAndDelete.jsp" class = "dropdown_A" id = "centerModify">풋살장 수정 및 삭제</a>
+										<a href="./logoutService.jsp" class = "dropdown_A" id = "hostLogout">로그아웃</a>
+									</div>
+								</li>
+							<% 
+								}else{
+							%>
+								<li>
+									<a href="#" class="fa-user" onclick = "" title="마이페이지" id ="btn_adminMypage">마이페이지</a>
+									<div id="adminMypage" class="dropdown-content1">
+										<a href="#" class = "dropdown_A" id = "memberCheck">회원 조회</a>
+										<a href="./logoutService.jsp" class = "dropdown_A" id = "adminLogout">로그아웃</a>
+									</div>
+								</li>
+							<% 
+								}
+							%>
 							<li>
 								<a href="#" title="VIP조회" class="fa-trophy" id = "btn_vip" onclick= "">VIP</a>
 								<div id="vip" class="dropdown-content2">
@@ -67,12 +103,11 @@
 											<td>JCHBS</td>
 											<td>5</td>
 										</tr>
-
 									</table>
 							 	</div>
 							</li>
 							<li>
-								<a href="#" class="fa-users">TEAM</a>
+								<a href="./teamCheck.jsp" title="팀조회" class="fa-users">TEAM</a>
 							</li>
 						</ul>
 					</div>

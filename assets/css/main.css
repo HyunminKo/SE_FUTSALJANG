@@ -1229,7 +1229,7 @@ table.centerInfoTable td {
 	.show{
 		display:block;
 	}
-	#mypage a {
+	#userMypage a, #hostMypage a, #adminMypage a {
 		position:relative;
 		display : block;
 		text-align: left;
