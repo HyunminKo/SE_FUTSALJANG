@@ -6,13 +6,10 @@
 <%
 	UserDAO userDAO = new UserDAO();
 	HostDAO hostDAO = new HostDAO();
-<<<<<<< HEAD
+
 	List<UserDAO> userinformationList = new ArrayList<>();
 	List<HostDAO> hostinformationList = new ArrayList<>();
-=======
-	List<UserDAO> userinformationList = new ArrayList<UserDAO>();
-	List<HostDAO> hostinformationList = new ArrayList<HostDAO>();
->>>>>>> 18f87088559b3ae973044c34d2b846df4b1424fd
+
 	userDAO.select(userinformationList);
 	hostDAO.select(hostinformationList);
 %>
@@ -25,7 +22,7 @@
 -->
 <html>
 	<head>
-		<title>뛰놀자</title>
+		<title id = "title">회원 조회</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/html5shiv.js"></script><![endif]-->
@@ -52,6 +49,7 @@
 
 			<jsp:include page="./banner.jsp"></jsp:include>
 
+			<h1 id="currentScreenName"></h1>
 			<div id="main">
 					
 					<hr/>
