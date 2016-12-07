@@ -69,8 +69,7 @@ input[type="submit"] {
 				<% 
 					}else if(type.equals("user")){
 				%>
-					<input id="teamEnrollBtn" type="submit" value="팀 등록" formnovalidate
-						formaction="./teamEnroll.jsp" />
+					<a id="teamEnrollBtn" class="button" href="./teamEnroll.jsp">팀 등록</a>
 					<table class="centerInfoTable">
 				<% 
 					}else{

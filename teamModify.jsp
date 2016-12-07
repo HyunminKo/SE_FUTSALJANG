@@ -1,4 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="DAO.TeamDAO"%>
+<%@page import="java.util.*"%>
+<%
+	List<TeamDAO> teamList = new ArrayList<>();
+	
+	String type = (String) session.getAttribute("Type");
+	String userNo = (String) session.getAttribute("No");
+	
+	TeamDAO.getMyTeam(teamList, userNo);
+%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -24,7 +34,24 @@
 				margin-left:23px;
 				margin-bottom:30px;
 			}
-
+			.centerInfoTable .teamName{
+				width: 100%;
+			}
+			.centerInfoTable .teamDescription{
+				width: 100%;
+			}
+			.centerInfoTable .tdTeamName{
+				width: 20%;
+			}
+			.centerInfoTable .tdcenterInfo{
+				width: 5%;
+			}
+			table.centerInfoTable {
+				width: 100%;
+			    border-collapse: collapse;
+				text-align: center;
+				margin:auto;
+			}
 		</style>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
@@ -39,7 +66,7 @@
 
 				<hr/>
 				<p>수정하거나 삭제할 팀의 정보를 선택해주세요.</p>
-				<form method="post" action="#">
+				<form method="post" action="./teamModifyService.jsp">
 
 					<table class="centerInfoTable">
 						<tr>
@@ -48,29 +75,29 @@
 							<th>팀이름</th>
 							<th style="border-right:2px solid rgba(0,0,0,0)">팀설명</th>
 						</tr>
-						<tr>
-							<td style="display:none;">1</td>
-							<td>
-								<input class="inputRadio" type="radio" id="centerInfo1" name="robot"/>
-								<label class="inputRadioLabel" for="centerInfo1"/>
-							</td>
-							<td>프로브 풋살팀</td>
-							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리 친구들의 모임</td>
-						</tr>
-						<tr>
-							<td style="display:none;">1</td>
-							<td>
-								<input class="inputRadio" type="radio" id="centerInfo2" name="robot"/>
-								<label class="inputRadioLabel" for="centerInfo2"/>
-							</td>
-							<td>프로브 풋살팀</td>
-							<td>충남대학교 컴퓨터 공학과 프로브레인 동아리 친구들의 모임</td>
-						</tr>
+				<%
+					Iterator<TeamDAO> it = teamList.iterator();
+					int i = 0;
+					while (it.hasNext()) {
+						TeamDAO temp = it.next();
+				%>
+				<tr>
+					<td class="tdcenterInfo"><input class="inputRadio" type="radio" name="teamInfo"
+						id="<%=temp.getTeamNo()%>" value="<%=temp.getTeamNo()%>" required/> <label class="inputRadioLabel"
+						for="<%=temp.getTeamNo()%>" /></td>
+					<td class="tdTeamName"><input class="teamName" type="text" id="teamName<%=temp.getTeamName()%>"
+						value="<%=temp.getTeamName()%>" name="teamName<%=temp.getTeamNo()%>"/></td>
+					<td><input class="teamDescription" type="text" id="teamDescription<%=temp.getTeamDescription()%>"
+						value="<%=temp.getTeamDescription()%>" name="teamDescription<%=temp.getTeamNo()%>"/></td>
+				</tr>
+				<%
+					i++;
+					}
+				%>
 					</table>
 
-					<input style="margin-top:50px;" type="submit" value="수정" formnovalidate formaction="#"/>
-					<input type="submit" value="삭제" formnovalidate formaction="#"/>
-					<input type="submit" value="취소" formnovalidate formaction="#"/>
+					<input style="margin-top:50px;" type="submit" value="수정"/>
+					<input type="submit" value="삭제" formaction="./teamDeleteService.jsp"/>
 				</form>
 				<hr/>
 			

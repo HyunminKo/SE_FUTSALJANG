@@ -76,7 +76,7 @@
 
 			<hr />
 			<p>수정하거나 삭제할 풋살장 정보를 선택해주세요.</p>
-			<form action="./futModifyService.jsp">
+			<form action="./futModifyService.jsp" method="post">
 			<table class="centerInfoTable">
 				<tr>
 					<th>선택</th>

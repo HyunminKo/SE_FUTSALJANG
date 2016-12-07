@@ -72,7 +72,7 @@
 								<input type="text" name="basecharge" id="baseCharge" style="width:100px; text-align:right;"  required/>
 							</td>
 							<td>
-								<p style="position:absolute; margin-left:-310px; margin-top:-12px;">원</p>
+								<p style="position:absolute; margin-left:-310px; margin-top:-12px;">원 (2시간 당)</p>
 							</td>
 						</tr>
 						<tr>
