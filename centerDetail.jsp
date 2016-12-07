@@ -60,7 +60,7 @@
 								<tr>
 									<td class="tdTitle">요금 : </td>
 									<td>
-										<span id="span_center_rate" name ="centerName" class="futInfo"><%=centerCharge%></span>
+										<span id="span_center_rate" class="futInfo"><%=centerCharge%></span>
 									</td>
 								</tr>
 								<tr>
