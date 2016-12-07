@@ -17,6 +17,7 @@
 					</span>
 				</li>
 				<li>
+					<form action = "./home.jsp" method = "post" onsubmit = "return urlCheck();">
 					<div class="select-wrapper" id="selectGu">
 						<ul  class="actions">
 							<li>
@@ -30,10 +31,12 @@
 								</select>
 							</li>
 							<li>
-								<input type="button"class="button" id="searchBtn" value="검색"/>
+								<input type="submit" id="searchBtn" value="검색" />
+								<input type = "hidden" id = "hiddenInput" name = "hiddenInput" value = ""/>
 							</li>
 						</ul>
 					</div>
+					</form>
 				</li>
 				<li>
 					<div id="operationIcons">
@@ -73,7 +76,7 @@
 								<li>
 									<a href="#" class="fa-user" onclick = "" title="마이페이지" id ="btn_adminMypage">마이페이지</a>
 									<div id="adminMypage" class="dropdown-content1">
-										<a href="#" class = "dropdown_A" id = "memberCheck">회원 조회</a>
+										<a href="./memberCheck.jsp" class = "dropdown_A" id = "memberCheck">회원 조회</a>
 										<a href="./logoutService.jsp" class = "dropdown_A" id = "adminLogout">로그아웃</a>
 									</div>
 								</li>
@@ -115,5 +118,5 @@
 			</ul>
 		</div>
 		
-		<h1 style="font-family: 'Hanna', serif;" id="currentScreenName"></h1>
+		<h1 style="font-family: 'Hanna', serif;" id="currentScreenName">대전 전체 풋살장 검색</h1>
 	</div>

@@ -18,6 +18,37 @@ $(document).ready(function(){
         $("#adminMypage").show();
         $("#vip").hide();
     });
+    
+	$("#searchBtn").click(function(){
+		var sel = document.getElementById("guList");
+		var currentScreenName = document.getElementById("currentScreenName");
+		var val;
+		val = sel.options[sel.selectedIndex].innerHTML;
+		if(val=="전체"){
+			currentScreenName.innerHTML="대전 전체 풋살장 검색";
+			$(".card").show();
+		}else{
+			currentScreenName.innerHTML="대전 "+ val +" 풋살장 검색";
+			$(".card").hide();
+			$("."+val).show();
+		}
+	});
+	
+	$("#main").hover(
+			  function () {
+			   $('#currentScreenName').css('color','#ff7496');
+			  }, 
+			  function () {
+			    $('#currentScreenName').css('color','white');
+			  }
+	);
+	
+	$(".cardForm").click(function(e){
+		var target = e.target;
+		while(target.className != 'cardForm')
+			target = target.parentNode;
+		$("#"+target.id).submit();
+	});
 });
 
 window.onclick = function(e) {
@@ -33,12 +64,31 @@ function bodyOnload(){
 
   document.getElementById("currentScreenName").innerHTML = title;
 }
+function pageSetting(a){
+	var val = a;
+	var currentScreenName = document.getElementById("currentScreenName");
+	$("#guList").val(val);
+	if(val=="전체"){
+		currentScreenName.innerHTML="대전 전체 풋살장 검색";
+		$(".card").show();
+	}else{
+		currentScreenName.innerHTML="대전 "+ val +" 풋살장 검색";
+		$(".card").hide();
+		$("."+val).show();
+	}
+}
 
-$("#main").hover(
-		  function () {
-		   $('#currentScreenName').css('color','#ff7496');
-		  }, 
-		  function () {
-		    $('#currentScreenName').css('color','white');
-		  }
-);
+
+function urlCheck(){
+	var para = document.location.href.split("/");
+	
+	if(para[4] == "home.jsp"){
+		return false;
+	}
+	else{
+			var sel = document.getElementById("guList");
+			var hidden = document.getElementById("hiddenInput");
+			hidden.value = sel.options[sel.selectedIndex].innerHTML;
+			return true;
+	}
+}

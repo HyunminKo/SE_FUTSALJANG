@@ -1,4 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="DAO.HostDAO" %>
+<%@page import="DAO.UserDAO" %>
+<%@page import="DAO.ReservationDAO" %>
+<%@page import="java.util.*" %>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String centerNo = request.getParameter("centerNo");
+	String centerImg = request.getParameter("centerImg");
+	String centerName = request.getParameter("centerName");
+	String centerCharge = request.getParameter("centerCharge");
+	String centerSectionNum = request.getParameter("centerSectionNum");
+	String centerPhone = request.getParameter("centerPhone");
+	String centerKu = request.getParameter("centerKu");
+	String centerDetailAddress = request.getParameter("centerDetailAddress");
+%>
+<script>
+	alert(<%=centerName%>);
+</script>
+<%
+%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -37,25 +57,25 @@
 						<tr>
 							<td class="tdTitle">풋살장 이름 : </td>
 							<td>
-								<span id="span_fut_name" class="futInfo"></span>
+								<span id="span_fut_name" class="futInfo"><%=centerName%></span>
 							</td>
 						</tr>
 						<tr>
 							<td class="tdTitle">대관 날짜 : </td>
 							<td>
-								<span id="span_date" class="futInfo"></span>
+								<span id="span_date" class="futInfo"><%=centerName%></span>
 							</td>
 						</tr>
 						<tr>
 							<td class="tdTitle">이용 시간 : </td>
 							<td>
-								<span id="span_time" class="futInfo"></span>
+								<span id="span_time" class="futInfo"><%=centerName%></span>
 							</td>
 						</tr>
 						<tr>
 							<td class="tdTitle">이용 금액 : </td>
-							<td class="tdInfo">
-								<span id="span_rate" class="futInfo"></span>
+							
+								<span id="span_rate" class="futInfo"><%=centerCharge%></span>
 							</td>
 						</tr>
 						<tr>

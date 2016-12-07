@@ -1,6 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="DAO.FutsalcenterDAO" %>
+<%@page import="java.util.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
+	FutsalcenterDAO futsalcenterDAO = new FutsalcenterDAO();
+	List<FutsalcenterDAO> centerList = new ArrayList<>();
 	
+	futsalcenterDAO.select(centerList);
+
+	String gu = request.getParameter("hiddenInput");
 %>
 <!DOCTYPE HTML>
 <!--
@@ -26,7 +34,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 		</script>
 	</head>
-	<body class="is-loading" onload="bodyOnload()" >
+	<body class="is-loading">
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -35,77 +43,33 @@
 			
 			<div id="main">
 				<hr/>
-				
-					<div class="card 유성구">
-						<img src="images/asd.jpg" id="" alt="Avatar"/>
+<% 
+			Iterator<FutsalcenterDAO> it = centerList.iterator();
+			int i = 0;
+			while(it.hasNext()){
+				FutsalcenterDAO temp = it.next();
+%>
+				<form action="./centerDetail.jsp" method="post" class="cardForm" id="<%=i%>">
+					<div class="card <%=temp.getKu()%>">
+						<img src="images/FUTSALJANG/<%=temp.getImgUrl()%>" alt="Avatar"/>
 						<div class="container">
-							<h4><b>유성구</b></h4> 
-							<p>유성구 풋살장</p> 
+							<h4><b><%=temp.getKu()%></b></h4>
+							<p><%=temp.getCenterName()%></p>
 						</div>
 					</div>
-					<div class="card 동구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>동구</b></h4> 
-							<p>동구 풋살장</p> 
-						</div>
-					</div>
-					<div class="card 중구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>중구</b></h4> 
-							<p>중구 풋살장</p> 
-						</div>
-					</div>
-					<div class="card 서구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>서구</b></h4> 
-							<p>서구 풋살장</p> 
-						</div>
-					</div>
-					<div class="card 대덕구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>대덕구 풋살장</b></h4> 
-							<p>대덕구</p> 
-						</div>
-					</div>
-					<div class="card 대덕구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>대덕구 풋살장</b></h4> 
-							<p>대덕구</p> 
-						</div>
-					</div>
-					<div class="card 대덕구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>대덕구 풋살장</b></h4> 
-							<p>대덕구</p> 
-						</div>
-					</div>
-					<div class="card 대덕구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>대덕구 풋살장</b></h4> 
-							<p>대덕구</p> 
-						</div>
-					</div>
-					<div class="card 대덕구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>대덕구 풋살장</b></h4> 
-							<p>대덕구</p> 
-						</div>
-					</div>
-					<div class="card 대덕구">
-						<img src="images/asd.jpg" alt="Avatar"/>
-						<div class="container">
-							<h4><b>대덕구 풋살장</b></h4> 
-							<p>대덕구</p> 
-						</div>
-					</div>
+					<input type="hidden" name="centerNo" value="<%=temp.getCenterNo()%>"/>
+					<input type="hidden" name="centerImg" value="<%=temp.getImgUrl()%>"/>
+					<input type="hidden" name="centerName" value="<%=temp.getCenterName()%>"/>
+					<input type="hidden" name="centerCharge" value="<%=temp.getCharge() %>"/>
+					<input type="hidden" name="centerSectionNum" value="<%=temp.getSectionNum() %>"/>
+					<input type="hidden" name="centerPhone" value="<%=temp.getCenterPhone()%>"/>
+					<input type="hidden" name="centerKu" value="<%=temp.getKu()%>"/>
+					<input type="hidden" name="centerDetailAddress" value="<%=temp.getDetailAddress()%>"/>
+				</form>
+<%
+				i++;
+			}
+%>				
 				<hr/>
 			
 			</div>
@@ -120,6 +84,7 @@
 
 		<!-- Scripts -->
 		<!--[if lte IE 8]><script src="assets/js/respond.min.js"></script><![endif]-->
+		<script src = "./assets/js/dropbar.js"></script>
 		<script>
 				if ('addEventListener' in window) {
 					window.addEventListener('load', function() { 
@@ -127,26 +92,10 @@
 					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
-
-			$(document).ready(function(){
-
-				$("#searchBtn").click(function(){
-					var sel = document.getElementById("guList");
-					var currentScreenName = document.getElementById("currentScreenName");
-					var val;
-					val = sel.options[sel.selectedIndex].innerHTML;
-					if(val=="전체"){
-						currentScreenName.innerHTML="대전 전체 풋살장 검색";
-						$(".card").show();
-					}else{
-						currentScreenName.innerHTML="대전 "+ val +" 풋살장 검색";
-						$(".card").hide();
-						$("."+val).show();
-					}
-				});
-				
-			});
+				var temp = '<%=gu%>';
+				if(temp!='null'){
+					pageSetting(temp);
+				}
 		</script>
-		<script src = "./assets/js/dropbar.js"></script>
 	</body>
 </html>

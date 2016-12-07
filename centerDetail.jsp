@@ -1,4 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+	String centerNo = request.getParameter("centerNo");
+	String centerImg = request.getParameter("centerImg");
+	String centerName = request.getParameter("centerName");
+	String centerCharge = request.getParameter("centerCharge");
+	String centerSectionNum = request.getParameter("centerSectionNum");
+	String centerPhone = request.getParameter("centerPhone");
+	String centerKu = request.getParameter("centerKu");
+	String centerDetailAddress = request.getParameter("centerDetailAddress");
+	
+%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -32,48 +44,48 @@
 			<div id="main">
 
 				<hr/>
-				<img src="images/FUTSALJANG/HB.jpg" alt="" class="w3-image" id = "center_picture_1">
+				<img src="images/FUTSALJANG/<%=centerImg %>" alt="" class="w3-image" id = "center_picture_1">
 
 					<div id = "center_info">
 
 
-						<form  method="post" action="#">
+						<form  method="post" action="./reservationpay.jsp">
 							<table>
 								<tr>
 									<td class="tdTitle">풋살장 이름 : </td>
 									<td>
-										<span id="span_center_name" class="futInfo"></span>
+										<span id="span_center_name" class="futInfo"><%=centerName%></span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tdTitle">요금 : </td>
 									<td>
-										<span id="span_center_rate" class="futInfo"></span>
+										<span id="span_center_rate" name ="centerName" class="futInfo"><%=centerCharge%></span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tdTitle">구장 개수 : </td>
 									<td>
-										<span id="span_center_sectionNum" class="futInfo"></span>
+										<span id="span_center_sectionNum" class="futInfo"><%=centerSectionNum%></span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tdTitle">전화 번호 : </td>
-									<td class="tdInfo">
-										<span id="span_center_phoneNum" class="futInfo"></span>
+									<td>
+										<span id="span_center_phoneNum" class="futInfo"><%=centerPhone%></span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tdTitle">구 : </td>
-									<td class="tdInfo">
-										<span id="span_center_gu" class="futInfo"></span>
+									<td>
+										<span id="span_center_gu" class="futInfo"><%=centerKu%></span>
 									</td>
 								</tr>
 								<tr>
 									<td class="tdTitle">상세 주소 : </td>
-									<td class="tdInfo">
+									<td>
 										<span id="span_center_detail" class="futInfo">
-
+											<%=centerDetailAddress%>
 										</span>
 									</td>
 								</tr>
@@ -101,39 +113,40 @@
 									</td>
 								</tr>
 							</table>
+							<table id = "time_table">
+								<tr class = "time_table_tr">
+									<th colspan = "2" class = "time_table_th">구장A</th>
+									<th colspan = "2" class = "time_table_th">구장B</th>
+									<th colspan = "2" class = "time_table_th">구장C</th>
+								</tr>
+		
+								<tr class = "time_table_tr">
+									<td colspan = "3" class = "time_table_td">08:00 ~ 10:00</td>
+									<td colspan = "3" class = "time_table_td">10:00 ~ 12:00</td>
+								</tr>
+		
+								<tr class = "time_table_tr">
+									<td colspan = "3" class = "time_table_td">12:00 ~ 14:00</td>
+									<td colspan = "3" class = "time_table_td">14:00 ~ 16:00</td>
+								</tr>
+		
+								<tr class = "time_table_tr">
+									<td colspan = "3" class = "time_table_td">16:00 ~ 18:00</td>
+									<td colspan = "3" class = "time_table_td">18:00 ~ 20:00</td>
+								</tr>
+		
+								<tr class = "time_table_tr">
+									<td colspan = "3" class = "time_table_td">20:00 ~ 22:00</td>
+									<td colspan = "3" class = "time_table_td">22:00 ~ 24:00</td>
+								</tr>
+							</table>
+							<input type ="submit" name = "btn_reservation" value ="예약 및 결제"/>
 						</form>						
 
 					</div>
 
-					<table id = "time_table">
-						<tr class = "time_table_tr">
-							<th colspan = "2" class = "time_table_th">구장A</th>
-							<th colspan = "2" class = "time_table_th">구장B</th>
-							<th colspan = "2" class = "time_table_th">구장C</th>
-						</tr>
 
-						<tr class = "time_table_tr">
-							<td colspan = "3" class = "time_table_td">08:00 ~ 10:00</td>
-							<td colspan = "3" class = "time_table_td">10:00 ~ 12:00</td>
-						</tr>
 
-						<tr class = "time_table_tr">
-							<td colspan = "3" class = "time_table_td">12:00 ~ 14:00</td>
-							<td colspan = "3" class = "time_table_td">14:00 ~ 16:00</td>
-						</tr>
-
-						<tr class = "time_table_tr">
-							<td colspan = "3" class = "time_table_td">16:00 ~ 18:00</td>
-							<td colspan = "3" class = "time_table_td">18:00 ~ 20:00</td>
-						</tr>
-
-						<tr class = "time_table_tr">
-							<td colspan = "3" class = "time_table_td">20:00 ~ 22:00</td>
-							<td colspan = "3" class = "time_table_td">22:00 ~ 24:00</td>
-						</tr>
-					</table>
-
-					<a href="./reservationpay.html" class="button">예약 및 결제</a>
 					<hr/>
 
 			</div>

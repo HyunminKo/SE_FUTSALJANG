@@ -1168,6 +1168,7 @@ table.centerInfoTable td {
 	#layer_pop{
 		position:fixed;
 		margin-left : 22.5em;
+		margin-top : -10%;
 		width:35%;
 		height:130%;
 		top:0px;
@@ -1210,7 +1211,12 @@ table.centerInfoTable td {
 	width:250px; 
 	height:150px; 
 }
-
+.cardHidden{
+	display: none;
+}
+.cardForm{
+	display: inline-block;
+}
 
 /*test*/
 
