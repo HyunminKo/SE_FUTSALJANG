@@ -7,8 +7,8 @@
 	ReservationDAO hostHistory = new ReservationDAO();
 	
 	List<ReservationDAO> hostResrvationList = new ArrayList<>();
-	
-	hostHistory.select(hostResrvationList, hostNo);
+	List<ReservationDAO> realList = new ArrayList<>();
+	hostHistory.select(hostResrvationList,realList, hostNo);
 	
 %>
 <!DOCTYPE HTML>

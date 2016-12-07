@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="DAO.ReservationDAO" %>
+<%@page import="java.util.*" %>
 <%
 	request.setCharacterEncoding("UTF-8");
 	String centerNo = request.getParameter("centerNo");
@@ -10,6 +12,9 @@
 	String centerKu = request.getParameter("centerKu");
 	String centerDetailAddress = request.getParameter("centerDetailAddress");
 	
+	List<ReservationDAO> rsvList = new ArrayList<>();
+	
+	ReservationDAO.selectRsvData(rsvList,centerNo);
 %>
 <!DOCTYPE HTML>
 <!--
@@ -96,15 +101,15 @@
 											<table id = "date_table" style="border-spacing:0px;">
 												<tr>
 													<td>
-														<select id = "year" name = "year" class = "select_date"/>
+														<select id = "year" name = "year" class = "select_date" onchange="selectDate(this)"/>
 													</td>
 													<td>년</td>
 													<td>
-														<select id = "month" name = "month" class = "select_date"/>
+														<select id = "month" name = "month" class = "select_date" onchange="selectDate(this)"/>
 													</td>
 													<td>월</td>
 													<td>
-														<select id = "day" name = "day" class = "select_date"/>
+														<select id = "day" name = "day" class = "select_date" onchange="selectDate(this)"/>
 													</td>
 													<td>일</td>
 												</tr>
@@ -169,12 +174,15 @@
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
 				
-				 
+				var dateArr = [<% for (int i = 0; i < rsvList.size(); i++) { %>"<%= rsvList.get(i).getBookingDate()%>"<%= i + 1 < rsvList.size() ? ",":"" %><% } %>];
+				var hoursArr = [<% for (int i = 0; i < rsvList.size(); i++) { %>"<%= rsvList.get(i).getHoursOfUse() %>"<%= i + 1 < rsvList.size() ? ",":"" %><% } %>];
+				var sectionArr = [<% for (int i = 0; i < rsvList.size(); i++) { %>"<%= rsvList.get(i).getSectionNo() %>"<%= i + 1 < rsvList.size() ? ",":"" %><% } %>];
+				
 				var input_var;
 				var time;
 				var time_div = document.getElementById("time_div");
 				var select = document.createElement("select");
-				select.setAttribute("onChange","selectSection()");
+				select.setAttribute("onChange","selectSection(this)");
 				select.setAttribute("id","sectionSelect");
 				for(var i = 0 ; i < <%=centerSectionNum%>; i++){
 						var option = document.createElement("option");
@@ -198,11 +206,11 @@
 							input.setAttribute("class", "time_table_input");
 							input.setAttribute("type","button");
 							input.setAttribute("onClick", "settingUseTime(this)")
-							input.setAttribute("id","input"+input_var);
+							input.setAttribute("id",k+"input"+input_var);
 							input.value = (parseInt(time) + ":00 ~ " + parseInt(parseInt(time)+2) +":00") ;
 							tr.appendChild(input);
 							time = time+2;
-							input_var = input_var + 1;
+							input_var = input_var + 2;
 						}
 						time_table.appendChild(tr);
 					}
@@ -211,7 +219,9 @@
 				
 					$(".timeTD").hide();
 					$(".0").show();
+				
 
+					
 			</script>
 			<script src = "./assets/js/dropbar.js"></script>
 		</body>

@@ -9,8 +9,10 @@
 	ReservationDAO userHistory = new ReservationDAO();
 	
 	List<ReservationDAO> userResrvationList = new ArrayList<>();
+	List<ReservationDAO> realList = new ArrayList<>();
 	
-	userHistory.select(userResrvationList, userNo);
+	userHistory.select(userResrvationList,realList, userNo);
+	
 %>
 
 <!DOCTYPE HTML>
@@ -54,7 +56,7 @@
 			<div id="main">
 
 				<hr/>
-				<form method="post" action="#">
+				<form method="post" action="./centerCancelService.jsp">
 
 					<table class="centerInfoTable">
 						<tr>
@@ -68,9 +70,11 @@
 						</tr>
 <%
 						Iterator<ReservationDAO> it = userResrvationList.iterator();
+				
 						int i = 0;
 						while(it.hasNext()){
 							ReservationDAO temp = it.next();
+							ReservationDAO temp2 = realList.get(i);
 %>
 						<tr>
 							<td id = "centerName<%=i%>"><%=temp.getCenterNo()%></td>
@@ -79,6 +83,10 @@
 							<td id = "hoursOfUse<%=i%>"><%=temp.getHoursOfUse()%>:00 ~ <%=2+Integer.parseInt(temp.getHoursOfUse())%>:00</td>
 							<td id = "charge<%=i%>"><%=temp.getCharge()%></td>
 							<td><input type="submit" value="취소"/></td>
+							<input type="hidden" name="index" value="<%=i%>"/>
+							<input type="hidden" name="centerNo<%=i%>" value="<%=temp2.getCenterNo()%>"/>
+							<input type="hidden" name="sectionNo<%=i%>" value="<%=temp2.getSectionNo()%>"/>
+							<input type="hidden" name="hoursOfUse<%=i%>" value="<%=temp2.getHoursOfUse()%>"/>
 						</tr>
 						<%
 						i++;

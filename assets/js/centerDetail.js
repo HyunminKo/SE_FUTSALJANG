@@ -26,6 +26,7 @@ window.onload =function(){
 	document.getElementById("month").innerHTML = strMonth;
 	document.getElementById("day").innerHTML = strDay;
 
+
 }
 
 function settingUseTime(a){
@@ -37,4 +38,22 @@ function settingUseTime(a){
 	var splitHours = useTime.split(":");
 	hours.value = splitHours[0];
 	
+}
+
+function matchDate(date_val){
+	for(var i = 0 ; i<dateArr.length; i++){
+		var hours = hoursArr[i];
+		var secNo = sectionArr[i];
+		var idCal = (hours-8);
+		var input = secNo+'input'+idCal;
+		var timeButton = document.getElementById(input);
+		if(dateArr[i] == date_val){
+			timeButton.value="예약 불가능";
+			timeButton.style.color = "red";
+			timeButton.disabled = true;			
+		}else{
+			timeButton.value=hours+":00 ~ "+parseInt(parseInt(hours)+2)+":00";
+			timeButton.disabled = false;
+		}
+	}
 }

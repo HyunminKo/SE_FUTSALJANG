@@ -49,6 +49,16 @@ $(document).ready(function(){
 			target = target.parentNode;
 		$("#"+target.id).submit();
 	});
+	
+	var year = document.getElementById("year");
+	var month = document.getElementById("month");
+	var day = document.getElementById("day");
+	var date_val = year.options[year.selectedIndex].innerHTML+":"+month.options[month.selectedIndex].innerHTML+":"+day.options[day.selectedIndex].innerHTML;
+	
+	var sS = document.getElementById("sectionSelect");
+	var section_abc = sS.options[sS.selectedIndex].id;
+	matchDate(date_val,section_abc);
+	
 });
 
 window.onclick = function(e) {
@@ -68,7 +78,7 @@ function bodyOnload(a){
  }
  
 
-function selectSection(){
+function selectSection(a){
 	var sectionNo = document.getElementById("sectionNo");
 	var time_div = document.getElementById("time_div");
 	var sectionSelect = document.getElementById("sectionSelect");
@@ -90,6 +100,13 @@ function selectSection(){
 		}
 		
 	}
+}
+function selectDate(a){
+	var year = document.getElementById("year");
+	var month = document.getElementById("month");
+	var day = document.getElementById("day");
+	var val = year.options[year.selectedIndex].innerHTML+":"+month.options[month.selectedIndex].innerHTML+":"+day.options[day.selectedIndex].innerHTML;
+	matchDate(val);
 }
 function pageSetting(a){
 	var val = a;
