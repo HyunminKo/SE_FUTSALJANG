@@ -62,15 +62,12 @@
 				</div>
 				<input type="hidden" name="centerNo" value="<%=temp.getCenterNo()%>" />
 				<input type="hidden" name="centerImg" value="<%=temp.getImgUrl()%>" />
-				<input type="hidden" name="centerName"
-					value="<%=temp.getCenterName()%>" /> <input type="hidden"
-					name="centerCharge" value="<%=temp.getCharge() %>" /> <input
-					type="hidden" name="centerSectionNum"
-					value="<%=temp.getSectionNum() %>" /> <input type="hidden"
-					name="centerPhone" value="<%=temp.getCenterPhone()%>" /> <input
-					type="hidden" name="centerKu" value="<%=temp.getKu()%>" /> <input
-					type="hidden" name="centerDetailAddress"
-					value="<%=temp.getDetailAddress()%>" />
+				<input type="hidden" name="centerName"value="<%=temp.getCenterName()%>" /> 
+				<input type="hidden" name="centerCharge" value="<%=temp.getCharge() %>" /> 
+				<input type="hidden" name="centerSectionNum" value="<%=temp.getSectionNum() %>" /> 
+				<input type="hidden" name="centerPhone" value="<%=temp.getCenterPhone()%>" /> 
+				<input type="hidden" name="centerKu" value="<%=temp.getKu()%>" /> 
+				<input type="hidden" name="centerDetailAddress" value="<%=temp.getDetailAddress()%>" />
 			</form>
 			<%
 				i++;

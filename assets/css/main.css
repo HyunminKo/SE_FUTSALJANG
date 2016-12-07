@@ -1029,9 +1029,10 @@ body.is-ie #wrapper {
 /*teamDetail*/
 table.centerInfoTable {
 
-    border-collapse: collapse;
-	text-align: center;
-	margin:auto;
+
+	border-collapse: collapse;
+	margin: auto;
+
 }
 
 table.centerInfoTable th {
@@ -1237,7 +1238,16 @@ table.centerInfoTable td {
 }
 
 #vip table {
-	border-collapse: collapse;
-	width: auto;
 
+	border-collapse:collapse;
+	width:auto;
+	
+}
+
+.time_table_input{
+	margin-right: 1em;
+}
+#sectionSelect{
+	margin-right : auto;
+	margin-left : auto;
 }

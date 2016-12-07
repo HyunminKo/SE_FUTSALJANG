@@ -118,10 +118,10 @@
 							<input type="hidden" name="centerNo" value="<%=centerNo%>"/>
 							<input type="hidden" name="centerName" value="<%=centerName%>"/>
 							<input type="hidden" name="centerCharge" value="<%=centerCharge %>"/>
-							<input type="hidden" name="sectionNo" value=""/>
-							<input type="hidden" name="paymentOption" value=""/>
-							<input type="hidden" name="bookingDate" value=""/>
-							<input type="hidden" name="hoursOfUse" value=""/>
+							<input type="hidden" name="sectionNo" id ="sectionNo" value="0"/>
+							<input type="hidden" name="paymentOption" id = "paymentOption" value=""/>
+							<input type="hidden" name="hoursOfUse" id = "hoursOfUse" value="8:00 ~ 10:00"/>
+							<input type="hidden" name="hours" id = "hours" value="8"/>
 							
 
 							<div id = "time_div">
@@ -134,6 +134,7 @@
 									<input type ="button" name = "btn_reservation" value ="예약 및 결제" onclick="alert('예약을 하려면 로그인이 필요합니다'); location.href='./login.html'"/>
 							<% 
 								}else if(type.equals("user")){
+									
 							%>
 									<input type ="submit" name = "btn_reservation" value ="예약 및 결제"/>
 							<% 
@@ -167,6 +168,50 @@
 					});
 					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
 				}
+				
+				 
+				var input_var;
+				var time;
+				var time_div = document.getElementById("time_div");
+				var select = document.createElement("select");
+				select.setAttribute("onChange","selectSection()");
+				select.setAttribute("id","sectionSelect");
+				for(var i = 0 ; i < <%=centerSectionNum%>; i++){
+						var option = document.createElement("option");
+						option.setAttribute("value","구장"+String.fromCharCode(i+65));
+						option.setAttribute("id",i);
+						option.innerHTML = "구장"+String.fromCharCode(i+65);
+						select.appendChild(option);
+				}
+				time_div.appendChild(select);
+
+				for(var k = 0; k < <%=centerSectionNum%>; k++){
+					var time_table = document.createElement("table");
+					time = 8;
+					input_var = 0;
+					time_table.setAttribute("class", "timeTD "+k);
+					for(var i = 0; i < 4; i++){
+						var tr = document.createElement("tr");
+						tr.setAttribute("class", "time_table_tr");
+						for(var j = 0; j < 2; j++){
+							var input = document.createElement("input");
+							input.setAttribute("class", "time_table_input");
+							input.setAttribute("type","button");
+							input.setAttribute("onClick", "settingUseTime(this)")
+							input.setAttribute("id","input"+input_var);
+							input.value = (parseInt(time) + ":00 ~ " + parseInt(parseInt(time)+2) +":00") ;
+							tr.appendChild(input);
+							time = time+2;
+							input_var = input_var + 1;
+						}
+						time_table.appendChild(tr);
+					}
+					time_div.appendChild(time_table);
+				}
+				
+					$(".timeTD").hide();
+					$(".0").show();
+
 			</script>
 			<script src = "./assets/js/dropbar.js"></script>
 		</body>
