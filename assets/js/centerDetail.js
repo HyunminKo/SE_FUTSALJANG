@@ -25,5 +25,8 @@ window.onload =function(){
 	document.getElementById("year").innerHTML = strYear;
 	document.getElementById("month").innerHTML = strMonth;
 	document.getElementById("day").innerHTML = strDay;
+	
+	
 
 }
+

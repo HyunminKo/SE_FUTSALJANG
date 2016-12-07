@@ -59,10 +59,41 @@ window.onclick = function(e) {
       $("#vip").hide();
   }
 }
-function bodyOnload(){
+function bodyOnload(a){
   var title = document.getElementById("title").innerHTML;
 
   document.getElementById("currentScreenName").innerHTML = title;
+  
+  if(a != "null"){
+	var time = 8;
+	var time_div = document.getElementById("time_div");
+	var select = document.createElement("select");
+	select.setAttribute("id","sectionSelect");
+	for(var i = 0 ; i < a; i++){
+			var option = document.createElement("option");
+			option.setAttribute("value","구장"+String.fromCharCode(i+65));
+			option.setAttribute("id",i);
+			option.innerHTML = "구장"+String.fromCharCode(i+65);
+				select.appendChild(option);
+	}
+	time_div.appendChild(select);
+	for(var k = 0; k < a; k++){
+		var time_table = document.createElement("table");
+		time_table.setAttribute("id", k);
+		for(var i = 0; i < 4; i++){
+			var tr = document.createElement("tr");
+			tr.setAttribute("class", "time_table_tr");
+			for(var j = 0; j < 2; j++){
+				var td = document.createElement("td");
+				td.setAttribute("class", "time_table_td");
+				td.innerHTML = document.createTextNode( time + ":00 ~ " + time+2 +":00" );
+				tr.appendChild(td);
+			}
+			time_table.appendChild(tr);
+		}
+		time_div.appendChild(time_table);
+	}
+  }
 }
 function pageSetting(a){
 	var val = a;

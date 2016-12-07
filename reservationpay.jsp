@@ -12,12 +12,7 @@
 	String paymentOption = request.getParameter();
 	String bookingDate = request.getParameter();
 	String hoursOfUse = request.getParameter(); */
-	
-%>
-<script>
-	alert(<%=centerName%>);
-</script>
-<%
+
 %>
 <!DOCTYPE HTML>
 <!--
@@ -74,7 +69,7 @@
 						</tr>
 						<tr>
 							<td class="tdTitle">이용 금액 : </td>
-							
+							<td>
 								<span id="span_rate" class="futInfo"><%=centerCharge%></span>
 							</td>
 						</tr>
