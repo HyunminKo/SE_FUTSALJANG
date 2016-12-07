@@ -52,22 +52,22 @@
 				centerSectionNum, centerPhoneNum, imgFileName);
 
 		if (fscDao.enroll()) {
-%>
-<script>
-	alert("풋살장 등록에 성공하였습니다.");
-	location.replace("./home.jsp");
-</script>
-<%
-	} else {
-%>
-<script>
-	alert("존재하는 풋살장 이름입니다.");
-	history.go(-1);
-</script>
-<%
-	}
-
-	} catch (Exception e) {
-		e.printStackTrace();
-	}
-%>
+		%>
+		<script>
+			alert("풋살장 등록에 성공하였습니다.");
+			location.replace("./home.jsp");
+		</script>
+		<%
+			} else {
+		%>
+		<script>
+			alert("존재하는 풋살장 이름입니다.");
+			history.go(-1);
+		</script>
+		<%
+			}
+		
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		%>
