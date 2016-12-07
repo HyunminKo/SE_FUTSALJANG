@@ -82,10 +82,6 @@
 						}
 %>
 					</table>
-
-					<input style="margin-top:50px;" type="submit" value="수정" formnovalidate formaction="#"/>
-					<input type="submit" value="삭제" formnovalidate formaction="#"/>
-					<input type="submit" value="취소" formnovalidate formaction="#"/>
 				</form>
 				<hr/>
 					

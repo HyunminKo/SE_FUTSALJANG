@@ -31,7 +31,7 @@
 			<div id="main">
 
 				<hr/>
-				<form method="post" action="./enrollService.jsp" enctype="multipart/form-data">
+				<form method="post" action="./enrollCenterService.jsp" enctype="multipart/form-data">
 					<table>
 						<tr>
 							<td>이름</td>
@@ -101,7 +101,7 @@
 							<input type="submit" value="등록"/>
 						</li>
 						<li>
-							<a href="./login.html" class="button">취소</a>
+							<a href="./home.html" class="button">취소</a>
 						</li>
 					</ul>
 				</form>
