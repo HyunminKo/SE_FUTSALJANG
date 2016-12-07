@@ -6,13 +6,13 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String centerNo = request.getParameter("centerNo");
-	String centerImg = request.getParameter("centerImg");
 	String centerName = request.getParameter("centerName");
 	String centerCharge = request.getParameter("centerCharge");
-	String centerSectionNum = request.getParameter("centerSectionNum");
-	String centerPhone = request.getParameter("centerPhone");
-	String centerKu = request.getParameter("centerKu");
-	String centerDetailAddress = request.getParameter("centerDetailAddress");
+/* 	String sectionNo = request.getParameter();
+	String paymentOption = request.getParameter();
+	String bookingDate = request.getParameter();
+	String hoursOfUse = request.getParameter(); */
+	
 %>
 <script>
 	alert(<%=centerName%>);

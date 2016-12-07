@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	
+%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -58,11 +61,11 @@
 								<input class="inputRadio" type="radio" id="centerInfo1" name="robot"/>
 								<label class="inputRadioLabel" for="centerInfo1"/>
 							</td>
-							<td>테크노 풋살장</td>
-							<td>20000</td>
-							<td>5</td>
-							<td>01094123159</td>
-							<td>대전 유성구 금남구즉로 1423</td>
+							<td><input type="text" value="테크노 풋살장"/></td>
+							<td><input type="text" value="20000"/></td>
+							<td><input type="text" value="5"/></td>
+							<td><input type="text" value="01094123159"/></td>
+							<td><input type="text" value="대전 유성구 금남구즉로 1423"/></td>
 						</tr>
 						<tr>
 							<td style="display:none;">2</td>
@@ -70,11 +73,11 @@
 								<input class="inputRadio" type="radio" id="centerInfo2" name="robot" />
 								<label class="inputRadioLabel" for="centerInfo2"/>
 							</td>
-							<td>송강동 풋살장</td>
-							<td>15000</td>
-							<td>4</td>
-							<td>01064231597</td>
-							<td>대전 유성구 배울1로 297</td>
+							<td><input type="text" value="송강동 풋살장"/></td>
+							<td><input type="text" value="15000"/></td>
+							<td><input type="text" value="4"/></td>
+							<td><input type="text" value="01064231597"/></td>
+							<td><input type="text" value="대전 유성구 배울1로 297"/></td>
 						</tr>
 						
 					</table>
