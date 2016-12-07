@@ -1,4 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+	request.setCharacterEncoding("UTF-8");
+
+	String teamName = request.getParameter("teamName");
+	String teamDescription = request.getParameter("teamDescription");
+	
+	
+%>
 <!DOCTYPE HTML>
 <!--
 	Identity by HTML5 UP
@@ -33,25 +41,26 @@
 					<hr/>
 						<div>
 							<table id= "team_detail_table" align = "center">
-								<tr>
-									<td>팀명 : </td>
-									<td colspan = "4">fc컴공</td>
-								</tr>
-								<tr>
-									<td>팀 설명 : </td>
-									<td colspan = "4">팀에 대한 설명</td>
-								</tr>
-								<tr>
-									<td>대결 목록 : </td>
-									<td>FC컴공</td>
-									<td>VS</td>
-									<td>FC짱짱</td>
-									<td>날짜</td>
-								</tr>
-								<tr>
-									<td colspan = "5"><input type="submit" value="대결 신청" formnovalidate formaction="#"/></td>
-									
-								</tr>
+								<form action="teamMatch" method="post">
+									<tr>
+										<td>팀명 : </td>
+										<td colspan = "4"><%=teamName %></td>
+									</tr>
+									<tr>
+										<td>팀 설명 : </td>
+										<td colspan = "4"><%=teamDescription %></td>
+									</tr>
+									<tr>
+										<td>대결 목록 : </td>
+										<td>FC컴공</td>
+										<td>VS</td>
+										<td>FC짱짱</td>
+										<td>날짜</td>
+									</tr>
+									<tr>
+										<td colspan = "5"><input type="submit" value="대결 신청"/></td>
+									</tr>
+								</form>
 							</table>
 						</div>
 					<hr/>
