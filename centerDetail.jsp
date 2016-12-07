@@ -34,7 +34,7 @@
 		<script type = "text/javascript" src = "./assets/js/centerDetail.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
-	<body class="is-loading" onload="bodyOnload()">
+	<body class="is-loading" onload="bodyOnload(<%=centerSectionNum%>)">
 
 		<!-- Wrapper -->
 		<div id="wrapper">
@@ -113,33 +113,20 @@
 									</td>
 								</tr>
 							</table>
-							<table id = "time_table">
-								<tr class = "time_table_tr">
-									<th colspan = "2" class = "time_table_th">구장A</th>
-									<th colspan = "2" class = "time_table_th">구장B</th>
-									<th colspan = "2" class = "time_table_th">구장C</th>
-								</tr>
-		
-								<tr class = "time_table_tr">
-									<td colspan = "3" class = "time_table_td">08:00 ~ 10:00</td>
-									<td colspan = "3" class = "time_table_td">10:00 ~ 12:00</td>
-								</tr>
-		
-								<tr class = "time_table_tr">
-									<td colspan = "3" class = "time_table_td">12:00 ~ 14:00</td>
-									<td colspan = "3" class = "time_table_td">14:00 ~ 16:00</td>
-								</tr>
-		
-								<tr class = "time_table_tr">
-									<td colspan = "3" class = "time_table_td">16:00 ~ 18:00</td>
-									<td colspan = "3" class = "time_table_td">18:00 ~ 20:00</td>
-								</tr>
-		
-								<tr class = "time_table_tr">
-									<td colspan = "3" class = "time_table_td">20:00 ~ 22:00</td>
-									<td colspan = "3" class = "time_table_td">22:00 ~ 24:00</td>
-								</tr>
-							</table>
+
+
+							<input type="hidden" name="centerNo" value="<%=centerNo%>"/>
+							<input type="hidden" name="centerName" value="<%=centerName%>"/>
+							<input type="hidden" name="centerCharge" value="<%=centerCharge %>"/>
+							<input type="hidden" name="sectionNo" value=""/>
+							<input type="hidden" name="paymentOption" value=""/>
+							<input type="hidden" name="bookingDate" value=""/>
+							<input type="hidden" name="hoursOfUse" value=""/>
+							
+
+							<div id = "time_div">
+
+							</div>
 							<% 
 								String type = (String) session.getAttribute("Type");
 								if(type == null){
@@ -152,6 +139,7 @@
 							<% 
 								}
 							%>
+
 						</form>						
 
 					</div>

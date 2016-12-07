@@ -1026,8 +1026,17 @@ body.is-ie #wrapper {
 }
 /*teamDetail*/
 table.centerInfoTable {
+<<<<<<< HEAD
 	border-collapse: collapse;
 	margin: auto;
+=======
+
+    border-collapse: collapse;
+	text-align: center;
+   	float : left;
+	margin:auto;
+	
+>>>>>>> 004c03fe8471bf3043d73c12bce1f9c0b723f3f4
 }
 
 table.centerInfoTable th {
@@ -1233,6 +1242,15 @@ table.centerInfoTable td {
 }
 
 #vip table {
+<<<<<<< HEAD
 	border-collapse: collapse;
 	width: auto;
+=======
+	border-collapse:collapse;
+	width:auto;
+	
+}
+#time_div{
+	float: left;
+>>>>>>> 004c03fe8471bf3043d73c12bce1f9c0b723f3f4
 }

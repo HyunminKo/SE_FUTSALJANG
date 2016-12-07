@@ -62,12 +62,9 @@ input[type="submit"] {
 		<div id="main">
 
 			<hr />
-			<form method="post" action="#">
 				<% 
 					if(type == null){
 				%>
-					<input id="teamEnrollBtn" type="submit" value="팀 등록" formnovalidate
-						formaction="./login.html" />
 					<table class="centerInfoTable">
 				<% 
 					}else if(type.equals("user")){
@@ -76,7 +73,7 @@ input[type="submit"] {
 						formaction="./teamEnroll.jsp" />
 					<table class="centerInfoTable">
 				<% 
-					}else if(type.equals("host")){
+					}else{
 				%>	
 					<table class="centerInfoTable">
 				<%
@@ -96,19 +93,22 @@ input[type="submit"] {
 							TeamDAO temp = it.next();
 					%>
 
+				<form method="post" action="./teamDetail.jsp">
+					<input type="hidden" name="teamNo" value="<%=temp.getTeamNo()%>"/>
+					<input type="hidden" name="teamName" value="<%=temp.getTeamName()%>"/>
+					<input type="hidden" name="teamDescription" value="<%=temp.getTeamDescription()%>"/>
 					<tr>
 						<td id="teamName<%=i%>"><%=temp.getTeamName()%></td>
 						<td id="teamDescription<%=i%>"><%=temp.getTeamDescription()%></td>
-						<td><input type="submit" value="상세보기" formnovalidate
-							formaction="./teamDetail.jsp" /></td>
+						<td><input type="submit" value="상세보기"/></td>
 					</tr>
+				</form>
 					<%
 						i++;
 						}
 					%>
 				</table>
 
-			</form>
 			<hr />
 
 		</div>

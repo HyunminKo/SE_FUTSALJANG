@@ -1,9 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
    pageEncoding="UTF-8" import ="java.sql.*" %>
+<%@page import="DAO.UserDAO"%>
+<%@page import="java.util.*"%>
  <%
 	String id = (String) session.getAttribute("Id");
  	String type = (String) session.getAttribute("Type");
  	String memberNo = (String) session.getAttribute("No");
+ 	
+	List<UserDAO> userinformationList = new ArrayList<>();
+	UserDAO.selectRank(userinformationList);
  %>	
 	<!-- Main -->
 	<div id="banner">
@@ -89,23 +94,21 @@
 									<table>
 										<tr>
 											<th>아이디</th>
-											<th>예약횟수</th>
+											<th>포인트</th>
 										</tr>
-										
-										<tr>
-											<td>YSJGOOD</td>
-											<td>10</td>													
-										</tr>
-										
-										<tr>
-											<td>KHMKIN</td>
-											<td>8</td>
-										</tr>
-
-										<tr>
-											<td>JCHBS</td>
-											<td>5</td>
-										</tr>
+										<%
+											Iterator<UserDAO> it = userinformationList.iterator();
+											int i = 0;
+											while (it.hasNext()) {
+												UserDAO temp = it.next();										
+										%>
+												<tr>
+													<td><%=temp.getUserName() %></td>
+													<td><%=temp.getUserPoint() %></td>													
+												</tr>
+										<%
+											}
+										%>
 									</table>
 							 	</div>
 							</li>
