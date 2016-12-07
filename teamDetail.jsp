@@ -1,11 +1,21 @@
+<%@page import="DAO.BelongtoDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@page import="DAO.MatchDAO"%>
+<%@page import="DAO.TeamDAO"%>
+<%@page import="DAO.BelongtoDAO"%>
+<%@page import="java.util.*"%>
 <%
 	request.setCharacterEncoding("UTF-8");
-
+	String teamNo = request.getParameter("teamNo");
 	String teamName = request.getParameter("teamName");
 	String teamDescription = request.getParameter("teamDescription");
 	
+	String memberNo = (String) session.getAttribute("No");
+	String type = (String) session.getAttribute("Type");
 	
+	MatchDAO matchDao = new MatchDAO();
+	List<MatchDAO> matchList = new ArrayList<>();
+	matchDao.select(matchList,teamNo);
 %>
 <!DOCTYPE HTML>
 <!--
@@ -50,16 +60,35 @@
 										<td>팀 설명 : </td>
 										<td colspan = "4"><%=teamDescription %></td>
 									</tr>
+					<%
+						Iterator<MatchDAO> it = matchList.iterator();
+						int i = 0;
+						while (it.hasNext()) {
+							MatchDAO temp = it.next();
+							String name = TeamDAO.getTeamName(temp.getTeamNoTwo());
+					%>									
 									<tr>
 										<td>대결 목록 : </td>
-										<td>FC컴공</td>
+										<td><%=teamName %></td>
 										<td>VS</td>
-										<td>FC짱짱</td>
-										<td>날짜</td>
+										<td><%=name %></td>
+										<td><%=temp.getMatchDate()%></td>
 									</tr>
+					<%
+						}
+						if(type.equals("user")){
+						String userTeamNo = BelongtoDAO.getUserTeamNo(memberNo);
+							if(userTeamNo!=null){
+								if(!teamNo.equals(userTeamNo)){
+					%>				
 									<tr>
 										<td colspan = "5"><input type="submit" value="대결 신청"/></td>
 									</tr>
+									<%
+								}
+							}
+						}
+									%>
 								</form>
 							</table>
 						</div>

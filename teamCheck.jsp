@@ -94,6 +94,7 @@ input[type="submit"] {
 					%>
 
 				<form method="post" action="./teamDetail.jsp">
+					<input type="hidden" name="teamNo" value="<%=temp.getTeamNo()%>"/>
 					<input type="hidden" name="teamName" value="<%=temp.getTeamName()%>"/>
 					<input type="hidden" name="teamDescription" value="<%=temp.getTeamDescription()%>"/>
 					<tr>
