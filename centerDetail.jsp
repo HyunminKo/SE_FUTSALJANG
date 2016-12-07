@@ -140,7 +140,18 @@
 									<td colspan = "3" class = "time_table_td">22:00 ~ 24:00</td>
 								</tr>
 							</table>
-							<input type ="submit" name = "btn_reservation" value ="예약 및 결제"/>
+							<% 
+								String type = (String) session.getAttribute("Type");
+								if(type == null){
+							%>
+									<input type ="button" name = "btn_reservation" value ="예약 및 결제" onclick="alert('예약을 하려면 로그인이 필요합니다'); location.href='./login.html'"/>
+							<% 
+								}else if(type.equals("user")){
+							%>
+									<input type ="submit" name = "btn_reservation" value ="예약 및 결제"/>
+							<% 
+								}
+							%>
 						</form>						
 
 					</div>
