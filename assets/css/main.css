@@ -1045,7 +1045,7 @@
 		
 	}
 	#time_table, .time_table_tr, .time_table_th, .time_table_td{
-		border : solid black 1pt;
+		border : solid black 1px;
 	}
 
 #centerDetailAddress{
@@ -1071,7 +1071,7 @@ table.centerInfoTable {
 
     border-collapse: collapse;
 	text-align: center;
-   
+   	float : left;
 	margin:auto;
 	
 }
@@ -1269,4 +1269,7 @@ table.centerInfoTable td {
 	border-collapse:collapse;
 	width:auto;
 	
+}
+#time_div{
+	float: left;
 }
