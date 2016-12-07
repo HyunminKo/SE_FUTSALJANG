@@ -118,11 +118,11 @@
 							<input type="hidden" name="centerNo" value="<%=centerNo%>"/>
 							<input type="hidden" name="centerName" value="<%=centerName%>"/>
 							<input type="hidden" name="centerCharge" value="<%=centerCharge %>"/>
-							<!-- <input type="hidden" name="sectionNo" value=""/>-->
+							<input type="hidden" name="sectionNo" value=""/>
 							<input type="hidden" name="paymentOption" value=""/>
 							<input type="hidden" name="bookingDate" value=""/>
 							<input type="hidden" name="hoursOfUse" value=""/>
-							<input type ="submit" name = "btn_reservation" value ="예약 및 결제"/>
+							
 
 							<div id = "time_div">
 
