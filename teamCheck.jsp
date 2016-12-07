@@ -8,6 +8,8 @@
 	List<TeamDAO> teamInformationList = new ArrayList<>();
 
 	teamDAO.select(teamInformationList);
+	
+	String type = (String) session.getAttribute("Type");
 %>
 <!DOCTYPE HTML>
 <!--
@@ -61,9 +63,26 @@ input[type="submit"] {
 
 			<hr />
 			<form method="post" action="#">
-				<input id="teamEnrollBtn" type="submit" value="팀 등록" formnovalidate
-					formaction="./teamEnroll.jsp" />
-				<table class="centerInfoTable">
+				<% 
+					if(type == null){
+				%>
+					<input id="teamEnrollBtn" type="submit" value="팀 등록" formnovalidate
+						formaction="./login.html" />
+					<table class="centerInfoTable">
+				<% 
+					}else if(type.equals("user")){
+				%>
+					<input id="teamEnrollBtn" type="submit" value="팀 등록" formnovalidate
+						formaction="./teamEnroll.jsp" />
+					<table class="centerInfoTable">
+				<% 
+					}else if(type.equals("host")){
+				%>	
+					<table class="centerInfoTable">
+				<%
+					}
+				%>
+					
 					<tr>
 						<th style="display: none;">팀번호</th>
 						<th>팀이름</th>
@@ -76,7 +95,7 @@ input[type="submit"] {
 						while (it.hasNext()) {
 							TeamDAO temp = it.next();
 					%>
-					
+
 					<tr>
 						<td id="teamName<%=i%>"><%=temp.getTeamName()%></td>
 						<td id="teamDescription<%=i%>"><%=temp.getTeamDescription()%></td>

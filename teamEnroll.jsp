@@ -29,31 +29,28 @@
 			<jsp:include page="./banner.jsp"></jsp:include>
 
 			<div id="main">
-
+				
 				<hr/>
-				<form method="post" action="#">
+			<form method="post" action="./enrollTeamService.jsp">
 
-					<table>
-						<tr>
-							<td>팀 이름</td>
-							<td>
-								<input type="text" name="teamName" id="teamName"  required/>
-							</td>
-						</tr>
-						<tr>
-							<td>팀 설명</td>
-							<td>
-								<textarea name="teamExplain" id="teamExplain" autofocus cols = "50" rows = "6"required>
-								</textarea>
-							</td>
-						</tr>
-					</table>
-
-
-					<input type="submit" value="등록하기" formnovalidate formaction="#"/>
-
-				</form>
-				<hr/>
+				<table>
+					<tr>
+						<td>팀 이름</td>
+						<td><input type="text" autofocus name="teamName"
+							id="teamName" required /></td>
+					</tr>
+					<tr>
+						<td>팀 설명</td>
+						<td><textarea name="teamDescription" id="teamDescription"
+								cols="50" rows="6" required></textarea></td>
+					</tr>
+				</table>
+				<ul class="actions">
+					<li><input type="submit" value="등록" /></li>
+					<li><a href="./teamCheck.jsp" class="button">취소</a></li>
+				</ul>
+			</form>
+			<hr/>
 			
 
 		</div>

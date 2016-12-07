@@ -49,24 +49,30 @@
 			while(it.hasNext()){
 				FutsalcenterDAO temp = it.next();
 %>
-				<form action="./centerDetail.jsp" method="post" class="cardForm" id="<%=i%>">
-					<div class="card <%=temp.getKu()%>">
-						<img src="images/FUTSALJANG/<%=temp.getImgUrl()%>" alt="Avatar"/>
-						<div class="container">
-							<h4><b><%=temp.getKu()%></b></h4>
-							<p><%=temp.getCenterName()%></p>
-						</div>
+			<form action="./centerDetail.jsp" method="post" class="cardForm"
+				id="<%=i%>">
+				<div class="card <%=temp.getKu()%>">
+					<img src="images/FUTSALJANG/<%=temp.getImgUrl()%>" alt="Avatar" />
+					<div class="container">
+						<h4>
+							<b><%=temp.getKu()%></b>
+						</h4>
+						<p><%=temp.getCenterName()%></p>
 					</div>
-					<input type="hidden" name="centerNo" value="<%=temp.getCenterNo()%>"/>
-					<input type="hidden" name="centerImg" value="<%=temp.getImgUrl()%>"/>
-					<input type="hidden" name="centerName" value="<%=temp.getCenterName()%>"/>
-					<input type="hidden" name="centerCharge" value="<%=temp.getCharge() %>"/>
-					<input type="hidden" name="centerSectionNum" value="<%=temp.getSectionNum() %>"/>
-					<input type="hidden" name="centerPhone" value="<%=temp.getCenterPhone()%>"/>
-					<input type="hidden" name="centerKu" value="<%=temp.getKu()%>"/>
-					<input type="hidden" name="centerDetailAddress" value="<%=temp.getDetailAddress()%>"/>
-				</form>
-<%
+				</div>
+				<input type="hidden" name="centerNo" value="<%=temp.getCenterNo()%>" />
+				<input type="hidden" name="centerImg" value="<%=temp.getImgUrl()%>" />
+				<input type="hidden" name="centerName"
+					value="<%=temp.getCenterName()%>" /> <input type="hidden"
+					name="centerCharge" value="<%=temp.getCharge() %>" /> <input
+					type="hidden" name="centerSectionNum"
+					value="<%=temp.getSectionNum() %>" /> <input type="hidden"
+					name="centerPhone" value="<%=temp.getCenterPhone()%>" /> <input
+					type="hidden" name="centerKu" value="<%=temp.getKu()%>" /> <input
+					type="hidden" name="centerDetailAddress"
+					value="<%=temp.getDetailAddress()%>" />
+			</form>
+			<%
 				i++;
 			}
 %>				
