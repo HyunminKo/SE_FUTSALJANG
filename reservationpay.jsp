@@ -5,13 +5,16 @@
 <%@page import="java.util.*" %>
 <%
 	request.setCharacterEncoding("UTF-8");
+	String userNo = (String)session.getAttribute("No");
 	String centerNo = request.getParameter("centerNo");
 	String centerName = request.getParameter("centerName");
 	String centerCharge = request.getParameter("centerCharge");
-/* 	String sectionNo = request.getParameter();
-	String paymentOption = request.getParameter();
-	String bookingDate = request.getParameter();
-	String hoursOfUse = request.getParameter(); */
+ 	String sectionNo = request.getParameter("sectionNo");
+	String bookingDate_year = request.getParameter("year");
+	String bookingDate_month = request.getParameter("month");
+	String bookingDate_day = request.getParameter("day");
+	String hoursOfUse = request.getParameter("hoursOfUse");
+	String hours = request.getParameter("hours");
 
 %>
 <!DOCTYPE HTML>
@@ -58,13 +61,13 @@
 						<tr>
 							<td class="tdTitle">대관 날짜 : </td>
 							<td>
-								<span id="span_date" class="futInfo"><%=centerName%></span>
+								<span id="span_date" class="futInfo"><%=bookingDate_year%>-<%=bookingDate_month%>-<%=bookingDate_day%></span>
 							</td>
 						</tr>
 						<tr>
 							<td class="tdTitle">이용 시간 : </td>
 							<td>
-								<span id="span_time" class="futInfo"><%=centerName%></span>
+								<span id="span_time" class="futInfo"><%=hoursOfUse%></span>
 							</td>
 						</tr>
 						<tr>
@@ -77,10 +80,10 @@
 							<td class="tdTitle">결제 방식 : </td>
 							<td style="text-align:left;">
 								<span id="span_paymentplan">
-									<input type="radio" id="craditcard" name="paymentplan" value = "cardit"  onclick = "div_show(this.value)" />
-									<label for="craditcard" style="margin:0px;">신용카드</label>
-									<input type="radio" id="online_payment" name="paymentplan" value = "online"  onclick = "div_show(this.value)"/>
-									<label for="online_payment" style="margin:0px;" >온라인 입금</label>
+									<input type="radio" id="creditCard" name="paymentOption" value = "credit"  onclick = "div_show(this.value)" />
+									<label for="creditCard" style="margin:0px;">신용카드</label>
+									<input type="radio" id="onlinePayment" name="paymentOption" value = "online"  onclick = "div_show(this.value)"/>
+									<label for="onlinePayment" style="margin:0px;" >온라인 입금</label>
 								</span>
 							</td>
 						</tr>
@@ -103,14 +106,14 @@
 						<tr id = "choice_card2" style="display:none;">
 							<td class="tdTitle">카드 번호 : </td>
 							<td>
-								<input type = "text" name = "cardnums" id = "cardnum_1" maxlength = "4" /><span class = "span_cardnum"> - </span>
-								<input type = "password" name = "cardnums" id = "cardnum_2" maxlength = "4"/><span class = "span_cardnum"> - </span>
-								<input type = "password" name = "cardnums" id = "cardnum_3" maxlength = "4"/><span class = "span_cardnum"> - </span>
-								<input type = "text" name = "cardnums" id = "cardnum_4" maxlength = "4"/>
+								<input type = "text" name = "cardnums" id = "cardnum_1" maxlength = "4" required/><span class = "span_cardnum"> - </span>
+								<input type = "password" name = "cardnums" id = "cardnum_2" maxlength = "4" required/><span class = "span_cardnum"> - </span>
+								<input type = "password" name = "cardnums" id = "cardnum_3" maxlength = "4" required/><span class = "span_cardnum"> - </span>
+								<input type = "text" name = "cardnums" id = "cardnum_4" maxlength = "4" required/>
 							</td>
 							<td class="tdTitle">비밀번호 앞자리 2개 : </td>
 							<td>
-								<input type = "password" name = "pw_2" id = "pw_2" maxlength = "2"/>
+								<input type = "password" name = "pw_2" id = "pw_2" maxlength = "2" required/>
 							</td>
 						</tr>
 						<tr id = "choice_online1" style="display:none;">
@@ -132,15 +135,22 @@
 						<tr id = "choice_online2" style="display:none;">
 							<td class="tdTitle">입금자 이름 : </td>
 							<td>
-								<input type ="text" id = "account_holder"/>
+								<input type ="text" id = "account_holder" required/>
 							</td>
 						</tr>
 					</table>
-					<input type="submit" value="결제" formnovalidate formaction="#"/>
-					<input type="submit" value="취소" formnovalidate formaction="#"/>
+					<input type="hidden" name="centerNo" value="<%=centerNo%>"/>
+					<input type="hidden" name="centerName" value="<%=centerName%>"/>
+					<input type="hidden" name="centerCharge" value="<%=centerCharge %>"/>
+					<input type="hidden" name="sectionNo" id ="sectionNo" value="<%=sectionNo%>"/>
+					<input type="hidden" name="paymentOption" id = "paymentOption" value="creditcard"/>
+					<input type="hidden" name="bookingDate" id = "bookingDate" value = ""/>
+					<input type="hidden" name="hours" id = "hours" value="<%=hours%>"/>
+					
+					<input type="submit" value="결제" formnovalidate formaction="./reservationService.jsp"/>
+					<input type="submit" value="취소" formnovalidate formaction="./home.jsp"/>
 				</form>
 				<hr/>
-					
 			</div>
 			
 		</div>

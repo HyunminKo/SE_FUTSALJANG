@@ -64,48 +64,12 @@ function bodyOnload(a){
   var title = document.getElementById("title").innerHTML;
   document.getElementById("currentScreenName").innerHTML = title;
   
-  if(a != "null"){
-	var time;
-	var time_div = document.getElementById("time_div");
-	var select = document.createElement("select");
-	select.setAttribute("onChange","selectSection()");
-	select.setAttribute("id","sectionSelect");
-	for(var i = 0 ; i < a; i++){
-			var option = document.createElement("option");
-			option.setAttribute("value","구장"+String.fromCharCode(i+65));
-			option.setAttribute("id",i);
-			option.innerHTML = "구장"+String.fromCharCode(i+65);
-			select.appendChild(option);
-	}
-	time_div.appendChild(select);
-	for(var k = 0; k < a; k++){
-		var time_table = document.createElement("table");
-		time = 8;
 		
-		time_table.setAttribute("class", "timeTD "+k);
-		for(var i = 0; i < 4; i++){
-			var tr = document.createElement("tr");
-			tr.setAttribute("class", "time_table_tr");
-			for(var j = 0; j < 2; j++){
-				var td = document.createElement("td");
-				td.setAttribute("class", "time_table_td");
-				td.innerHTML = (parseInt(time) + ":00 ~ " + parseInt(parseInt(time)+2) +":00") ;
-				tr.appendChild(td);
-				time = time+2;
-			}
-			time_table.appendChild(tr);
-		}
-		time_div.appendChild(time_table);
-	}
-	
-		$(".timeTD").hide();
-		$(".0").show();
-		
-  }
-  
-}
+ }
+ 
 
 function selectSection(){
+	var sectionNo = document.getElementById("sectionNo");
 	var time_div = document.getElementById("time_div");
 	var sectionSelect = document.getElementById("sectionSelect");
 	var tables = time_div.childNodes;
@@ -113,13 +77,16 @@ function selectSection(){
 	val = sectionSelect.options[sectionSelect.selectedIndex];
 
 	for (var i = 2; i < tables.length; i++) {
-		if (val.id == tables[i].className) {
-			var temp = tables[i].className
+		var names = tables[i].className;
+		var name = names.split(" ");
+		if (val.id == name[1]) {
+			var temp = name[1];
 			$("."+temp).show();
+			sectionNo.value = val.id;
 		}
 		else{
-			var temp2 = tables[i].className;
-			$("."+temp2).hide();
+			var temp = name[1];
+			$("."+temp).hide();
 		}
 		
 	}

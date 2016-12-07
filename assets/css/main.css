@@ -1272,3 +1272,11 @@ table.centerInfoTable td {
 #time_div{
 	float: left;
 }
+.time_table_input{
+	margin-right: 1em;
+}
+#sectionSelect{
+	margin-right : auto;
+	margin-left : auto;
+	
+}

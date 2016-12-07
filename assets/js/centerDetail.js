@@ -25,8 +25,16 @@ window.onload =function(){
 	document.getElementById("year").innerHTML = strYear;
 	document.getElementById("month").innerHTML = strMonth;
 	document.getElementById("day").innerHTML = strDay;
-	
-	
 
 }
 
+function settingUseTime(a){
+	var timeId = a.id;
+	var useTime = document.getElementById(timeId).value;
+	var hoursOfUse = document.getElementById("hoursOfUse");
+	var hours = document.getElementById("hours");
+	hoursOfUse.value = useTime;	
+	var splitHours = useTime.split(":");
+	hours.value = splitHours[0];
+	
+}
