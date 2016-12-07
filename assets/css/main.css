@@ -1167,8 +1167,7 @@ table.centerInfoTable td {
 	}
 	#layer_pop{
 		position:fixed;
-		margin-top : -10%;
-		margin-left : 22em;
+		margin-left : 22.5em;
 		width:35%;
 		height:130%;
 		top:0px;
