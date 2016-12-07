@@ -113,9 +113,8 @@
 									</td>
 								</tr>
 							</table>
-							<div id = "time_div">
 
-							</div>
+
 							<input type="hidden" name="centerNo" value="<%=centerNo%>"/>
 							<input type="hidden" name="centerName" value="<%=centerName%>"/>
 							<input type="hidden" name="centerCharge" value="<%=centerCharge %>"/>
@@ -124,6 +123,23 @@
 							<input type="hidden" name="bookingDate" value=""/>
 							<input type="hidden" name="hoursOfUse" value=""/>
 							<input type ="submit" name = "btn_reservation" value ="예약 및 결제"/>
+
+							<div id = "time_div">
+
+							</div>
+							<% 
+								String type = (String) session.getAttribute("Type");
+								if(type == null){
+							%>
+									<input type ="button" name = "btn_reservation" value ="예약 및 결제" onclick="alert('예약을 하려면 로그인이 필요합니다'); location.href='./login.html'"/>
+							<% 
+								}else if(type.equals("user")){
+							%>
+									<input type ="submit" name = "btn_reservation" value ="예약 및 결제"/>
+							<% 
+								}
+							%>
+
 						</form>						
 
 					</div>
