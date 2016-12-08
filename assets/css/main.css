@@ -933,7 +933,9 @@ body.is-ie #wrapper {
 .tdInfo {
 	text-align: left;
 }
-
+.tdPoint{
+	text-align: left;
+}
 #card_company {
 	width: 10%;
 	height: 30px;

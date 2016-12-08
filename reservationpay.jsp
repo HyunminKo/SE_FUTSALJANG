@@ -15,7 +15,8 @@
 	String bookingDate_day = request.getParameter("day");
 	String hoursOfUse = request.getParameter("hoursOfUse");
 	String hours = request.getParameter("hours");
-
+	
+	String userPoint = UserDAO.getUserPoint(userNo);
 %>
 <!DOCTYPE HTML>
 <!--
@@ -118,9 +119,20 @@
 						</tr>
 						<tr id = "choice_card3" style="display:none;">
 							<td class="tdTitle">포인터 사용 : </td>
-							<td>
-								<input type ="text" name="usePoint" id = "point" required/>
+							<td class="tdPoint">
+								<%
+									if(Integer.parseInt(userPoint)>=10000){
+										%>
+										<input type ="number" class="point" id = "cardPoint" min="0" max="<%=userPoint%>" step="1000" required/><span> 현재 포인트: <%=userPoint%></span>		
+										<%	
+									}else{
+								%>
+								<input type ="number" id = "cardPoint" disabled/> <span> 현재 포인트: <%=userPoint%></span>
+								<%
+									}
+								%>
 							</td>
+							
 						</tr>	
 						<tr id = "choice_online1" style="display:none;">
 							<td class="tdTitle">입금 은행 : </td>
@@ -146,8 +158,18 @@
 						</tr>
 						<tr id = "choice_online3" style="display:none;">
 							<td class="tdTitle">포인터 사용 : </td>
-							<td>
-								<input type ="text" name="usePoint" id = "point" required/>
+							<td class="tdPoint">
+								<%
+									if(Integer.parseInt(userPoint)>=10000){
+										%>
+										<input type ="number" class="point" id = "onlinePoint" min="0" max="<%=userPoint%>" step="1000" required/> <span> 현재 포인트: <%=userPoint%></span>		
+										<%	
+									}else{
+								%>
+								<input type ="number"id = "onlinePoint" disabled/> <span> 현재 포인트: <%=userPoint%></span>
+								<%
+									}
+								%>
 							</td>
 						</tr>						
 					</table>

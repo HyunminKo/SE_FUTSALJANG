@@ -13,7 +13,8 @@
 
 	String memberNo = (String) session.getAttribute("No");
 	String type = (String) session.getAttribute("Type");
-
+	String userTeamNo = null;
+	
 	MatchDAO matchDao = new MatchDAO();
 	List<MatchDAO> matchList = new ArrayList<>();
 	matchDao.select(matchList, teamNo);
