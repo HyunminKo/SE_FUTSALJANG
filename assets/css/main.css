@@ -1019,6 +1019,7 @@ body.is-ie #wrapper {
 
 #currentScreenName {
 	color: white;
+	
 	transition: background-color 0.2s ease-in-out, border-color 0.2s
 		ease-in-out, color 0.2s ease-in-out;
 }
@@ -1048,6 +1049,7 @@ table.centerInfoTable td {
 	width: auto;
 	border: 2px solid white;
 }
+
 
 
 #team_detail_table {
@@ -1142,10 +1144,10 @@ table.centerInfoTable td {
 
 #layer_pop {
 	position: fixed;
-	margin-left: 22.5em;
-	margin-top: -10%;
+	margin-left: 400px;
+	
 	width: 35%;
-	height: 130%;
+	height: 400px;
 	top: 0px;
 	left: 0px;
 	background-image: url('images/white.png');
