@@ -107,6 +107,10 @@ function selectDate(a){
 	var day = document.getElementById("day");
 	var val = year.options[year.selectedIndex].innerHTML+":"+month.options[month.selectedIndex].innerHTML+":"+day.options[day.selectedIndex].innerHTML;
 	
+	var yearSelectedIndex = year.selectedIndex;
+	var monthSelectedIndex = month.selectedIndex;
+	var daySelectedIndex = day.selectedIndex;
+	
 	var sYear = 2016;
 	var eYear = 2030;
 	var sMonth = 1;
@@ -152,9 +156,9 @@ function selectDate(a){
 	document.getElementById("month").innerHTML = strMonth;
 	document.getElementById("day").innerHTML = strDay;
 	
-	year.selectedIndex = year.selectedIndex;
-	month.selectedIndex = month.selectedIndex;
-	day.selectedIndex = day.selectedIndex;
+	year.selectedIndex = yearSelectedIndex;
+	month.selectedIndex = monthSelectedIndex;
+	day.selectedIndex = daySelectedIndex;
 	
 	matchDate(val);
 }
