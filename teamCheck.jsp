@@ -44,7 +44,7 @@ input[type="submit"] {
 #teamEnrollBtn {
 	position: fixed;
 	background: rgba(255, 255, 255, 1);
-	margin-left: 439px;
+	margin-left: 512.5px;
 	margin-top: -40px;
 	border-radius: 6px;
 }

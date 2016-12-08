@@ -42,6 +42,12 @@
 	padding: 0;
 }
 
+table.centerInfoTable {
+
+	width:750px;
+
+}
+
 .centerInfoTable td .futName {
 	width: 150px;;
 }
@@ -51,7 +57,7 @@
 }
 
 .centerInfoTable td .futSecNum {
-	width: 50px;
+	width: 60px;
 }
 
 .centerInfoTable td .futPhone {

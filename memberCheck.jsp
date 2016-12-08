@@ -122,7 +122,7 @@ td input[type="button"] {
 						<option value="일반">일반</option>
 						<option value="VIP">VIP</option>
 					</select> <br> <input type="text" id="modifyPhone" name="modifyPhone"
-						placeholder="" required /> <br> <input type="hidden"
+						placeholder="" style="text-align: center;" required /> <br> <input type="hidden"
 						name="memberNo" id="memberNo" value="" /> <input type="submit"
 						class="btn_modify" value="수정" /> <input type="button"
 						class="btn_close" value="취소" onclick="layerClose(this)" />
