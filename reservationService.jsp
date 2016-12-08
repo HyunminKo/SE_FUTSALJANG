@@ -23,7 +23,7 @@
 		
 		rsvDAO = new ReservationDAO(userNo, sectionNo, centerNo, paymentOption, bookingDate.replace("-", ":"), hoursOfUse);
 		
-		if(rsvDAO.insert()){
+		if(rsvDAO.insert(userNo)){
 			%>
 			<script>
 				location.replace("./userHistory.jsp");
