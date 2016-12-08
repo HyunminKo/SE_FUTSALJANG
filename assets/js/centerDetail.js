@@ -10,15 +10,23 @@ window.onload =function(){
 	var strMonth="";
 	var strDay="";
 
+	var today = new Date();
+	var dd = today.getDate();
+	var mm = today.getMonth()+1; //January is 0!
+	var yyyy = today.getFullYear();	
+	
 	for(var i=sYear;i<=eYear;i++){
-		strYear += "<option value = "+i+">"+i+"</option>";
+		if(yyyy<=i)
+			strYear += "<option value = "+i+">"+i+"</option>";
 	}
 
 	for(var i=sMonth;i<=eMonth;i++){
+		if(mm<=i)		
 		strMonth += "<option value = "+i+">"+i+"</option>";
 	}
 
 	for(var i=sDay;i<=eDay;i++){
+		if(dd<=i)		
 		strDay += "<option value = "+i+">"+i+"</option>";
 	}
 
