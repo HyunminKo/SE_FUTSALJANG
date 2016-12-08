@@ -5,6 +5,7 @@
 <%@ page import="java.sql.*"%>
 <%@ page import="java.io.*"%>
 <%
+
 	request.setCharacterEncoding("utf-8");
 	
 	String index = request.getParameter("index");

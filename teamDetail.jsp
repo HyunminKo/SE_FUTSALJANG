@@ -76,7 +76,10 @@
 									</tr>
 					<%
 						}
-						if(type.equals("user")){
+						if(type == null){
+							
+						}
+						else if(type.equals("user")){
 						String userTeamNo = BelongtoDAO.getUserTeamNo(memberNo);
 							if(userTeamNo!=null){
 								if(!teamNo.equals(userTeamNo)){
@@ -85,7 +88,7 @@
 										<td colspan = "5"><input type="submit" value="대결 신청"/></td>
 									</tr>
 									<%
-								}
+								}								
 							}
 						}
 									%>
