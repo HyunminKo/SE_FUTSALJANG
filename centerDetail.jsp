@@ -132,9 +132,6 @@
 							<div id = "time_div">
 
 							</div>
-						</form>						
-
-					</div>
 							<div id="rsvbuttonDiv">
 							<% 
 								String type = (String) session.getAttribute("Type");
@@ -150,6 +147,9 @@
 								}
 							%>
 							</div>
+						</form>						
+
+					</div>
 
 
 
