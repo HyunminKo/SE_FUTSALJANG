@@ -19,11 +19,12 @@
 		String paymentOption = request.getParameter("paymentOption");
 	 	String bookingDate = request.getParameter("bookingDate");
 		String hoursOfUse = request.getParameter("hours");
-		
-		
+		String userPoint = request.getParameter("userPoint");
+		if(userPoint==null)
+			userPoint = "0";
 		rsvDAO = new ReservationDAO(userNo, sectionNo, centerNo, paymentOption, bookingDate.replace("-", ":"), hoursOfUse);
 		
-		if(rsvDAO.insert(userNo)){
+		if(rsvDAO.insert(userNo,userPoint)){
 			%>
 			<script>
 				location.replace("./userHistory.jsp");
