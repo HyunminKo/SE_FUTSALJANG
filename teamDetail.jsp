@@ -12,6 +12,7 @@
 	
 	String memberNo = (String) session.getAttribute("No");
 	String type = (String) session.getAttribute("Type");
+	String userTeamNo = null;
 	
 	MatchDAO matchDao = new MatchDAO();
 	List<MatchDAO> matchList = new ArrayList<>();
@@ -80,7 +81,7 @@
 							
 						}
 						else if(type.equals("user")){
-						String userTeamNo = BelongtoDAO.getUserTeamNo(memberNo);
+						userTeamNo = BelongtoDAO.getUserTeamNo(memberNo);
 							if(userTeamNo!=null){
 								if(!teamNo.equals(userTeamNo)){
 					%>				

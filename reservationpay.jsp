@@ -127,7 +127,7 @@
 										<%	
 									}else{
 								%>
-								<input type ="number" id = "point" disabled/> <span> 현재 포인트: <%=userPoint%></span>
+								<input type ="number" id = "cardPoint" disabled/> <span> 현재 포인트: <%=userPoint%></span>
 								<%
 									}
 								%>
@@ -166,7 +166,7 @@
 										<%	
 									}else{
 								%>
-								<input type ="number"id = "point" disabled/> <span> 현재 포인트: <%=userPoint%></span>
+								<input type ="number"id = "onlinePoint" disabled/> <span> 현재 포인트: <%=userPoint%></span>
 								<%
 									}
 								%>
