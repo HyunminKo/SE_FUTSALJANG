@@ -101,7 +101,7 @@ table.centerInfoTable {
 
 					} else if (type.equals("user")) {
 
-						String userTeamNo = BelongtoDAO.getUserTeamNo(memberNo);
+						userTeamNo = BelongtoDAO.getUserTeamNo(memberNo);
 						if (userTeamNo != null) {
 							if (!teamNo.equals(userTeamNo)) {
 								%>
