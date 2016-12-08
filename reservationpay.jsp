@@ -116,6 +116,12 @@
 								<input type = "password" name = "pw_2" id = "pw_2" maxlength = "2" required/>
 							</td>
 						</tr>
+						<tr id = "choice_card3" style="display:none;">
+							<td class="tdTitle">포인터 사용 : </td>
+							<td>
+								<input type ="text" name="usePoint" id = "point" required/>
+							</td>
+						</tr>	
 						<tr id = "choice_online1" style="display:none;">
 							<td class="tdTitle">입금 은행 : </td>
 							<td>
@@ -138,6 +144,12 @@
 								<input type ="text" id = "account_holder" required/>
 							</td>
 						</tr>
+						<tr id = "choice_online3" style="display:none;">
+							<td class="tdTitle">포인터 사용 : </td>
+							<td>
+								<input type ="text" name="usePoint" id = "point" required/>
+							</td>
+						</tr>						
 					</table>
 					<input type="hidden" name="centerNo" value="<%=centerNo%>"/>
 					<input type="hidden" name="centerName" value="<%=centerName%>"/>
