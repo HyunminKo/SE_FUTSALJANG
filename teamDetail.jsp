@@ -51,7 +51,7 @@
 					<hr/>
 						<div>
 							<table class="centerInfoTable" id= "team_detail_table" align = "center">
-								<form action="teamMatch" method="post">
+								<form action="./teamMatchService.jsp" method="post">
 									<tr>
 										<th>팀명</th>
 										<td><%=teamName %></td>
