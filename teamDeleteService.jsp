@@ -15,7 +15,7 @@
 		%>
 		<script>
 			alert("팀 삭제에 성공했습니다.");
-			location.replace("./teamModifyAndDelete.jsp"); 
+			location.replace("./teamModify.jsp"); 
 		</script>
 		<%		
 	}else{

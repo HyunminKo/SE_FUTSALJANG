@@ -1047,11 +1047,11 @@ table.centerInfoTable td {
 	border: 2px solid white;
 }
 
+
 #team_detail_table {
 	margin-right: auto;
 	margin-left: auto;
-	border: solid #cccccc 1px;
-	width: 60%;
+	
 }
 
 #team_detail_table tr {

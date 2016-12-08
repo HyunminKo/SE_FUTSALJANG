@@ -12,10 +12,10 @@
 	try {
 		String teamName = request.getParameter("teamName");
 		String teamDescription = request.getParameter("teamDescription");
-
+		String userNo = (String) session.getAttribute("No");
 		teamDao = new TeamDAO(teamName, teamDescription);
 
-		if (teamDao.enroll()) {
+		if (teamDao.enroll(userNo)) {
 %>
 <script>
 	alert("팀 등록에 성공하였습니다.");
