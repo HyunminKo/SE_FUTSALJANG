@@ -13,7 +13,7 @@
 	String centerNo = request.getParameter("centerNo"+index);
 	String sectionNo = request.getParameter("sectionNo"+index);
 	String hours = request.getParameter("hoursOfUse"+index);
-	
+
 	if(ReservationDAO.delete(userNo,centerNo,sectionNo,hours)){
 		%>
 		<script>

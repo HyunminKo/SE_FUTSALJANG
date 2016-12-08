@@ -4,6 +4,8 @@
 <%@page import="DAO.UserDAO" %>
 <%@page import="DAO.ReservationDAO" %>
 <%@page import="java.util.*" %>
+<%@page import="java.util.Calendar"%>
+
 <%
 	String userNo = (String)session.getAttribute("No");
 	ReservationDAO userHistory = new ReservationDAO();
@@ -82,11 +84,57 @@
 							<td id = "bookingDate<%=i%>"><%=temp.getBookingDate()%></td>
 							<td id = "hoursOfUse<%=i%>"><%=temp.getHoursOfUse()%>:00 ~ <%=2+Integer.parseInt(temp.getHoursOfUse())%>:00</td>
 							<td id = "charge<%=i%>"><%=temp.getCharge()%></td>
-							<td><input type="submit" value="취소"/></td>
+							<%
+							String[] array;
+							String rsvDate = temp.getBookingDate();
+							array = rsvDate.split("-");
+							
+							Calendar oCalendar = Calendar.getInstance( );  // 현재 날짜/시간 등의 각종 정보 얻기
+							int current_year = oCalendar.get(Calendar.YEAR);
+							int current_month = (oCalendar.get(Calendar.MONTH) + 1);
+							int current_day = oCalendar.get(Calendar.DAY_OF_MONTH);
+						   
+								if(Integer.parseInt(array[0]) < current_year) {//현재년도가 클때 
+									%>
+										<td>취소불가</td>
+									<%
+								}
+								else if(Integer.parseInt(array[0]) == current_year){
+									if(Integer.parseInt(array[1]) < current_month){//현재년도가 같고 현재 달이 크면
+										%>
+										<td>취소불가</td>
+										<%
+									}
+									else if(Integer.parseInt(array[1]) == current_month){//현재년도가 같고 현재 달이 같으면 
+										if(Integer.parseInt(array[2]) < current_day){//현재년도 같고 현재 달이 같고 현재 일이 크면
+											%>
+											<td>취소불가</td>
+											<%	
+										}
+										else{//현재 년도 같고 현재 달이 같고 현재 일이 작거나 같으면 취소 불가
+											%>
+											<td><input type="submit" value="취소"/></td>
+											<%
+										}
+									}
+									else{//현재 년도 같고 현재 달이 작거나 같으면
+										%>
+										<td><input type="submit" value="취소"/></td>
+										<%
+									}
+								}
+								else{//현재 년도가 작을 때 
+									%>
+									<td><input type="submit" value="취소"/></td>
+									<%
+								}
+							%>
+							
 							<input type="hidden" name="index" value="<%=i%>"/>
 							<input type="hidden" name="centerNo<%=i%>" value="<%=temp2.getCenterNo()%>"/>
 							<input type="hidden" name="sectionNo<%=i%>" value="<%=temp2.getSectionNo()%>"/>
 							<input type="hidden" name="hoursOfUse<%=i%>" value="<%=temp2.getHoursOfUse()%>"/>
+							<input type="hidden" name="bookingDate<%=i%>" value= "<%=temp2.getBookingDate() %>"/>
 						</tr>
 						<%
 						i++;
@@ -116,5 +164,6 @@
 				}
 		</script>
 		<script src = "./assets/js/dropbar.js"></script>
+
 	</body>
 </html>

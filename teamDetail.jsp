@@ -93,19 +93,24 @@ table.centerInfoTable {
 
 				<%
 					}
+				%>
+				</table>				
+				<%
 					if (type == null) {
 
 					} else if (type.equals("user")) {
+
 						String userTeamNo = BelongtoDAO.getUserTeamNo(memberNo);
 						if (userTeamNo != null) {
 							if (!teamNo.equals(userTeamNo)) {
-
+								%>
+							<input style="margin-top:25px;" type="submit" value="대결신청"/>
+								<%
 							}
 						}
 					}
 				%>
-			</table>
-					<input style="margin-top:25px;" type="submit" value="대결신청"/>
+
 			</form>
 			<hr />
 		</div>
