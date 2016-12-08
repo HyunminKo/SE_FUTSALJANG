@@ -50,15 +50,15 @@
 					
 					<hr/>
 						<div>
-							<table id= "team_detail_table" align = "center">
+							<table class="centerInfoTable" id= "team_detail_table" align = "center">
 								<form action="teamMatch" method="post">
 									<tr>
-										<td>팀명 : </td>
-										<td colspan = "4"><%=teamName %></td>
+										<th>팀명</th>
+										<td><%=teamName %></td>
 									</tr>
 									<tr>
-										<td>팀 설명 : </td>
-										<td colspan = "4"><%=teamDescription %></td>
+										<th>설명</th>
+										<td><%=teamDescription %></td>
 									</tr>
 					<%
 						Iterator<MatchDAO> it = matchList.iterator();

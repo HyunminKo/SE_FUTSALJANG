@@ -49,13 +49,13 @@
 			<div id="main">
 
 				<hr/>
-				<img src="images/FUTSALJANG/<%=centerImg %>" alt="" class="w3-image" id = "center_picture_1">
 
 					<div id = "center_info">
 
 
 						<form  method="post" action="./reservationpay.jsp">
-							<table>
+							<img src="images/FUTSALJANG/<%=centerImg %>" alt="" class="w3-image" id = "center_picture_1">
+							<table id="center_infoTable">
 								<tr>
 									<td class="tdTitle">풋살장 이름 : </td>
 									<td>
@@ -132,6 +132,10 @@
 							<div id = "time_div">
 
 							</div>
+						</form>						
+
+					</div>
+							<div id="rsvbuttonDiv">
 							<% 
 								String type = (String) session.getAttribute("Type");
 								if(type == null){
@@ -145,10 +149,7 @@
 							<% 
 								}
 							%>
-
-						</form>						
-
-					</div>
+							</div>
 
 
 
