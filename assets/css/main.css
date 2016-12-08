@@ -684,8 +684,8 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
 /* Main */
 #main {
 	position: relative;
-	max-width: 70em;
-	min-width: 70em;
+	max-width: 80em;
+	min-width: 80em;
 	margin-bottom: 50px;
 	margin-top: 10px;
 	padding: 0em 3em 0em 3em;
@@ -783,7 +783,7 @@ body.is-loading #main, body.is-loading #openingPage, body.is-loading #banner,
 #banner {
 	position: relative;
 	max-width: 100%;
-	min-width: 70em;
+	min-width: 80em;
 	margin-top: 50px;
 	padding: 0;
 	background: rgba(0, 0, 0, 0);
@@ -973,8 +973,8 @@ body.is-ie #wrapper {
 #center_picture_1 {
 	border-radius: 20px;
 	float: left;
-	width: 30%;
-	height: 17em;
+	width: 33%;
+	height: 20em;
 }
 
 .p_center_info {
@@ -1251,4 +1251,23 @@ table.centerInfoTable td {
 #sectionSelect{
 	margin-right : auto;
 	margin-left : auto;
+}
+#center_infoTable{
+	width:33%;
+	float:left;
+}
+#time_div{
+	width: 33%;
+	float: left;
+	margin:auto;
+}
+.timeTD{
+	width:100%;
+	margin:auto;
+}
+#rsvbuttonDiv{
+	padding: 2em;
+	float:left;
+	width:100%;
+	margin:auto;
 }
