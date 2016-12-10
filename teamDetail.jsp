@@ -95,7 +95,17 @@ table.centerInfoTable {
 				<%
 					}
 				%>
-				</table>				
+				
+				</table>
+				
+				<div id = "selectMatchDate">
+					<select id = "match_year" name = "match_year" class = "match_select_date" onchange = "onchangeDate(this)"></select>
+					<p class = "p_Date">년</p>
+					<select id = "match_month" name = "match_month" class = "match_select_date" onchange = "onchangeDate(this)"></select>
+					<p class = "p_Date">월</p>
+					<select id = "match_day" name = "match_day" class = "match_select_date" onchange = "onchangeDate(this)"></select>
+					<p class = "p_Date">일</p>
+				</div>				
 				<%
 					if (type == null) {
 
@@ -136,5 +146,6 @@ table.centerInfoTable {
 			}
 		</script>
 		<script src="./assets/js/dropbar.js"></script>
+		<script src="./assets/js/teamDetail.js"></script>
 </body>
 </html>

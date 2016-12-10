@@ -1275,3 +1275,12 @@ table.centerInfoTable td {
 	width:100%;
 	margin:auto;
 }
+.match_select_date{
+	float: left;
+}
+#selectMatchDate{
+	display : inline-block;	
+}
+.p_Date{
+	float : left;
+}

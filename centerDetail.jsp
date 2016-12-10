@@ -127,6 +127,7 @@
 							<input type="hidden" name="paymentOption" id = "paymentOption" value=""/>
 							<input type="hidden" name="hoursOfUse" id = "hoursOfUse" value="8:00 ~ 10:00"/>
 							<input type="hidden" name="hours" id = "hours" value="8"/>
+							<input type="hidden" name="bookingDate" id = "bookingDate" value=""/>
 							
 
 							<div id = "time_div">
