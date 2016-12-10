@@ -22,3 +22,10 @@ function memberModify(a){
 function layerClose(a){
 	$("#layer_pop").hide();
 }
+
+function memberDelete(a){
+	var id = a.id;
+	var inputTag = document.getElementById("row"+id);
+	inputTag.value = id;
+	inputTag.setAttribute("name","rowNum");
+}

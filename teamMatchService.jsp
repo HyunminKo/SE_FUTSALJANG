@@ -12,21 +12,23 @@
 		
 		String teamNoOne = request.getParameter("teamNo");
 		String teamNoTwo = request.getParameter("userTeamNo");
-		String bookingDate = request.getParameter("bookingDate");
+		String year = request.getParameter("match_year");
+		String month = request.getParameter("match_month");
+		String day = request.getParameter("match_day");
 		
-		matchDao = new MatchDAO(teamNoOne,teamNoTwo,bookingDate);
+		matchDao = new MatchDAO(teamNoOne,teamNoTwo,year+":"+month+":"+day);
 		if(matchDao.insert()){
 			%>
 			<script>
 				alert("팀 대결 신청에 성공하셨습니다.");
-				location.replace("./home.jsp");
+				location.replace("./teamCheck.jsp");
 			</script>
 			<%			
 		}else{
 			%>
 			<script>
 				alert("팀 대결 신청에 실패하셨습니다.");
-				location.replace("./home.jsp");
+				location.replace("./teamCheck.jsp");
 			</script>
 			<%			
 		}

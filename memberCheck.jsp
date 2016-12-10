@@ -56,6 +56,7 @@ td input[type="button"] {
 			<hr />
 			<div>
 				<table class="centerInfoTable">
+					<form action="./memberDeleteService.jsp" method="POST" >
 					<tr>
 						<th>회원번호</th>
 						<th>아이디</th>
@@ -79,7 +80,9 @@ td input[type="button"] {
 						<td id="Phone<%=i%>"><%=temp.getUserPhone()%></td>
 						<td><input type="button" id="modify<%=i%>" value="수정"
 							onclick="memberModify(this)" /></td>
-						<td><input type="button" value="삭제" /></td>
+						<td><input type="submit" value="삭제" onclick="return memberDelete(this)" id="<%=i%>"/></td>
+						<input type="hidden" name="memberNo<%=i %>" value="<%=temp.getUserNo() %>"/>
+						<input type="hidden" name="" id="row<%=i %>" value=""/>
 					</tr>
 					<%
 						i++;
@@ -87,7 +90,6 @@ td input[type="button"] {
 					%>
 					<%
 						Iterator<HostDAO> it_Host = hostinformationList.iterator();
-						i = 0;
 						while (it_Host.hasNext()) {
 							HostDAO temp = it_Host.next();
 					%>
@@ -99,12 +101,15 @@ td input[type="button"] {
 						<td id="Phone<%=i%>"><%=temp.getHostPhone()%></td>
 						<td><input type="button" id="modify<%=i%>" value="수정"
 							onclick="memberModify(this)" /></td>
-						<td><input type="button" value="삭제" /></td>
+						<td><input type="submit" value="삭제" onclick="return memberDelete(this)" id="<%=i%>"  /></td>
+						<input type="hidden" name="memberNo<%=i %>" value="<%=temp.getHostNo() %>"/>
+						<input type="hidden" name="" id="row<%=i %>" value=""/>
 					</tr>
 					<%
 						i++;
 						}
 					%>
+					</form>
 				</table>
 			</div>
 

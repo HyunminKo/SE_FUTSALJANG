@@ -72,6 +72,13 @@ table.centerInfoTable {
 			
 			
 			<table class="centerInfoTable" style="margin-top: 10px;" align="center">
+				<tr>
+					<th colspan="2">대결 목록</th>
+				</tr>
+				<tr>
+					<th>상대 팀 이름</th>
+					<th>경기 날짜</th>
+				</tr>
 				<%
 					Iterator<MatchDAO> it = matchList.iterator();
 					int i = 0;
@@ -80,13 +87,6 @@ table.centerInfoTable {
 						String name = TeamDAO.getTeamName(temp.getTeamNoTwo());
 				%>
 
-				<tr>
-					<th colspan="2">대결 목록</th>
-				</tr>
-				<tr>
-					<th>상대 팀 이름</th>
-					<th>경기 날짜</th>
-				</tr>
 				<tr>
 					<td style="width:50%;"><%=name%></td>
 					<td><%=temp.getMatchDate()%></td>
@@ -121,7 +121,8 @@ table.centerInfoTable {
 						}
 					}
 				%>
-
+				<input type="hidden" name="teamNo" value="<%=teamNo%>"/>
+				<input type="hidden" name="userTeamNo" value="<%=userTeamNo%>"/>
 			</form>
 			<hr />
 		</div>
