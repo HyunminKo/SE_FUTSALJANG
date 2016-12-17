@@ -84,7 +84,7 @@
 									<input type="radio" id="creditCard" name="paymentOption" value = "credit"  onclick = "div_show(this.value)" />
 									<label for="creditCard" style="margin:0px;">신용카드</label>
 									<input type="radio" id="onlinePayment" name="paymentOption" value = "online"  onclick = "div_show(this.value)"/>
-									<label for="onlinePayment" style="margin:0px;" >온라인 입금</label>
+									<label for="onlinePayment" style="margin:0px;" >무통장 입금</label>
 								</span>
 							</td>
 						</tr>

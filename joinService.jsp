@@ -21,7 +21,7 @@
 			if(userDAO.join()){
 				%>
 					<script>
-						alert("회원가입에 성공하셨습니다.\n 다시 로그인 해주시기 바랍니다.");
+						alert("회원가입에 성공하셨습니다.\n다시 로그인 해주시기 바랍니다.");
 						location.replace("./home.jsp");
 					</script>
 				<%
@@ -39,7 +39,7 @@
 			if(hostDAO.join()){
 				%>
 					<script>
-						alert("회원가입에 성공하셨습니다.\n 다시 로그인 해주시기 바랍니다.");
+						alert("회원가입에 성공하셨습니다.\n다시 로그인 해주시기 바랍니다.");
 						location.replace("./home.jsp");
 					</script>
 				<%

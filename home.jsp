@@ -55,9 +55,9 @@
 					<img src="images/FUTSALJANG/<%=temp.getImgUrl()%>" alt="Avatar" />
 					<div class="container">
 						<h4>
-							<b><%=temp.getKu()%></b>
+							<b><%=temp.getCenterName()%></b>
 						</h4>
-						<p><%=temp.getCenterName()%></p>
+						<p><%=temp.getKu()%></p>
 					</div>
 				</div>
 				<input type="hidden" name="centerNo" value="<%=temp.getCenterNo()%>" />

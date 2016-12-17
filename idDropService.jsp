@@ -15,41 +15,27 @@
 
 	UserDAO userDao = new UserDAO();
 	HostDAO hostDao = new HostDAO();
-
-	if (type.equals("user")) {
-		if (UserDAO.drop(memberNo)) {
-			session.invalidate();
-%>
-<script>
-	alert("계정 탈퇴가 완료되었습니다.");
-	location.replace("./home.jsp");
-</script>
-<%
-
-	} else {
-%>
-<script>
-	alert("계정 탈퇴가 불가능합니다.");
-	history.go(-1);
-</script>
-<%
+	Boolean result= false;
+	if(type.equals("user")){
+		result = UserDAO.delete(memberNo);
+	}else{
+		result = HostDAO.delete(memberNo);
 	}
-	} else {
-		if (hostDao.drop(memberNo)) {
-	session.invalidate();
-%>
-<script>
-	alert("계정 탈퇴가 완료되었습니다.");
-	location.replace("./home.jsp");	
-</script>
-<%
-	} else {
-%>
-<script>
-	alert("계정 탈퇴가 불가능합니다.");
-	history.go(-1);
-</script>
-<%
-	}
+	
+	if(result){
+		session.invalidate();
+		%>
+		<script>
+			alert("회원 탈퇴에 성공했습니다.");
+			location.replace("./home.jsp"); 
+		</script>
+		<%		
+	}else{
+		%>
+		<script>
+			alert("회원 탈퇴에 실패했습니다.");
+			history.go(-1); 
+		</script>
+		<%
 	}
 %>

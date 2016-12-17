@@ -7,8 +7,8 @@
 <%
 	FutsalcenterDAO fscDao;
 	request.setCharacterEncoding("utf-8");
-	
-	String centerNo = (String) request.getParameter("centerInfo");
+	String index = (String) request.getParameter("rowNum");
+	String centerNo = (String) request.getParameter("centerNo"+index);
 	
 	
 	fscDao = new FutsalcenterDAO(centerNo);

@@ -99,7 +99,7 @@ table.centerInfoTable {
 						FutsalcenterDAO temp = it.next();
 				%>
 				<tr>
-					<td><input class="inputRadio" type="radio" name="centerInfo"
+					<td><input class="inputRadio" type="radio" name="centerInfo<%=i %>"
 						id="<%=temp.getCenterNo()%>" value="<%=temp.getCenterNo()%>" required/> <label class="inputRadioLabel"
 						for="<%=temp.getCenterNo()%>" /></td>
 					<td><input class="futName" type="text" id="futName<%=temp.getCenterNo()%>"
@@ -112,6 +112,8 @@ table.centerInfoTable {
 						value="<%=temp.getCenterPhone()%>" name="centerPhone<%=temp.getCenterNo()%>"/></td>
 					<td><input class="futDeTailAdd" type="text"
 						id="futDeTailAdd<%=i%>" value="<%=temp.getDetailAddress()%>" name="centerDetailAddress<%=temp.getCenterNo()%>"/></td>
+						<input type="hidden" name="centerNo<%=i %>" value="<%=temp.getCenterNo() %>"/>
+						<input type="hidden" name="" id="row<%=i %>" value=""/>
 				</tr>
 				<%
 					i++;
@@ -119,7 +121,7 @@ table.centerInfoTable {
 				%>
 			</table>
 			<input type="submit" value="수정" style="margin-top: 50px;"/>
-			<input type="submit" value="삭제" formaction="./futDeleteService.jsp"/>
+			<input type="submit" value="삭제" onclick="return centerDelete(this)" formaction="./futDeleteService.jsp"/>
 			</form>
 			<hr />
 
@@ -147,5 +149,6 @@ table.centerInfoTable {
 		}
 	</script>
 	<script src="./assets/js/dropbar.js"></script>
+	<script src="./assets/js/centerDelete.js"></script>
 </body>
 </html>
