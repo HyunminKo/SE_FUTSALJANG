@@ -100,7 +100,7 @@ table.centerInfoTable {
 				%>
 				<tr>
 					<td><input class="inputRadio" type="radio" name="centerInfo"
-						id="<%=temp.getCenterNo()%>" value="<%=temp.getCenterNo()%>" required/> <label class="inputRadioLabel"
+						id="<%=i %>" value="<%=temp.getCenterNo()%>" onchange="radioButtonClicked(this)" required/> <label class="inputRadioLabel"
 						for="<%=temp.getCenterNo()%>" /></td>
 					<td><input class="futName" type="text" id="futName<%=temp.getCenterNo()%>"
 						value="<%=temp.getCenterName()%>" name="centerName<%=temp.getCenterNo()%>"/></td>
@@ -121,7 +121,7 @@ table.centerInfoTable {
 				%>
 			</table>
 			<input type="submit" value="수정" style="margin-top: 50px;"/>
-			<input type="submit" value="삭제" onclick="return centerDelete(this)" formaction="./futDeleteService.jsp"/>
+			<input type="submit" value="삭제" formaction="./futDeleteService.jsp"/>
 			</form>
 			<hr />
 
