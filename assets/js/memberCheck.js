@@ -29,9 +29,10 @@ function memberDelete(a){
 		var inputTag = document.getElementById("row"+id);
 		inputTag.value = id;
 		inputTag.setAttribute("name","rowNum");
+		return true;
 	}
 	else{
-		return;
+		return false;
 	}
 	
 }

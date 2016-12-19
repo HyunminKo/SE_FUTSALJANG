@@ -139,6 +139,13 @@
 						<%
 						i++;
 						}
+						if(userResrvationList.size() == 0){
+							%>
+							<tr>
+								<td colspan = "7">기록 없음</td>
+							</tr>
+							<%
+						}
 						%>
 					</table>
 
