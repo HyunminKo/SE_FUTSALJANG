@@ -60,7 +60,6 @@
 									<div id="userMypage" class="dropdown-content1">
 										<a href="./userHistory.jsp" class = "dropdown_A" id = "userHistory">이용 내역</a>
 										<a href="./teamModify.jsp" class = "dropdown_A" id = "teamModify">팀 수정 및 삭제</a>
-										<a href="./idDropService.jsp" class = "dropdown_A" id = "userDrop">회원탈퇴</a>
 										<a href="./logoutService.jsp" class = "dropdown_A" id = "userLogout">로그아웃</a>
 									</div>
 								</li>

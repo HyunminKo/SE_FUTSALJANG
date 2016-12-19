@@ -100,18 +100,18 @@ table.centerInfoTable {
 				%>
 				<tr>
 					<td><input class="inputRadio" type="radio" name="centerInfo"
-						id="<%=i %>" value="<%=temp.getCenterNo()%>" onchange="radioButtonClicked(this)" required/> <label class="inputRadioLabel"
-						for="<%=temp.getCenterNo()%>" /></td>
+						id="<%=i %>" value="<%=temp.getCenterNo()%>"required/> <label class="inputRadioLabel"
+						for="<%=temp.getCenterNo()%>"></label></td>
 					<td><input class="futName" type="text" id="futName<%=temp.getCenterNo()%>"
-						value="<%=temp.getCenterName()%>" name="centerName<%=temp.getCenterNo()%>"/></td>
+						value="<%=temp.getCenterName()%>" name="centerName<%=temp.getCenterNo()%>" required/></td>
 					<td><input class="futCharge" type="text" id="futChare<%=i%>"
-						value="<%=temp.getCharge()%>" name="centerCharge<%=temp.getCenterNo()%>"/></td>
+						value="<%=temp.getCharge()%>" name="centerCharge<%=temp.getCenterNo()%>" required/></td>
 					<td><input class="futSecNum" type="text" id="futSecNum<%=i%>"
-						value="<%=temp.getSectionNum()%>" name="centerSectionNum<%=temp.getCenterNo()%>"/></td>
+						value="<%=temp.getSectionNum()%>" name="centerSectionNum<%=temp.getCenterNo()%>" required/></td>
 					<td><input class="futPhone" type="text" id="futPhone<%=i%>"
-						value="<%=temp.getCenterPhone()%>" name="centerPhone<%=temp.getCenterNo()%>"/></td>
+						value="<%=temp.getCenterPhone()%>" name="centerPhone<%=temp.getCenterNo()%>" required/></td>
 					<td><input class="futDeTailAdd" type="text"
-						id="futDeTailAdd<%=i%>" value="<%=temp.getDetailAddress()%>" name="centerDetailAddress<%=temp.getCenterNo()%>"/></td>
+						id="futDeTailAdd<%=i%>" value="<%=temp.getDetailAddress()%>" name="centerDetailAddress<%=temp.getCenterNo()%>" required/></td>
 						<input type="hidden" name="centerNo<%=i %>" value="<%=temp.getCenterNo() %>"/>
 						<input type="hidden" name="" id="row<%=i %>" value=""/>
 				</tr>
