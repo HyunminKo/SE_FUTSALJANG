@@ -72,7 +72,6 @@
 										<a href="./hostHistory.jsp" class = "dropdown_A" id = "hostHistory">이용 내역</a>
 										<a href="./centerEnroll.jsp" class = "dropdown_A" id = "centerEnroll">풋살장 등록</a>
 										<a href="./centerModifyAndDelete.jsp" class = "dropdown_A" id = "centerModify">풋살장 수정 및 삭제</a>
-										<a href="./idDropService.jsp" class = "dropdown_A" id = "hostDrop">회원탈퇴</a>
 										<a href="./logoutService.jsp" class = "dropdown_A" id = "hostLogout">로그아웃</a>
 									</div>
 								</li>
