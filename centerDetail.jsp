@@ -36,7 +36,7 @@
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
 		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css"/>
-		<script type = "text/javascript" src = "./assets/js/centerDetail.js"></script>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	</head>
 	<body class="is-loading" onload="bodyOnload(<%=centerSectionNum%>)">
@@ -226,5 +226,6 @@
 					
 			</script>
 			<script src = "./assets/js/dropbar.js"></script>
+			<script type = "text/javascript" src = "./assets/js/centerDetail.js"></script>
 		</body>
 	</html>

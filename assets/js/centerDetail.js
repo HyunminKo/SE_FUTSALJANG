@@ -40,12 +40,15 @@ window.onload =function(){
 function settingUseTime(a){
 	var timeId = a.id;
 	var useTime = document.getElementById(timeId).value;
-	var hoursOfUse = document.getElementById("hoursOfUse");
-	var hours = document.getElementById("hours");
-	hoursOfUse.value = useTime;	
-	var splitHours = useTime.split(":");
-	hours.value = splitHours[0];
-	
+	if(useTime == "예약불가능"){
+		alert("이미예약된 시간대 입니다.");
+	}else{
+		var hoursOfUse = document.getElementById("hoursOfUse");
+		var hours = document.getElementById("hours");
+		hoursOfUse.value = useTime;	
+		var splitHours = useTime.split(":");
+		hours.value = splitHours[0];
+	}
 }
 
 function matchDate(date_val){
@@ -56,9 +59,9 @@ function matchDate(date_val){
 		var input = secNo+'input'+idCal;
 		var timeButton = document.getElementById(input);
 		if(dateArr[i] == date_val){
-			timeButton.value="예약 불가능";
+			timeButton.value="예약불가능";
 			timeButton.style.color = "red";
-			timeButton.disabled = true;			
+			timeButton.disabled = false;
 		}else{
 			timeButton.value=hours+":00 ~ "+parseInt(parseInt(hours)+2)+":00";
 			timeButton.disabled = false;

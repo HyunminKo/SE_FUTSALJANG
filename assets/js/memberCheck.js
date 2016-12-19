@@ -25,7 +25,13 @@ function layerClose(a){
 
 function memberDelete(a){
 	var id = a.id;
-	var inputTag = document.getElementById("row"+id);
-	inputTag.value = id;
-	inputTag.setAttribute("name","rowNum");
+	if(confirm("정말 삭제 하시겠습니까?") == true){
+		var inputTag = document.getElementById("row"+id);
+		inputTag.value = id;
+		inputTag.setAttribute("name","rowNum");
+	}
+	else{
+		return;
+	}
+	
 }
