@@ -99,7 +99,7 @@ table.centerInfoTable {
 						FutsalcenterDAO temp = it.next();
 				%>
 				<tr>
-					<td><input class="inputRadio" type="radio" name="centerInfo<%=i %>"
+					<td><input class="inputRadio" type="radio" name="centerInfo"
 						id="<%=temp.getCenterNo()%>" value="<%=temp.getCenterNo()%>" required/> <label class="inputRadioLabel"
 						for="<%=temp.getCenterNo()%>" /></td>
 					<td><input class="futName" type="text" id="futName<%=temp.getCenterNo()%>"
