@@ -4,6 +4,6 @@
 
 ### 풋살장 예약 시스템
 
-![풋살장메인](./index.png)
+![풋살장메인](./images/index.jpg)
 
 - JSP, Oracle DB
